@@ -1483,3 +1483,550 @@ footer{padding:37px 0 20px;border-top:1px solid #292435;background:#08070b}.foot
 }
 
 
+/* =========================================================
+   🔧 COMPREHENSIVE UI FIX: Spacing, Typography, CTA, Density
+   ========================================================= */
+
+/* ── 1. CTA BUTTONS: Bigger, bolder, neon-purple glow ── */
+.cta-primary,
+.strategy-green-btn,
+.pulse-btn-large,
+.sticky-btn {
+  background: linear-gradient(135deg, #7c3aed 0%, #6d28d9 50%, #5b21b6 100%) !important;
+  border: 1.5px solid rgba(196, 181, 253, 0.5) !important;
+  color: #ffffff !important;
+  font-size: 18px !important;
+  font-weight: 800 !important;
+  letter-spacing: 0.01em !important;
+  padding: 18px 38px !important;
+  border-radius: 12px !important;
+  box-shadow:
+    0 0 20px rgba(124, 58, 237, 0.5),
+    0 0 40px rgba(124, 58, 237, 0.25),
+    0 8px 25px rgba(0, 0, 0, 0.4) !important;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1) !important;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3) !important;
+  cursor: pointer !important;
+  text-decoration: none !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 10px !important;
+  animation: ctaNeonPulse 2.5s ease-in-out infinite !important;
+}
+
+.cta-primary:hover,
+.strategy-green-btn:hover,
+.pulse-btn-large:hover,
+.sticky-btn:hover {
+  transform: translateY(-3px) scale(1.04) !important;
+  box-shadow:
+    0 0 30px rgba(139, 92, 246, 0.7),
+    0 0 60px rgba(124, 58, 237, 0.4),
+    0 0 80px rgba(109, 40, 217, 0.2),
+    0 12px 35px rgba(0, 0, 0, 0.5) !important;
+  background: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 50%, #6d28d9 100%) !important;
+  border-color: rgba(216, 200, 255, 0.7) !important;
+}
+
+@keyframes ctaNeonPulse {
+  0%, 100% {
+    box-shadow:
+      0 0 20px rgba(124, 58, 237, 0.5),
+      0 0 40px rgba(124, 58, 237, 0.25),
+      0 8px 25px rgba(0, 0, 0, 0.4);
+  }
+  50% {
+    box-shadow:
+      0 0 28px rgba(139, 92, 246, 0.65),
+      0 0 55px rgba(124, 58, 237, 0.35),
+      0 8px 25px rgba(0, 0, 0, 0.4);
+  }
+}
+
+/* Header CTA - slightly smaller to fit nav */
+.header-cta {
+  font-size: 14px !important;
+  padding: 12px 22px !important;
+}
+
+/* ── 2. SECTION SPACING: Eliminate huge gaps ── */
+
+/* Main section padding override */
+.section {
+  padding: 65px 0 !important;
+}
+
+/* Proof / Reviews section */
+.section.proof {
+  padding: 60px 0 !important;
+}
+
+/* Strategy section */
+.strategy-clean-section {
+  padding: 60px 0 65px !important;
+}
+
+/* Travel Specialists */
+.travel-specialists-section {
+  padding: 60px 0 !important;
+}
+
+/* Why Stacked Section */
+.why-stacked-section {
+  padding: 60px 0 !important;
+}
+
+/* Budget Section */
+.budget-section {
+  padding: 40px 0 50px !important;
+}
+
+/* Consultation / Offer Section — the big gap culprit */
+.section.offer {
+  padding: 50px 0 100px !important;
+}
+
+/* Dark section spacing */
+.dark-section {
+  padding: 65px 0 !important;
+}
+
+/* Hero section fine-tuning */
+.hero-pattern-section {
+  padding: 28px 16px 20px !important;
+}
+
+/* Stats section tighter */
+.stats-grid > div {
+  padding: 28px 24px !important;
+}
+
+/* Reduce gallery heading top margin */
+.gallery-heading {
+  margin-top: 35px !important;
+}
+
+/* Reduce CTA wrap margins within sections */
+.strategy-btn-wrap {
+  margin-top: 28px !important;
+}
+
+/* Cards row bottom margin */
+.strategy-cards-row {
+  margin-bottom: 32px !important;
+}
+
+/* Why stacked header */
+.why-stacked-header {
+  margin-bottom: 32px !important;
+}
+
+/* Specialists grid gap */
+.specialists-grid {
+  gap: 40px !important;
+}
+
+/* Section intro margin */
+.section-intro {
+  margin-bottom: 40px !important;
+}
+
+/* ── 3. TYPOGRAPHY: Bigger, bolder, more readable ── */
+
+/* Main headings */
+h1 {
+  font-size: clamp(52px, 6.5vw, 88px) !important;
+  font-weight: 700 !important;
+}
+
+.section-intro h2,
+.why-intro h2,
+.offer h2 {
+  font-size: clamp(42px, 5vw, 66px) !important;
+  font-weight: 700 !important;
+  line-height: 1.05 !important;
+}
+
+/* Strategy section title */
+.strategy-clean-title {
+  font-size: clamp(32px, 4.2vw, 50px) !important;
+  font-weight: 800 !important;
+}
+
+/* Why stacked title */
+.why-stacked-title {
+  font-size: clamp(36px, 4.5vw, 54px) !important;
+  font-weight: 800 !important;
+}
+
+/* Specialists heading */
+.specialists-left h2 {
+  font-size: clamp(40px, 5vw, 60px) !important;
+  font-weight: 800 !important;
+}
+
+/* Strategy subtitle */
+.strategy-clean-subtitle {
+  font-size: 20px !important;
+  font-weight: 800 !important;
+}
+
+/* Body text and descriptions */
+.section-intro p,
+.why-intro > p,
+.offer > p {
+  font-size: 17px !important;
+  line-height: 1.7 !important;
+}
+
+.specialists-left p {
+  font-size: 17px !important;
+  line-height: 1.7 !important;
+}
+
+.strategy-clean-desc {
+  font-size: 17px !important;
+}
+
+.why-stacked-subtitle {
+  font-size: 16px !important;
+}
+
+/* Service card text */
+.service-card h3 {
+  font-size: 22px !important;
+  font-weight: 700 !important;
+}
+
+.service-card p {
+  font-size: 14.5px !important;
+  line-height: 1.7 !important;
+}
+
+/* Spec cards */
+.spec-card h3 {
+  font-size: 20px !important;
+  font-weight: 800 !important;
+}
+
+.spec-card p {
+  font-size: 14.5px !important;
+}
+
+/* Why cards */
+.why-card-title {
+  font-size: 21px !important;
+  font-weight: 800 !important;
+}
+
+.why-card-text {
+  font-size: 15.5px !important;
+  line-height: 1.65 !important;
+}
+
+.why-card-list li {
+  font-size: 15px !important;
+}
+
+/* Stats numbers */
+.stats strong {
+  font-size: 48px !important;
+  font-weight: 700 !important;
+}
+
+.stats small {
+  font-size: 12px !important;
+  font-weight: 600 !important;
+  letter-spacing: 0.1em !important;
+}
+
+/* Section labels */
+.section-label {
+  font-size: 12px !important;
+  font-weight: 800 !important;
+  letter-spacing: 0.16em !important;
+}
+
+/* Budget section text */
+.budget-lead-text {
+  font-size: clamp(18px, 2.2vw, 24px) !important;
+  font-weight: 500 !important;
+  line-height: 1.6 !important;
+}
+
+.budget-highlight-box h3 {
+  font-size: clamp(24px, 3vw, 38px) !important;
+  font-weight: 800 !important;
+}
+
+.b-point {
+  font-size: 16px !important;
+  font-weight: 600 !important;
+}
+
+/* Strategy card titles */
+.strategy-card-title {
+  font-size: 16px !important;
+  font-weight: 700 !important;
+}
+
+/* Gallery heading */
+.gallery-heading span {
+  font-size: 12px !important;
+  font-weight: 800 !important;
+}
+
+/* Review badges */
+.review-badge {
+  font-size: 12px !important;
+  font-weight: 800 !important;
+}
+
+/* Proof tile labels */
+.proof-tile span {
+  font-size: 11px !important;
+  font-weight: 700 !important;
+}
+
+/* Outcome pills */
+.outcome-pill {
+  font-size: clamp(17px, 1.8vw, 22px) !important;
+  font-weight: 800 !important;
+  padding: 14px 36px !important;
+}
+
+/* ── 4. STICKY BOTTOM BAR ── */
+.sticky-bar {
+  padding: 14px 0 !important;
+}
+
+.sticky-bar-text span {
+  font-size: 13px !important;
+  font-weight: 600 !important;
+}
+
+.sticky-bar-text strong {
+  font-size: 18px !important;
+  font-weight: 800 !important;
+}
+
+.sticky-btn {
+  font-size: 17px !important;
+  padding: 16px 32px !important;
+  border-radius: 10px !important;
+}
+
+/* Footer CTA link text */
+.footer-links a {
+  font-size: 14px !important;
+  font-weight: 700 !important;
+}
+
+/* ── 5. SECTION DENSITY: Tighter gaps between elements ── */
+
+/* Reduce proof-grid gap */
+.proof-grid {
+  gap: 16px !important;
+}
+
+/* Reviews grid gap */
+.reviews-proof-grid-4 {
+  gap: 18px !important;
+}
+
+/* Why cards stack gap */
+.why-cards-stack {
+  gap: 14px !important;
+}
+
+/* Specialist cards gap */
+.specialist-cards {
+  gap: 16px !important;
+}
+
+/* Consultation section panel padding */
+.final-cta-panel {
+  padding: 40px !important;
+}
+
+/* Footer bottom padding for sticky bar clearance */
+footer {
+  padding-bottom: 85px !important;
+}
+
+/* ── 6. RESPONSIVE OVERRIDES ── */
+
+@media (max-width: 800px) {
+  .section {
+    padding: 50px 0 !important;
+  }
+
+  .section.proof {
+    padding: 45px 0 !important;
+  }
+
+  .strategy-clean-section {
+    padding: 45px 0 50px !important;
+  }
+
+  .travel-specialists-section {
+    padding: 45px 0 !important;
+  }
+
+  .why-stacked-section {
+    padding: 45px 0 !important;
+  }
+
+  .section.offer {
+    padding: 40px 0 80px !important;
+  }
+
+  .dark-section {
+    padding: 50px 0 !important;
+  }
+
+  .stats-grid > div {
+    padding: 22px 16px !important;
+  }
+
+  .stats strong {
+    font-size: 38px !important;
+  }
+
+  /* CTA sizing for tablets */
+  .cta-primary,
+  .pulse-btn-large {
+    font-size: 16px !important;
+    padding: 16px 30px !important;
+  }
+
+  .sticky-btn {
+    font-size: 15px !important;
+    padding: 14px 24px !important;
+  }
+
+  .sticky-bar-text strong {
+    font-size: 16px !important;
+  }
+
+  footer {
+    padding-bottom: 75px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .section {
+    padding: 40px 0 !important;
+  }
+
+  .section.proof {
+    padding: 35px 0 !important;
+  }
+
+  .strategy-clean-section {
+    padding: 35px 0 40px !important;
+  }
+
+  .travel-specialists-section {
+    padding: 35px 0 !important;
+  }
+
+  .why-stacked-section {
+    padding: 35px 0 !important;
+  }
+
+  .section.offer {
+    padding: 30px 0 75px !important;
+  }
+
+  h1 {
+    font-size: 46px !important;
+  }
+
+  .section-intro h2,
+  .why-intro h2,
+  .offer h2 {
+    font-size: 38px !important;
+  }
+
+  .strategy-clean-title {
+    font-size: 28px !important;
+  }
+
+  .why-stacked-title {
+    font-size: 32px !important;
+  }
+
+  .specialists-left h2 {
+    font-size: 34px !important;
+  }
+
+  .stats strong {
+    font-size: 32px !important;
+  }
+
+  /* CTA sizing for mobile */
+  .cta-primary,
+  .pulse-btn-large {
+    font-size: 16px !important;
+    padding: 15px 24px !important;
+    width: 100% !important;
+    max-width: 360px !important;
+  }
+
+  .sticky-btn {
+    font-size: 15px !important;
+    padding: 13px 20px !important;
+    width: 100% !important;
+    max-width: 320px !important;
+  }
+
+  .sticky-bar-inner {
+    flex-direction: column !important;
+    text-align: center !important;
+    gap: 8px !important;
+  }
+
+  .sticky-bar-text strong {
+    font-size: 15px !important;
+  }
+
+  .sticky-bar-text span {
+    font-size: 12px !important;
+  }
+
+  .budget-lead-text {
+    font-size: 16px !important;
+  }
+
+  .budget-highlight-box h3 {
+    font-size: 22px !important;
+  }
+
+  .outcome-pill {
+    font-size: 16px !important;
+    padding: 12px 24px !important;
+  }
+
+  .spec-card h3 {
+    font-size: 18px !important;
+  }
+
+  .why-card-title {
+    font-size: 19px !important;
+  }
+
+  .service-card h3 {
+    font-size: 20px !important;
+  }
+
+  .final-cta-panel {
+    padding: 28px 20px !important;
+  }
+
+  footer {
+    padding-bottom: 70px !important;
+  }
+}
+
