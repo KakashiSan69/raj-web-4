@@ -565,18 +565,24 @@
   <section class="hero-pattern-section" id="top">
     <div class="container hero-pattern-container">
 
-      <!-- Green Pill Badge -->
+      <!-- Centered Brand Logo (Matches phone screenshot) -->
+      <div class="hero-logo-wrap">
+        <img src="/assets/ms_travel_marketing_logo-removebg-preview.png" alt="MS Travel Marketing" class="hero-center-logo">
+      </div>
+
+      <!-- Green Pill Badge (Strictly 2 Lines) -->
       <div class="badge-green-pill">
-        <img draggable="false" role="img" class="badge-emoji-img" alt="🚀" src="/assets/rocket.svg">
-        <span class="badge-text">GROW YOUR TAXI &amp; TOUR BUSINESS <br class="mobile-br">WITH PROFITABLE GOOGLE ADS</span>
+        <span class="badge-line line-1"><img draggable="false" role="img" class="badge-emoji-img" alt="🚀" src="/assets/rocket.svg">GROW YOUR TAXI &amp; TOUR BUSINESS</span>
+        <span class="badge-line line-2">WITH PROFITABLE GOOGLE ADS</span>
       </div>
 
-      <!-- Red Pill Badge -->
+      <!-- Red Pill Badge (Strictly 2 Lines) -->
       <div class="badge-red-pill">
-        GET 100+ TAXI/ CAB &amp; TOUR PACKAGE BOOKINGS <br class="mobile-br">IN JUST 30 DAYS!
+        <span class="badge-line line-1">GET 100+ TAXI/ CAB &amp; TOUR PACKAGE</span>
+        <span class="badge-line line-2">BOOKINGS IN JUST 30 DAYS!</span>
       </div>
 
-      <!-- 4 Feature Points with Yellow Arrows -->
+      <!-- 4 Feature Points with Yellow Arrows (2 Columns on mobile) -->
       <div class="hero-arrow-points">
         <div class="arrow-point">
           <span class="yellow-arrow">➔</span>
@@ -596,26 +602,23 @@
         </div>
       </div>
 
-      <!-- Hero Video Player Box -->
+      <!-- Hero Video Player Box with Blue Border & Play Button -->
       <div class="hero-video-box">
-        <video controls preload="metadata" poster="/assets/76yuhj.jpg" playsinline aria-label="Google Ads results for taxi businesses">
+        <video id="hero-main-video" controls preload="metadata" poster="/assets/76yuhj.jpg" playsinline aria-label="Google Ads results for taxi businesses">
           <source src="/assets/taxi-google-ads-results.mp4" type="video/mp4">
           Your browser does not support HTML video.
         </video>
-        <div class="video-caption">
-          <span>
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
-            Watch the case study
-          </span>
-          <small>Real data · Real leads · Real profit</small>
+        <div class="hero-video-play-overlay" id="video-play-btn" onclick="playHeroVideo()">
+          <div class="play-circle-icon">
+            <svg width="34" height="34" viewBox="0 0 24 24" fill="currentColor"><polygon points="7 4 20 12 7 20 7 4"/></svg>
+          </div>
         </div>
       </div>
 
-      <!-- Pulsing CTA Button below video -->
-      <div class="hero-cta-center" style="margin-top: 32px; text-align: center;">
-        <a class="cta-primary pulse-btn-large" href="https://pay.marketingsafalta.com/checkout/product/4ef42814-1c13-4bdd-9cb8-29e0b2117ba5?template=2">
-          <span>Book A Meeting At ₹49</span>
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      <!-- Green Strategy Call CTA Button below video (Matches phone screenshot) -->
+      <div class="hero-cta-center" style="margin-top: 20px; text-align: center;">
+        <a class="hero-green-call-btn" href="https://pay.marketingsafalta.com/checkout/product/4ef42814-1c13-4bdd-9cb8-29e0b2117ba5?template=2">
+          <span>Book a Free Strategy Call</span>
         </a>
       </div>
     </div>
@@ -1302,10 +1305,31 @@
       }
     });
 
-    // Direct Checkout Redirection on Tap / Click for all Book A Meeting At ₹49 buttons
+    // Video Play Overlay Handler
+    function playHeroVideo() {
+      const vid = document.getElementById('hero-main-video');
+      const overlay = document.getElementById('video-play-btn');
+      if (vid) {
+        vid.play();
+        if (overlay) overlay.style.display = 'none';
+      }
+    }
+    const heroVid = document.getElementById('hero-main-video');
+    if (heroVid) {
+      heroVid.addEventListener('play', () => {
+        const overlay = document.getElementById('video-play-btn');
+        if (overlay) overlay.style.display = 'none';
+      });
+      heroVid.addEventListener('pause', () => {
+        const overlay = document.getElementById('video-play-btn');
+        if (overlay) overlay.style.display = 'flex';
+      });
+    }
+
+    // Direct Checkout Redirection on Tap / Click for all Book A Meeting buttons
     const CHECKOUT_URL = 'https://pay.marketingsafalta.com/checkout/product/4ef42814-1c13-4bdd-9cb8-29e0b2117ba5?template=2';
     document.addEventListener('click', (e) => {
-      const cta = e.target.closest('.cta-primary, .strategy-green-btn, .pulse-btn-large, .sticky-btn, a[href*="checkout"]');
+      const cta = e.target.closest('.cta-primary, .strategy-green-btn, .pulse-btn-large, .sticky-btn, .hero-green-call-btn, a[href*="checkout"]');
       if (cta) {
         e.preventDefault();
         window.location.href = CHECKOUT_URL;
