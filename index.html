@@ -282,6 +282,106 @@
       margin: 0;
     }
 
+    /* =========================================================
+       WHY MS TRAVEL MARKETING (Stacked 6 Cards from Screenshot)
+       ========================================================= */
+    .why-stacked-section {
+      padding: 95px 0;
+      background: radial-gradient(circle at 50% 30%, rgba(109, 40, 217, 0.14), transparent 60%), #090510;
+      border-bottom: 1px solid rgba(139, 92, 246, 0.15);
+    }
+    .why-stacked-container {
+      max-width: 860px;
+      margin: 0 auto;
+    }
+    .why-stacked-header {
+      text-align: center;
+      margin-bottom: 45px;
+    }
+    .why-stacked-title {
+      font-size: clamp(34px, 4vw, 48px);
+      font-weight: 700;
+      color: #ffffff;
+      margin: 0 0 14px;
+      letter-spacing: -0.03em;
+    }
+    .why-stacked-subtitle {
+      font-size: 15px;
+      color: #cbd5e1;
+      max-width: 620px;
+      margin: 0 auto;
+      line-height: 1.6;
+    }
+    .why-cards-stack {
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+    }
+    .why-card-item {
+      padding: 26px 30px;
+      border-radius: 16px;
+      background: linear-gradient(145deg, rgba(25, 15, 41, 0.9), rgba(16, 9, 27, 0.95));
+      border: 1px solid rgba(139, 92, 246, 0.25);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+      transition: all 0.25s ease;
+    }
+    .why-card-item:hover {
+      transform: translateY(-3px);
+      border-color: rgba(168, 85, 247, 0.5);
+      box-shadow: 0 14px 35px rgba(124, 58, 237, 0.25);
+    }
+    .why-card-heading {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 10px;
+    }
+    .why-card-icon {
+      font-size: 22px;
+      line-height: 1;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .why-card-title {
+      font-size: 19px;
+      font-weight: 700;
+      color: #ffffff;
+      margin: 0;
+      letter-spacing: -0.02em;
+    }
+    .why-card-text {
+      font-size: 14.5px;
+      line-height: 1.65;
+      color: #94a3b8;
+      margin: 0;
+    }
+    .why-card-list {
+      margin: 8px 0 0;
+      padding: 0;
+      list-style: none;
+      font-size: 14px;
+      line-height: 1.7;
+      color: #cbd5e1;
+    }
+
+    /* 4 Reviews Grid */
+    .reviews-proof-grid-4 {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+    }
+    @media (max-width: 992px) {
+      .reviews-proof-grid-4 {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+    @media (max-width: 540px) {
+      .reviews-proof-grid-4 {
+        grid-template-columns: 1fr;
+      }
+    }
+
     /* Sticky Bottom Bar */
     .sticky-bar {
       position: fixed;
@@ -328,30 +428,40 @@
       --muted: #475569;
       --line: #e2e8f0;
     }
-    [data-theme="light"] .travel-specialists-section {
+    [data-theme="light"] .travel-specialists-section,
+    [data-theme="light"] .why-stacked-section {
       background: #f8fafc;
       border-block: 1px solid #e2e8f0;
     }
-    [data-theme="light"] .specialists-left h2 {
+    [data-theme="light"] .specialists-left h2,
+    [data-theme="light"] .why-stacked-title {
       color: #0f172a;
     }
-    [data-theme="light"] .specialists-left p {
+    [data-theme="light"] .specialists-left p,
+    [data-theme="light"] .why-stacked-subtitle {
       color: #475569;
     }
-    [data-theme="light"] .spec-card {
+    [data-theme="light"] .spec-card,
+    [data-theme="light"] .why-card-item {
       background: #ffffff;
       border: 1px solid #e2e8f0;
       box-shadow: 0 4px 18px rgba(0, 0, 0, 0.05);
     }
-    [data-theme="light"] .spec-card:hover {
+    [data-theme="light"] .spec-card:hover,
+    [data-theme="light"] .why-card-item:hover {
       border-color: #cbd5e1;
       box-shadow: 0 12px 30px rgba(0, 0, 0, 0.09);
     }
-    [data-theme="light"] .spec-card h3 {
+    [data-theme="light"] .spec-card h3,
+    [data-theme="light"] .why-card-title {
       color: #0f172a;
     }
-    [data-theme="light"] .spec-card p {
+    [data-theme="light"] .spec-card p,
+    [data-theme="light"] .why-card-text {
       color: #475569;
+    }
+    [data-theme="light"] .why-card-list {
+      color: #334155;
     }
     [data-theme="light"] .founder-badge {
       background: rgba(255, 255, 255, 0.95);
@@ -415,8 +525,8 @@
 
       <nav id="main-nav">
         <button onclick="scrollToId('services')">Services</button>
-        <button onclick="scrollToId('specialists')">Why Us</button>
-        <button onclick="scrollToId('results')">Proof</button>
+        <button onclick="scrollToId('specialists')">Specialists</button>
+        <button onclick="scrollToId('why-us')">Why Us</button>
         <button onclick="scrollToId('reviews')">Reviews</button>
         <button onclick="scrollToId('consultation')">Consultation</button>
         <a class="cta-primary header-cta" href="https://pay.marketingsafalta.com/checkout/product/4ef42814-1c13-4bdd-9cb8-29e0b2117ba5?template=2">
@@ -609,7 +719,7 @@
         <div class="strategy-clean-card">
           <div class="strategy-card-icon">
             <svg viewBox="0 0 640 512" fill="currentColor" width="28" height="28">
-              <path d="M290.547 189.039c-20.295-10.149-44.147-11.199-64.739-3.89 42.606 0 71.208 20.475 85.578 50.576 8.576 17.899-5.148 38.071-23.617 38.071 18.429 0 32.211 20.136 23.617 38.071-14.725 30.846-46.123 50.854-80.298 50.854-.557 0-94.471-8.615-94.471-8.615l-66.406 33.347c-9.384 4.693-19.815.379-23.895-7.781L1.86 290.747c-4.167-8.615-1.111-18.897 6.946-23.621l58.072-33.069L108 159.861c6.39-57.245 34.731-109.767 79.743-146.726 11.391-9.448 28.341-7.781 37.51 3.613 9.446 11.394 7.78 28.067-3.612 37.516-12.503 10.559-23.618 22.509-32.509 35.57 21.672-14.729 46.679-24.732 74.186-28.067 14.725-1.945 28.063 8.336 29.73 23.065 1.945 14.728-8.336 28.067-23.062 29.734-16.116 1.945-31.12 7.503-44.178 15.284 26.114-5.713 58.712-3.138 88.079 11.115 13.336 6.669 18.893 22.509 12.224 35.848-6.389 13.06-22.504 18.617-35.564 12.226z"/>
+              <path d="M290.547 189.039c-20.295-10.149-44.147-11.199-64.739-3.89 42.606 0 71.208 20.475 85.578 50.576 8.576 17.899-5.148 38.071-23.617 38.071 18.429 0 32.211 20.136 23.617 38.071-14.725 30.846-46.123 50.854-80.298 50.854-.557 0-94.471-8.615-94.471-8.615l-66.406 33.347c-9.384 4.693-19.815.379-23.895-7.781L1.86 290.747c-4.167-8.615-1.111-18.897 6.946-23.621l58.072-33.069L108 159.861c6.39-57.245 34.731-109.767 79.743-146.726 11.391-9.448 28.341-7.781 37.51 3.613 9.446 11.394 7.78 28.067-3.612 37.516-12.503 10.559-23.618 22.509-32.509 35.57 21.672-14.729 46.679-24.732 74.186-28.067 14.725-1.945 28.063 8.336 29.73 23.065 1.945 14.728-8.336 28.067-23.062 29.734-16.116 1.945-31.12 7.503-44.178 15.284 26.114-5.713 58.712-3.138 88.079 11.115 13.336 6.669 18.893 22.509 12.224 35.848-6.389 13.06-22.504 18.617-35.564 12.226zm-27.229 69.472c-6.112-12.505-18.338-20.286-32.231-20.286a35.46 35.46 0 0 0-35.565 35.57c0 21.428 17.808 35.57 35.565 35.57 13.893 0 26.119-7.781 32.231-20.286 4.446-9.449 13.614-15.006 23.339-15.284-9.725-.277-18.893-5.835-23.339-15.284zm374.821-37.237c4.168 8.615 1.111 18.897-6.946 23.621l-58.071 33.069L532 352.16c-6.39 57.245-34.731 109.767-79.743 146.726-10.932 9.112-27.799 8.144-37.51-3.613-9.446-11.394-7.78-28.067 3.613-37.516 12.503-10.559 23.617-22.509 32.508-35.57-21.672 14.729-46.679 24.732-74.186 28.067-10.021 2.506-27.552-5.643-29.73-23.065-1.945-14.728 8.336-28.067 23.062-29.734 16.116-1.946 31.12-7.503 44.178-15.284-26.114 5.713-58.712 3.138-88.079-11.115-13.336-6.669-18.893-22.509-12.224-35.848 6.389-13.061 22.505-18.619 35.565-12.227 20.295 10.149 44.147 11.199 64.739 3.89-42.606 0-71.208-20.475-85.578-50.576-8.576-17.899 5.148-38.071 23.617-38.071-18.429 0-32.211-20.136-23.617-38.071 14.033-29.396 44.039-50.887 81.966-50.854l92.803 8.615 66.406-33.347c9.408-4.704 19.828-.354 23.894 7.781l44.455 88.926zm-229.227-18.618c-13.893 0-26.119 7.781-32.231 20.286-4.446 9.449-13.614 15.006-23.339 15.284 9.725.278 18.893 5.836 23.339 15.284 6.112 12.505 18.338 20.286 32.231 20.286a35.46 35.46 0 0 0 35.565-35.57c0-21.429-17.808-35.57-35.565-35.57z"/>
             </svg>
           </div>
           <h3 class="strategy-card-title">Travel Agencies</h3>
@@ -636,7 +746,7 @@
   </section>
 
   <!-- =========================================================
-       TRAVEL SPECIALISTS SECTION (Exact Match to User Screenshot)
+       TRAVEL SPECIALISTS SECTION (Matched to Screenshot)
        ========================================================= -->
   <section class="travel-specialists-section" id="specialists">
     <div class="container">
@@ -731,6 +841,101 @@
     </div>
   </section>
 
+  <!-- =========================================================
+       WHY MS TRAVEL MARKETING? (Stacked 6 Cards from User Screenshot)
+       ========================================================= -->
+  <section class="why-stacked-section" id="why-us">
+    <div class="container why-stacked-container">
+      <div class="why-stacked-header">
+        <h2 class="why-stacked-title">Why MS Travel Marketing?</h2>
+        <p class="why-stacked-subtitle">
+          We’re not general marketers. We specialize exclusively in Google Ads for the travel industry
+        </p>
+      </div>
+
+      <div class="why-cards-stack">
+        <!-- 1. 300+ Clients Trust Us -->
+        <div class="why-card-item">
+          <div class="why-card-heading">
+            <span class="why-card-icon">🔥</span>
+            <h3 class="why-card-title">300+ Clients Trust Us</h3>
+          </div>
+          <p class="why-card-text">
+            We have successfully worked with 300+ taxi &amp; travel businesses across India, helping them generate consistent leads and bookings.
+          </p>
+        </div>
+
+        <!-- 2. 45+ Active Long-Term Clients -->
+        <div class="why-card-item">
+          <div class="why-card-heading">
+            <span class="why-card-icon">💠</span>
+            <h3 class="why-card-title">45+ Active Long-Term Clients</h3>
+          </div>
+          <p class="why-card-text">
+            Right now, 45+ clients are actively running campaigns with us – proof that our results retain clients long-term.
+          </p>
+        </div>
+
+        <!-- 3. Leads That Actually Convert -->
+        <div class="why-card-item">
+          <div class="why-card-heading">
+            <span class="why-card-icon">📞</span>
+            <h3 class="why-card-title">Leads That Actually Convert</h3>
+          </div>
+          <p class="why-card-text">
+            We don't send random traffic. We bring people who are actively searching for taxi &amp; tour services.
+          </p>
+        </div>
+
+        <!-- 4. Data-Driven Optimization -->
+        <div class="why-card-item">
+          <div class="why-card-heading">
+            <span class="why-card-icon">📊</span>
+            <h3 class="why-card-title">Data-Driven Optimization</h3>
+          </div>
+          <p class="why-card-text">
+            We monitor, optimize, and improve your ads regularly to reduce cost per lead and improve ROI.
+          </p>
+        </div>
+
+        <!-- 5. Travel Industry Expertise -->
+        <div class="why-card-item">
+          <div class="why-card-heading">
+            <span class="why-card-icon">🧠</span>
+            <h3 class="why-card-title">Travel Industry Expertise</h3>
+          </div>
+          <p class="why-card-text">
+            We understand the travel industry inside out:
+          </p>
+          <ul class="why-card-list">
+            <li>— Customer search behavior</li>
+            <li>— Peak seasons &amp; demand trends</li>
+            <li>— Booking psychology</li>
+            <li>— High-converting ad copies</li>
+          </ul>
+        </div>
+
+        <!-- 6. One-to-One Strategy Meeting -->
+        <div class="why-card-item">
+          <div class="why-card-heading">
+            <span class="why-card-icon">👥</span>
+            <h3 class="why-card-title">One-to-One Strategy Meeting</h3>
+          </div>
+          <p class="why-card-text">
+            Every client gets a personal one-to-one meeting to understand their business and build a customized ad strategy. No templates. No copy-paste campaigns.
+          </p>
+        </div>
+      </div>
+
+      <div style="text-align: center; margin-top: 40px;">
+        <a class="cta-primary pulse-btn-large" href="https://pay.marketingsafalta.com/checkout/product/4ef42814-1c13-4bdd-9cb8-29e0b2117ba5?template=2">
+          <span>Book A Meeting At ₹49</span>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
   <!-- CLIENT REVIEWS & VERIFIED PROOFS -->
   <section class="section proof" id="reviews">
     <div class="container">
@@ -748,9 +953,20 @@
         </p>
       </div>
 
-      <!-- WhatsApp Review Screenshots -->
-      <div class="reviews-proof-grid">
-        <button class="review-tile" onclick="openLightbox(0)" aria-label="Open Client WhatsApp Review 1">
+      <!-- 4 WhatsApp Review Screenshots including Varun Travels -->
+      <div class="reviews-proof-grid-4">
+        <!-- New Varun Travels Review -->
+        <button class="review-tile" onclick="openLightbox(0)" aria-label="Open Varun Travels WhatsApp Review">
+          <div class="review-img-wrap">
+            <img src="/assets/varun-travels-whatsapp-review.png" alt="Varun Travels WhatsApp Review">
+          </div>
+          <span class="review-badge">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+            Varun Travels · 14 Calls
+          </span>
+        </button>
+
+        <button class="review-tile" onclick="openLightbox(1)" aria-label="Open Client WhatsApp Review 1">
           <div class="review-img-wrap">
             <img src="/assets/42fb2c05-2d10-4bf0-92bf-6ba215ba566b.jpg" alt="Client WhatsApp Review 1">
           </div>
@@ -760,7 +976,7 @@
           </span>
         </button>
 
-        <button class="review-tile" onclick="openLightbox(1)" aria-label="Open Client WhatsApp Review 2">
+        <button class="review-tile" onclick="openLightbox(2)" aria-label="Open Client WhatsApp Review 2">
           <div class="review-img-wrap">
             <img src="/assets/515180f9-8af0-4640-af5a-e7e92f39c58f.jpg" alt="Client WhatsApp Review 2">
           </div>
@@ -770,7 +986,7 @@
           </span>
         </button>
 
-        <button class="review-tile" onclick="openLightbox(2)" aria-label="Open Client WhatsApp Review 3">
+        <button class="review-tile" onclick="openLightbox(3)" aria-label="Open Client WhatsApp Review 3">
           <div class="review-img-wrap">
             <img src="/assets/c852383c-1210-4bd6-b005-63df7e7e7962.jpg" alt="Client WhatsApp Review 3">
           </div>
@@ -787,27 +1003,27 @@
         <small>Tap any image to zoom &amp; inspect</small>
       </div>
       <div class="proof-grid">
-        <button class="proof-tile" onclick="openLightbox(3)">
+        <button class="proof-tile" onclick="openLightbox(4)">
           <img src="/assets/aaaa.jpeg" alt="Campaign result 01">
           <span>Campaign result <b>01</b></span>
         </button>
-        <button class="proof-tile" onclick="openLightbox(4)">
+        <button class="proof-tile" onclick="openLightbox(5)">
           <img src="/assets/aaaaa.jpeg" alt="Campaign result 02">
           <span>Campaign result <b>02</b></span>
         </button>
-        <button class="proof-tile" onclick="openLightbox(5)">
+        <button class="proof-tile" onclick="openLightbox(6)">
           <img src="/assets/aaa.jpeg" alt="Campaign result 03">
           <span>Campaign result <b>03</b></span>
         </button>
-        <button class="proof-tile" onclick="openLightbox(6)">
+        <button class="proof-tile" onclick="openLightbox(7)">
           <img src="/assets/a.jpeg" alt="Campaign result 04">
           <span>Campaign result <b>04</b></span>
         </button>
-        <button class="proof-tile" onclick="openLightbox(7)">
+        <button class="proof-tile" onclick="openLightbox(8)">
           <img src="/assets/WhatsApp-Image-2026-04-11-at-10.48.35-AM.jpeg" alt="Campaign result 05">
           <span>Campaign result <b>05</b></span>
         </button>
-        <button class="proof-tile" onclick="openLightbox(8)">
+        <button class="proof-tile" onclick="openLightbox(9)">
           <img src="/assets/WhatsApp-Image-2026-04-11-at-10.54.05-AM.jpeg" alt="Campaign result 06">
           <span>Campaign result <b>06</b></span>
         </button>
@@ -919,7 +1135,7 @@
   <!-- LIGHTBOX MODAL -->
   <div class="lightbox" id="lightbox" style="display:none;" onclick="handleLightboxClick(event)">
     <div class="lightbox-toolbar">
-      <span id="lightbox-counter">Result 01 / 09</span>
+      <span id="lightbox-counter">Result 01 / 10</span>
       <button onclick="closeLightbox()" aria-label="Close viewer">
         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6 6 18M6 6l12 12"/></svg>
       </button>
@@ -991,8 +1207,9 @@
       }
     }, { passive: true });
 
-    // Lightbox Gallery
+    // Lightbox Gallery with Varun Travels + 3 reviews + proofs
     const galleryImages = [
+      '/assets/varun-travels-whatsapp-review.png',
       '/assets/42fb2c05-2d10-4bf0-92bf-6ba215ba566b.jpg',
       '/assets/515180f9-8af0-4640-af5a-e7e92f39c58f.jpg',
       '/assets/c852383c-1210-4bd6-b005-63df7e7e7962.jpg',
@@ -1062,7 +1279,16 @@
       }
     }
 
-    // Direct Checkout Redirection for all CTA buttons
+    window.addEventListener('keydown', (e) => {
+      const lb = document.getElementById('lightbox');
+      if (lb.style.display !== 'none') {
+        if (e.key === 'Escape') closeLightbox();
+        if (e.key === 'ArrowLeft') prevImage();
+        if (e.key === 'ArrowRight') nextImage();
+      }
+    });
+
+    // Direct Checkout Redirection on Tap / Click for all Book A Meeting At ₹49 buttons
     const CHECKOUT_URL = 'https://pay.marketingsafalta.com/checkout/product/4ef42814-1c13-4bdd-9cb8-29e0b2117ba5?template=2';
     document.addEventListener('click', (e) => {
       const cta = e.target.closest('.cta-primary, .strategy-green-btn, .pulse-btn-large, .sticky-btn, a[href*="checkout"]');
