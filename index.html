@@ -6,6 +6,25 @@
   <title>Marketing Safalta | Google Ads for Taxi &amp; Tour Businesses</title>
   <meta name="description" content="Get 100+ Taxi, Cab &amp; Tour Package bookings in 30 days with high-ROI Google Ads campaigns.">
   <link rel="icon" type="image/png" href="/assets/logo.png">
+
+  <!-- Meta Pixel Code -->
+  <script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '499707126418434');
+  fbq('track', 'PageView');
+  </script>
+  <noscript><img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=499707126418434&ev=PageView&noscript=1"
+  /></noscript>
+  <!-- End Meta Pixel Code -->
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400..1000;1,9..40,400..1000&family=Space+Grotesk:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
@@ -648,24 +667,24 @@
     </div>
   </section>
 
-  <!-- ANIMATED STATS (Orange Gradient Banner) -->
+  <!-- ANIMATED STATS -->
   <section class="stats" id="results">
     <div class="container stats-grid">
-      <div class="stat-item">
-        <strong class="stat-number" data-target="300" data-suffix="+">0<span>+</span></strong>
-        <small class="stat-label">Clients Served</small>
+      <div>
+        <strong>300<span>+</span></strong>
+        <small>Clients Served</small>
       </div>
-      <div class="stat-item">
-        <strong class="stat-number" data-target="45" data-suffix="+">0<span>+</span></strong>
-        <small class="stat-label">Active Clients</small>
+      <div>
+        <strong>45<span>+</span></strong>
+        <small>Active Clients</small>
       </div>
-      <div class="stat-item">
-        <strong class="stat-number" data-target="5000" data-suffix="+">0<span>+</span></strong>
-        <small class="stat-label">Leads Generated</small>
+      <div>
+        <strong>5<span>K+</span></strong>
+        <small>Leads Generated</small>
       </div>
-      <div class="stat-item">
-        <strong class="stat-number" data-target="95" data-suffix="%">0<span>%</span></strong>
-        <small class="stat-label">Travel Industry Focus</small>
+      <div>
+        <strong>95<span>%</span></strong>
+        <small>Travel Industry Focus</small>
       </div>
     </div>
   </section>
@@ -1325,69 +1344,6 @@
         window.location.href = CHECKOUT_URL;
       }
     });
-
-    // Counting Animation for Stats Numbers
-    function initStatsCounter() {
-      const statsSection = document.getElementById('results');
-      if (!statsSection) return;
-
-      let animated = false;
-
-      const runCounter = () => {
-        if (animated) return;
-        animated = true;
-
-        const counters = statsSection.querySelectorAll('.stat-number');
-        const duration = 1800; // ms
-        const startTime = performance.now();
-
-        function updateCounters(currentTime) {
-          const elapsed = currentTime - startTime;
-          const progress = Math.min(elapsed / duration, 1);
-          // Ease-out expo curve for smooth count deceleration
-          const ease = progress === 1 ? 1 : 1 - Math.pow(2, -10 * progress);
-
-          counters.forEach(counter => {
-            const target = parseInt(counter.getAttribute('data-target'), 10);
-            const suffix = counter.getAttribute('data-suffix') || '';
-            const currentVal = Math.round(target * ease);
-            counter.innerHTML = `${currentVal}<span>${suffix}</span>`;
-          });
-
-          if (progress < 1) {
-            requestAnimationFrame(updateCounters);
-          } else {
-            counters.forEach(counter => {
-              const target = counter.getAttribute('data-target');
-              const suffix = counter.getAttribute('data-suffix') || '';
-              counter.innerHTML = `${target}<span>${suffix}</span>`;
-            });
-          }
-        }
-
-        requestAnimationFrame(updateCounters);
-      };
-
-      if ('IntersectionObserver' in window) {
-        const observer = new IntersectionObserver((entries) => {
-          entries.forEach(entry => {
-            if (entry.isIntersecting) {
-              runCounter();
-              observer.disconnect();
-            }
-          });
-        }, { threshold: 0.2 });
-        observer.observe(statsSection);
-      } else {
-        runCounter();
-      }
-    }
-
-    if (document.readyState === 'loading') {
-      document.addEventListener('DOMContentLoaded', initStatsCounter);
-    } else {
-      initStatsCounter();
-    }
   </script>
 </body>
 </html>
