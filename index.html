@@ -5,29 +5,21 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Marketing Safalta | Google Ads for Taxi &amp; Tour Businesses</title>
   <meta name="description" content="Get 100+ Taxi, Cab &amp; Tour Package bookings in 30 days with high-ROI Google Ads campaigns.">
-  <link rel="icon" type="image/png" href="/assets/logo.png">
+  <link rel="icon" type="image/webp" href="/assets/logo.webp">
 
-  <!-- Meta Pixel Code -->
-  <script>
-  !function(f,b,e,v,n,t,s)
-  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-  n.queue=[];t=b.createElement(e);t.async=!0;
-  t.src=v;s=b.getElementsByTagName(e)[0];
-  s.parentNode.insertBefore(t,s)}(window, document,'script',
-  'https://connect.facebook.net/en_US/fbevents.js');
-  fbq('init', '499707126418434');
-  fbq('track', 'PageView');
-  </script>
-  <noscript><img height="1" width="1" style="display:none"
-  src="https://www.facebook.com/tr?id=499707126418434&ev=PageView&noscript=1"
-  /></noscript>
-  <!-- End Meta Pixel Code -->
-
+  <!-- Preconnect to critical origins -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400..1000;1,9..40,400..1000&family=Space+Grotesk:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="dns-prefetch" href="https://connect.facebook.net">
+
+  <!-- Preload critical assets -->
+  <link rel="preload" href="/assets/style.css" as="style">
+  <link rel="preload" href="/assets/logo.webp" as="image" type="image/webp">
+
+  <!-- Fonts with display=swap for better FCP -->
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400..1000;1,9..40,400..1000&family=Space+Grotesk:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+  <noscript><link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400..1000;1,9..40,400..1000&family=Space+Grotesk:wght@400;500;600;700;800;900&display=swap" rel="stylesheet"></noscript>
+
   <link rel="stylesheet" href="/assets/style.css">
   <style>
     /* Custom enhancements for the Dark & Violet theme */
@@ -528,6 +520,8 @@
   </style>
 </head>
 <body class="site-shell">
+  <!-- Meta Pixel noscript fallback -->
+  <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=499707126418434&ev=PageView&noscript=1" alt=""/></noscript>
 
   <!-- Topline Bar -->
   <div class="topline">
@@ -549,7 +543,7 @@
       </button>
 
       <a class="brand" href="#top">
-        <img src="/assets/logo.png" alt="Marketing Safalta">
+        <img src="/assets/logo.webp" alt="Marketing Safalta" width="46" height="46" fetchpriority="high">
         <span>
           <b>Marketing Safalta</b>
           <em>Travel Growth</em>
@@ -586,7 +580,7 @@
 
       <!-- Green Pill Badge (Strictly 2 Lines) -->
       <div class="badge-green-pill">
-        <span class="badge-line line-1"><img draggable="false" role="img" class="badge-emoji-img" alt="🚀" src="/assets/rocket.svg">GROW YOUR TAXI &amp; TOUR BUSINESS</span>
+        <span class="badge-line line-1"><img draggable="false" role="img" class="badge-emoji-img" alt="🚀" src="/assets/rocket.svg" width="26" height="26">GROW YOUR TAXI &amp; TOUR BUSINESS</span>
         <span class="badge-line line-2">WITH PROFITABLE GOOGLE ADS</span>
       </div>
 
@@ -618,7 +612,7 @@
 
       <!-- Hero Video Player Box with Blue Border & Play Button -->
       <div class="hero-video-box">
-        <video id="hero-main-video" controls preload="metadata" poster="/assets/76yuhj.jpg" playsinline aria-label="Google Ads results for taxi businesses">
+        <video id="hero-main-video" controls preload="none" poster="/assets/76yuhj.webp" playsinline aria-label="Google Ads results for taxi businesses" width="600" height="338">
           <source src="/assets/taxi-google-ads-results.mp4" type="video/mp4">
           Your browser does not support HTML video.
         </video>
@@ -786,7 +780,7 @@
           <div class="founder-showcase">
             <div class="founder-image-wrapper">
               <div class="founder-glow"></div>
-              <img class="founder-img" src="/assets/taxi-google-ads-hero.png" alt="Raj Thakur, CEO Marketing Safalta">
+              <img class="founder-img" src="/assets/taxi-google-ads-hero.webp" alt="Raj Thakur, CEO Marketing Safalta" width="440" height="480" loading="lazy" decoding="async">
 
               <!-- Floating Founder Badge -->
               <div class="founder-badge">
@@ -980,7 +974,7 @@
         <!-- New Varun Travels Review -->
         <button class="review-tile" onclick="openLightbox(0)" aria-label="Open Varun Travels WhatsApp Review">
           <div class="review-img-wrap">
-            <img src="/assets/varun-travels-whatsapp-review.png" alt="Varun Travels WhatsApp Review">
+            <img src="/assets/varun-travels-whatsapp-review.webp" alt="Varun Travels WhatsApp Review" width="400" height="500" loading="lazy" decoding="async">
           </div>
           <span class="review-badge">
             <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
@@ -990,7 +984,7 @@
 
         <button class="review-tile" onclick="openLightbox(1)" aria-label="Open Client WhatsApp Review 1">
           <div class="review-img-wrap">
-            <img src="/assets/42fb2c05-2d10-4bf0-92bf-6ba215ba566b.jpg" alt="Client WhatsApp Review 1">
+            <img src="/assets/42fb2c05-2d10-4bf0-92bf-6ba215ba566b.webp" alt="Client WhatsApp Review 1" width="400" height="500" loading="lazy" decoding="async">
           </div>
           <span class="review-badge">
             <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
@@ -1000,7 +994,7 @@
 
         <button class="review-tile" onclick="openLightbox(2)" aria-label="Open Client WhatsApp Review 2">
           <div class="review-img-wrap">
-            <img src="/assets/515180f9-8af0-4640-af5a-e7e92f39c58f.jpg" alt="Client WhatsApp Review 2">
+            <img src="/assets/515180f9-8af0-4640-af5a-e7e92f39c58f.webp" alt="Client WhatsApp Review 2" width="400" height="500" loading="lazy" decoding="async">
           </div>
           <span class="review-badge">
             <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
@@ -1010,7 +1004,7 @@
 
         <button class="review-tile" onclick="openLightbox(3)" aria-label="Open Client WhatsApp Review 3">
           <div class="review-img-wrap">
-            <img src="/assets/c852383c-1210-4bd6-b005-63df7e7e7962.jpg" alt="Client WhatsApp Review 3">
+            <img src="/assets/c852383c-1210-4bd6-b005-63df7e7e7962.webp" alt="Client WhatsApp Review 3" width="400" height="500" loading="lazy" decoding="async">
           </div>
           <span class="review-badge">
             <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
@@ -1026,27 +1020,27 @@
       </div>
       <div class="proof-grid">
         <button class="proof-tile" onclick="openLightbox(4)">
-          <img src="/assets/aaaa.jpeg" alt="Campaign result 01">
+          <img src="/assets/aaaa.webp" alt="Campaign result 01" width="800" height="470" loading="lazy" decoding="async">
           <span>Campaign result <b>01</b></span>
         </button>
         <button class="proof-tile" onclick="openLightbox(5)">
-          <img src="/assets/aaaaa.jpeg" alt="Campaign result 02">
+          <img src="/assets/aaaaa.webp" alt="Campaign result 02" width="800" height="470" loading="lazy" decoding="async">
           <span>Campaign result <b>02</b></span>
         </button>
         <button class="proof-tile" onclick="openLightbox(6)">
-          <img src="/assets/aaa.jpeg" alt="Campaign result 03">
+          <img src="/assets/aaa.webp" alt="Campaign result 03" width="800" height="470" loading="lazy" decoding="async">
           <span>Campaign result <b>03</b></span>
         </button>
         <button class="proof-tile" onclick="openLightbox(7)">
-          <img src="/assets/a.jpeg" alt="Campaign result 04">
+          <img src="/assets/a.webp" alt="Campaign result 04" width="800" height="470" loading="lazy" decoding="async">
           <span>Campaign result <b>04</b></span>
         </button>
         <button class="proof-tile" onclick="openLightbox(8)">
-          <img src="/assets/WhatsApp-Image-2026-04-11-at-10.48.35-AM.jpeg" alt="Campaign result 05">
+          <img src="/assets/WhatsApp-Image-2026-04-11-at-10.48.35-AM.webp" alt="Campaign result 05" width="800" height="470" loading="lazy" decoding="async">
           <span>Campaign result <b>05</b></span>
         </button>
         <button class="proof-tile" onclick="openLightbox(9)">
-          <img src="/assets/WhatsApp-Image-2026-04-11-at-10.54.05-AM.jpeg" alt="Campaign result 06">
+          <img src="/assets/WhatsApp-Image-2026-04-11-at-10.54.05-AM.webp" alt="Campaign result 06" width="800" height="470" loading="lazy" decoding="async">
           <span>Campaign result <b>06</b></span>
         </button>
       </div>
@@ -1119,7 +1113,7 @@
   <footer>
     <div class="container footer-grid">
       <div class="brand footer-brand">
-        <img src="/assets/logo.png" alt="Marketing Safalta">
+        <img src="/assets/logo.webp" alt="Marketing Safalta" width="45" height="45" loading="lazy" decoding="async">
         <span>
           <b>Marketing Safalta</b>
           <em>Travel Growth</em>
@@ -1228,16 +1222,16 @@
 
     // Lightbox Gallery with Varun Travels + 3 reviews + proofs
     const galleryImages = [
-      '/assets/varun-travels-whatsapp-review.png',
-      '/assets/42fb2c05-2d10-4bf0-92bf-6ba215ba566b.jpg',
-      '/assets/515180f9-8af0-4640-af5a-e7e92f39c58f.jpg',
-      '/assets/c852383c-1210-4bd6-b005-63df7e7e7962.jpg',
-      '/assets/aaaa.jpeg',
-      '/assets/aaaaa.jpeg',
-      '/assets/aaa.jpeg',
-      '/assets/a.jpeg',
-      '/assets/WhatsApp-Image-2026-04-11-at-10.48.35-AM.jpeg',
-      '/assets/WhatsApp-Image-2026-04-11-at-10.54.05-AM.jpeg'
+      '/assets/varun-travels-whatsapp-review.webp',
+      '/assets/42fb2c05-2d10-4bf0-92bf-6ba215ba566b.webp',
+      '/assets/515180f9-8af0-4640-af5a-e7e92f39c58f.webp',
+      '/assets/c852383c-1210-4bd6-b005-63df7e7e7962.webp',
+      '/assets/aaaa.webp',
+      '/assets/aaaaa.webp',
+      '/assets/aaa.webp',
+      '/assets/a.webp',
+      '/assets/WhatsApp-Image-2026-04-11-at-10.48.35-AM.webp',
+      '/assets/WhatsApp-Image-2026-04-11-at-10.54.05-AM.webp'
     ];
 
     let currentIdx = 0;
@@ -1336,6 +1330,20 @@
         e.preventDefault();
         window.location.href = CHECKOUT_URL;
       }
+    });
+
+    // Deferred Meta Pixel — loads after page is fully rendered
+    window.addEventListener('load', function() {
+      !function(f,b,e,v,n,t,s)
+      {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+      n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+      if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+      n.queue=[];t=b.createElement(e);t.async=!0;
+      t.src=v;s=b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t,s)}(window, document,'script',
+      'https://connect.facebook.net/en_US/fbevents.js');
+      fbq('init', '499707126418434');
+      fbq('track', 'PageView');
     });
   </script>
 </body>
