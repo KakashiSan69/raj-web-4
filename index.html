@@ -648,24 +648,24 @@
     </div>
   </section>
 
-  <!-- ANIMATED STATS -->
+  <!-- ANIMATED STATS (Orange Gradient Banner) -->
   <section class="stats" id="results">
     <div class="container stats-grid">
-      <div>
-        <strong>300<span>+</span></strong>
-        <small>Clients Served</small>
+      <div class="stat-item">
+        <strong class="stat-number" data-target="300" data-suffix="+">0<span>+</span></strong>
+        <small class="stat-label">Clients Served</small>
       </div>
-      <div>
-        <strong>45<span>+</span></strong>
-        <small>Active Clients</small>
+      <div class="stat-item">
+        <strong class="stat-number" data-target="45" data-suffix="+">0<span>+</span></strong>
+        <small class="stat-label">Active Clients</small>
       </div>
-      <div>
-        <strong>5<span>K+</span></strong>
-        <small>Leads Generated</small>
+      <div class="stat-item">
+        <strong class="stat-number" data-target="5000" data-suffix="+">0<span>+</span></strong>
+        <small class="stat-label">Leads Generated</small>
       </div>
-      <div>
-        <strong>95<span>%</span></strong>
-        <small>Travel Industry Focus</small>
+      <div class="stat-item">
+        <strong class="stat-number" data-target="95" data-suffix="%">0<span>%</span></strong>
+        <small class="stat-label">Travel Industry Focus</small>
       </div>
     </div>
   </section>
@@ -1325,6 +1325,69 @@
         window.location.href = CHECKOUT_URL;
       }
     });
+
+    // Counting Animation for Stats Numbers
+    function initStatsCounter() {
+      const statsSection = document.getElementById('results');
+      if (!statsSection) return;
+
+      let animated = false;
+
+      const runCounter = () => {
+        if (animated) return;
+        animated = true;
+
+        const counters = statsSection.querySelectorAll('.stat-number');
+        const duration = 1800; // ms
+        const startTime = performance.now();
+
+        function updateCounters(currentTime) {
+          const elapsed = currentTime - startTime;
+          const progress = Math.min(elapsed / duration, 1);
+          // Ease-out expo curve for smooth count deceleration
+          const ease = progress === 1 ? 1 : 1 - Math.pow(2, -10 * progress);
+
+          counters.forEach(counter => {
+            const target = parseInt(counter.getAttribute('data-target'), 10);
+            const suffix = counter.getAttribute('data-suffix') || '';
+            const currentVal = Math.round(target * ease);
+            counter.innerHTML = `${currentVal}<span>${suffix}</span>`;
+          });
+
+          if (progress < 1) {
+            requestAnimationFrame(updateCounters);
+          } else {
+            counters.forEach(counter => {
+              const target = counter.getAttribute('data-target');
+              const suffix = counter.getAttribute('data-suffix') || '';
+              counter.innerHTML = `${target}<span>${suffix}</span>`;
+            });
+          }
+        }
+
+        requestAnimationFrame(updateCounters);
+      };
+
+      if ('IntersectionObserver' in window) {
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              runCounter();
+              observer.disconnect();
+            }
+          });
+        }, { threshold: 0.2 });
+        observer.observe(statsSection);
+      } else {
+        runCounter();
+      }
+    }
+
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', initStatsCounter);
+    } else {
+      initStatsCounter();
+    }
   </script>
 </body>
 </html>
