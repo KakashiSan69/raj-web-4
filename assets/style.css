@@ -297,7 +297,7 @@ footer{padding:37px 0 20px;border-top:1px solid #292435;background:#08070b}.foot
 /* Hero Pattern Section */
 .hero-pattern-section {
   position: relative;
-  padding: 36px 16px 60px;
+  padding: 32px 16px 22px;
   background-color: #060509;
   background-image: 
     radial-gradient(circle at 50% 15%, rgba(109, 63, 229, 0.16) 0%, transparent 65%),
@@ -569,7 +569,7 @@ footer{padding:37px 0 20px;border-top:1px solid #292435;background:#08070b}.foot
 
 /* Value Proposition & Daily Budget Section */
 .budget-section {
-  padding: 70px 0;
+  padding: 45px 0 65px;
   background: #09080e;
   border-bottom: 1px solid #1f1a2a;
 }
@@ -832,7 +832,7 @@ footer{padding:37px 0 20px;border-top:1px solid #292435;background:#08070b}.foot
 /* Responsive adjustments */
 @media (max-width: 800px) {
   .hero-pattern-section {
-    padding: 20px 10px 38px;
+    padding: 18px 10px 20px;
   }
   .hero-logo-wrap {
     margin-bottom: 14px;
