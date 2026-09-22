@@ -1,0 +1,6 @@
+# Ignore heavy old WordPress archive and backend scripts on Vercel
+old-website
+router.php
+.git
+.github
+*.zip
