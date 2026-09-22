@@ -1,22 +1,17 @@
-# Marketing Safalta
+# Marketing Safalta — Travel Marketing Website
 
-Healthcare Performance Marketing Website.
+Performance Google Ads & Marketing for Taxi, Cab & Tour Businesses across India.
 
-## Tech Stack
-- React 19 + TypeScript + Vite
-- Tailwind CSS
-- Express (Production Server)
+## Features
+- **Dark & Violet Theme**: Deep violet aesthetic with neon accents, glowing cards, and clean typography.
+- **Sun / Moon Theme Toggle**: One-click toggle between Dark Violet and Clean Light modes with localStorage persistence.
+- **Travel Specialists Section**: Features founder Raj Thakur and 4 core value pillars.
+- **Client Reviews & Proof Gallery**: Verified WhatsApp confirmations and campaign analytics with interactive full-screen lightbox zoom.
+- **Direct Checkout**: Fast booking flow for ₹49 strategy consultation meetings.
+- **Sticky Booking Bar**: Seamless booking prompt on scroll.
 
-## Getting Started
-
+## Running Locally
 ```bash
-npm install
-npm run dev
+php -S 0.0.0.0:8000 router.php
 ```
-
-## Production Build
-
-```bash
-npm run build
-npm start
-```
+Visit `http://localhost:8000` in your browser.

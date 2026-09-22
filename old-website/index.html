@@ -1,0 +1,1076 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Marketing Safalta | Google Ads for Taxi &amp; Tour Businesses</title>
+  <meta name="description" content="Get 100+ Taxi, Cab &amp; Tour Package bookings in 30 days with high-ROI Google Ads campaigns.">
+  <link rel="icon" type="image/png" href="/assets/logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400..700;1,9..40,400..700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/style.css">
+  <style>
+    /* Custom enhancements for the Dark & Violet theme */
+    :root {
+      --violet: #8b5cf6;
+      --violet-2: #6d28d9;
+      --bg: #090510;
+      --surface: #120a1d;
+      --surface-2: #1b102b;
+      --text: #f5f3ff;
+      --muted: #a79fc0;
+      --line: #2e1e47;
+    }
+
+    [data-theme="dark"] body {
+      background: #090510 !important;
+      color: #f5f3ff !important;
+    }
+
+    [data-theme="dark"] .site-shell {
+      background: #090510 !important;
+    }
+
+    [data-theme="dark"] .site-header {
+      background: rgba(9, 5, 16, 0.88);
+      border-bottom: 1px solid rgba(139, 92, 246, 0.2);
+    }
+
+    /* Logo Styling */
+    .brand img {
+      width: 46px;
+      height: 46px;
+      object-fit: contain;
+      border-radius: 8px;
+    }
+    .brand span b {
+      color: #ffffff;
+      font-weight: 700;
+    }
+    .brand span em {
+      color: #a78bfa;
+      letter-spacing: 0.18em;
+    }
+
+    /* Theme toggle button in header */
+    .header-theme-wrap {
+      display: flex;
+      align-items: center;
+      margin-left: 12px;
+    }
+    .theme-toggle-btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: rgba(139, 92, 246, 0.15);
+      border: 1px solid rgba(139, 92, 246, 0.35);
+      color: #c4b5fd;
+      transition: all 0.25s ease;
+      cursor: pointer;
+    }
+    .theme-toggle-btn:hover {
+      background: rgba(139, 92, 246, 0.3);
+      color: #ffffff;
+      transform: scale(1.06);
+      box-shadow: 0 0 16px rgba(139, 92, 246, 0.5);
+    }
+
+    /* CTA Buttons to ₹49 */
+    .cta-primary, .strategy-green-btn, .pulse-btn-large, .sticky-btn {
+      background: linear-gradient(135deg, #7c3aed 0%, #6366f1 100%) !important;
+      border: 1px solid rgba(196, 181, 253, 0.45) !important;
+      color: #ffffff !important;
+      box-shadow: 0 10px 25px rgba(124, 58, 237, 0.35) !important;
+      font-weight: 700 !important;
+      letter-spacing: 0.02em !important;
+      transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1) !important;
+      cursor: pointer !important;
+      text-decoration: none !important;
+      display: inline-flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      gap: 10px !important;
+      padding: 13px 26px !important;
+      border-radius: 8px !important;
+    }
+    .cta-primary:hover, .strategy-green-btn:hover, .pulse-btn-large:hover, .sticky-btn:hover {
+      transform: translateY(-2px) scale(1.02) !important;
+      box-shadow: 0 16px 36px rgba(139, 92, 246, 0.55) !important;
+      background: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%) !important;
+    }
+
+    /* Travel specialists Section (Matched to Screenshot) */
+    .travel-specialists-section {
+      padding: 100px 0;
+      background: radial-gradient(circle at 25% 40%, rgba(124, 58, 237, 0.16), transparent 50%), #090510;
+      border-block: 1px solid rgba(139, 92, 246, 0.15);
+    }
+    .specialists-grid {
+      display: grid;
+      grid-template-columns: 1.05fr 1.15fr;
+      gap: 60px;
+      align-items: center;
+    }
+    @media (max-width: 992px) {
+      .specialists-grid {
+        grid-template-columns: 1fr;
+        gap: 50px;
+      }
+    }
+    .specialists-left h2 {
+      font-size: clamp(38px, 4.5vw, 56px);
+      line-height: 1.05;
+      font-weight: 700;
+      margin: 0 0 20px;
+      color: #ffffff;
+      letter-spacing: -0.04em;
+    }
+    .specialists-left p {
+      font-size: 16px;
+      line-height: 1.7;
+      color: #cbd5e1;
+      max-width: 520px;
+      margin: 0 0 35px;
+    }
+    .founder-showcase {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      margin-bottom: 28px;
+    }
+    .founder-image-wrapper {
+      position: relative;
+      width: 100%;
+      max-width: 440px;
+      display: flex;
+      justify-content: center;
+    }
+    .founder-glow {
+      position: absolute;
+      inset: 10% 10%;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(139, 92, 246, 0.45) 0%, rgba(109, 40, 217, 0.1) 70%, transparent 85%);
+      filter: blur(40px);
+      z-index: 1;
+      pointer-events: none;
+    }
+    .founder-img {
+      position: relative;
+      z-index: 2;
+      width: 100%;
+      max-height: 480px;
+      object-fit: contain;
+      filter: drop-shadow(0 20px 35px rgba(0, 0, 0, 0.8));
+    }
+    .founder-badge {
+      position: absolute;
+      bottom: 24px;
+      left: 20px;
+      z-index: 3;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 12px 18px;
+      background: rgba(18, 10, 29, 0.94);
+      border: 1px solid rgba(167, 139, 250, 0.4);
+      border-radius: 12px;
+      box-shadow: 0 16px 36px rgba(0, 0, 0, 0.6), 0 0 20px rgba(139, 92, 246, 0.25);
+      backdrop-filter: blur(12px);
+    }
+    .founder-badge .badge-pulse {
+      width: 10px;
+      height: 10px;
+      background: #a855f7;
+      border-radius: 50%;
+      box-shadow: 0 0 0 4px rgba(168, 85, 247, 0.3);
+      animation: pulse 2s infinite;
+    }
+    .founder-badge-info small {
+      display: block;
+      font-size: 9px;
+      font-weight: 700;
+      color: #c084fc;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+    }
+    .founder-badge-info strong {
+      display: block;
+      font-size: 16px;
+      font-weight: 700;
+      color: #ffffff;
+      line-height: 1.2;
+    }
+    .founder-badge-info em {
+      display: block;
+      font-size: 11px;
+      color: #94a3b8;
+      font-style: normal;
+      margin-top: 2px;
+    }
+    .founder-badge .badge-sparkle {
+      color: #c084fc;
+      font-size: 18px;
+    }
+
+    /* Right side cards: 03, 04, 05, 06 */
+    .specialist-cards {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
+    @media (max-width: 640px) {
+      .specialist-cards {
+        grid-template-columns: 1fr;
+      }
+    }
+    .spec-card {
+      position: relative;
+      padding: 28px 24px;
+      border-radius: 14px;
+      background: linear-gradient(145deg, rgba(27, 16, 43, 0.85), rgba(18, 10, 29, 0.95));
+      border: 1px solid rgba(139, 92, 246, 0.22);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+      transition: all 0.3s ease;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+    .spec-card:hover {
+      transform: translateY(-4px);
+      border-color: rgba(168, 85, 247, 0.5);
+      box-shadow: 0 18px 45px rgba(124, 58, 237, 0.25);
+    }
+    .spec-card-top {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+    .spec-card-num {
+      font-size: 13px;
+      font-weight: 700;
+      color: #94a3b8;
+      letter-spacing: 0.05em;
+    }
+    .spec-card-icon {
+      width: 44px;
+      height: 44px;
+      border-radius: 10px;
+      background: rgba(124, 58, 237, 0.2);
+      border: 1px solid rgba(167, 139, 250, 0.35);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #c4b5fd;
+      flex-shrink: 0;
+    }
+    .spec-card h3 {
+      font-size: 18px;
+      font-weight: 700;
+      color: #ffffff;
+      margin: 0;
+      letter-spacing: -0.02em;
+    }
+    .spec-card p {
+      font-size: 13.5px;
+      line-height: 1.6;
+      color: #94a3b8;
+      margin: 0;
+    }
+
+    /* Sticky Bottom Bar */
+    .sticky-bar {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      z-index: 99;
+      background: rgba(12, 7, 20, 0.95);
+      border-top: 1px solid rgba(139, 92, 246, 0.3);
+      backdrop-filter: blur(14px);
+      padding: 14px 0;
+      transform: translateY(100%);
+      transition: transform 0.35s ease;
+      box-shadow: 0 -10px 30px rgba(0, 0, 0, 0.5);
+    }
+    .sticky-bar.visible {
+      transform: translateY(0);
+    }
+    .sticky-bar-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+    .sticky-bar-text span {
+      display: block;
+      font-size: 12px;
+      color: #a78bfa;
+      font-weight: 500;
+    }
+    .sticky-bar-text strong {
+      display: block;
+      font-size: 16px;
+      color: #ffffff;
+      font-weight: 700;
+    }
+
+    /* Light Theme Adjustments */
+    [data-theme="light"] {
+      --bg: #f8fafc;
+      --surface: #ffffff;
+      --surface-2: #f1f5f9;
+      --text: #0f172a;
+      --muted: #475569;
+      --line: #e2e8f0;
+    }
+    [data-theme="light"] .travel-specialists-section {
+      background: #f8fafc;
+      border-block: 1px solid #e2e8f0;
+    }
+    [data-theme="light"] .specialists-left h2 {
+      color: #0f172a;
+    }
+    [data-theme="light"] .specialists-left p {
+      color: #475569;
+    }
+    [data-theme="light"] .spec-card {
+      background: #ffffff;
+      border: 1px solid #e2e8f0;
+      box-shadow: 0 4px 18px rgba(0, 0, 0, 0.05);
+    }
+    [data-theme="light"] .spec-card:hover {
+      border-color: #cbd5e1;
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.09);
+    }
+    [data-theme="light"] .spec-card h3 {
+      color: #0f172a;
+    }
+    [data-theme="light"] .spec-card p {
+      color: #475569;
+    }
+    [data-theme="light"] .founder-badge {
+      background: rgba(255, 255, 255, 0.95);
+      border-color: #cbd5e1;
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+    }
+    [data-theme="light"] .founder-badge-info strong {
+      color: #0f172a;
+    }
+    [data-theme="light"] .sticky-bar {
+      background: rgba(255, 255, 255, 0.96);
+      border-top: 1px solid #e2e8f0;
+    }
+    [data-theme="light"] .sticky-bar-text strong {
+      color: #0f172a;
+    }
+    [data-theme="light"] .sticky-bar-text span {
+      color: #64748b;
+    }
+    [data-theme="light"] .theme-toggle-btn {
+      background: #f1f5f9;
+      border-color: #cbd5e1;
+      color: #6d28d9;
+    }
+
+    @keyframes pulse {
+      0% { box-shadow: 0 0 0 0 rgba(168, 85, 247, 0.6); }
+      70% { box-shadow: 0 0 0 10px rgba(168, 85, 247, 0); }
+      100% { box-shadow: 0 0 0 0 rgba(168, 85, 247, 0); }
+    }
+  </style>
+</head>
+<body class="site-shell">
+
+  <!-- Topline Bar -->
+  <div class="topline">
+    <div class="container topline-inner">
+      <span>
+        <i></i> Google Ads for Taxi &amp; Tour Businesses
+      </span>
+      <span style="font-size: 12px; color: var(--muted)">
+        Real Results, Not Promises
+      </span>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <button class="mobile-menu" aria-label="Toggle menu" onclick="toggleMenu()">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+      </button>
+
+      <a class="brand" href="#top">
+        <img src="/assets/logo.png" alt="Marketing Safalta">
+        <span>
+          <b>Marketing Safalta</b>
+          <em>Travel Growth</em>
+        </span>
+      </a>
+
+      <nav id="main-nav">
+        <button onclick="scrollToId('services')">Services</button>
+        <button onclick="scrollToId('specialists')">Why Us</button>
+        <button onclick="scrollToId('results')">Proof</button>
+        <button onclick="scrollToId('reviews')">Reviews</button>
+        <button onclick="scrollToId('consultation')">Consultation</button>
+        <a class="cta-primary header-cta" href="https://pay.marketingsafalta.com/checkout/product/4ef42814-1c13-4bdd-9cb8-29e0b2117ba5?template=2">
+          <span>Book A Meeting At ₹49</span>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+      </nav>
+
+      <!-- Sun/Moon Theme Toggle -->
+      <div class="header-theme-wrap">
+        <button class="theme-toggle-btn" id="theme-btn" onclick="toggleTheme()" aria-label="Toggle theme" title="Toggle dark / light theme">
+          <!-- Sun Icon (shown in dark mode) -->
+          <svg id="theme-icon-sun" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+          <!-- Moon Icon (shown in light mode) -->
+          <svg id="theme-icon-moon" style="display:none" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section class="hero-pattern-section" id="top">
+    <div class="container hero-pattern-container">
+
+      <!-- Green Pill Badge -->
+      <div class="badge-green-pill">
+        <span class="badge-emoji">🚀</span>
+        <span>GROW YOUR TAXI &amp; TOUR BUSINESS WITH PROFITABLE GOOGLE ADS</span>
+      </div>
+
+      <!-- Red Pill Badge -->
+      <div class="badge-red-pill">
+        GET 100+ TAXI/ CAB &amp; TOUR PACKAGE BOOKINGS IN JUST 30 DAYS!
+      </div>
+
+      <!-- 4 Feature Points with Yellow Arrows -->
+      <div class="hero-arrow-points">
+        <div class="arrow-point">
+          <span class="yellow-arrow">➔</span>
+          <span>Get More Calls</span>
+        </div>
+        <div class="arrow-point">
+          <span class="yellow-arrow">➔</span>
+          <span>More WhatsApp Enquiries</span>
+        </div>
+        <div class="arrow-point">
+          <span class="yellow-arrow">➔</span>
+          <span>More Bookings</span>
+        </div>
+        <div class="arrow-point">
+          <span class="yellow-arrow">➔</span>
+          <span>Better ROI</span>
+        </div>
+      </div>
+
+      <!-- Hero Video Player Box -->
+      <div class="hero-video-box">
+        <video controls preload="metadata" poster="/assets/76yuhj.jpg" playsinline aria-label="Google Ads results for taxi businesses">
+          <source src="/assets/taxi-google-ads-results.mp4" type="video/mp4">
+          Your browser does not support HTML video.
+        </video>
+        <div class="video-caption">
+          <span>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+            Watch the case study
+          </span>
+          <small>Real data · Real leads · Real profit</small>
+        </div>
+      </div>
+
+      <!-- Pulsing CTA Button below video -->
+      <div class="hero-cta-center" style="margin-top: 32px; text-align: center;">
+        <a class="cta-primary pulse-btn-large" href="https://pay.marketingsafalta.com/checkout/product/4ef42814-1c13-4bdd-9cb8-29e0b2117ba5?template=2">
+          <span>Book A Meeting At ₹49</span>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- BUDGET & VALUE PROPOSITION SECTION -->
+  <section class="section budget-section">
+    <div class="container budget-container">
+      <div class="budget-intro-card">
+        <p class="budget-lead-text">
+          If you run a <b>Taxi, Cab, Tour Package, Travel Agency, or Local Travel Business</b>, and you want genuine leads, daily inquiries, and consistent bookings, you are in the right place.
+        </p>
+        <div class="budget-highlight-box">
+          <div class="budget-tag">PROVEN PROFIT FORMULA</div>
+          <h3>
+            Run Smart Google Ads with Just <span>₹500/Day</span>: Real Results, Not Promises.
+          </h3>
+          <div class="budget-points">
+            <div class="b-point">
+              <span class="b-icon">📞</span>
+              <span>More Calls, More Leads &amp; Confirmed Customers Every Month.</span>
+            </div>
+            <div class="b-point">
+              <span class="b-icon">✅</span>
+              <span>Performance-Driven Campaigns with Proven Strategy.</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 3 Outcome Pills -->
+        <div class="outcome-pills-row">
+          <div class="outcome-pill">More Visibility</div>
+          <div class="outcome-pill">More Calls</div>
+          <div class="outcome-pill">More Bookings</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ANIMATED STATS -->
+  <section class="stats" id="results">
+    <div class="container stats-grid">
+      <div>
+        <strong>300<span>+</span></strong>
+        <small>Clients Served</small>
+      </div>
+      <div>
+        <strong>45<span>+</span></strong>
+        <small>Active Clients</small>
+      </div>
+      <div>
+        <strong>5<span>K+</span></strong>
+        <small>Leads Generated</small>
+      </div>
+      <div>
+        <strong>95<span>%</span></strong>
+        <small>Travel Industry Focus</small>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES / SPECIALIZED STRATEGY -->
+  <section class="strategy-clean-section" id="services">
+    <div class="container">
+      <div class="strategy-clean-header">
+        <span class="strategy-clean-subtitle">What We Do</span>
+        <h2 class="strategy-clean-title">Our Specialized Strategy</h2>
+        <p class="strategy-clean-desc">
+          We create and manage high-converting Google Ads campaigns specially designed for travel businesses
+        </p>
+      </div>
+
+      <div class="strategy-cards-row">
+        <!-- Card 1 -->
+        <div class="strategy-clean-card">
+          <div class="strategy-card-icon">
+            <svg viewBox="0 0 512 512" fill="currentColor" width="28" height="28">
+              <path d="M462 241.64l-22-84.84c-9.6-35.2-41.6-60.8-76.8-60.8H352V64c0-17.67-14.33-32-32-32H192c-17.67 0-32 14.33-32 32v32h-11.2c-35.2 0-67.2 25.6-76.8 60.8l-22 84.84C21.41 248.04 0 273.47 0 304v48c0 23.63 12.95 44.04 32 55.12V448c0 17.67 14.33 32 32 32h32c17.67 0 32-14.33 32-32v-32h256v32c0 17.67 14.33 32 32 32h32c17.67 0 32-14.33 32-32v-40.88c19.05-11.09 32-31.5 32-55.12v-48c0-30.53-21.41-55.96-50-62.36zM96 352c-17.67 0-32-14.33-32-32s14.33-32 32-32 32 14.33 32 32-14.33 32-32 32zm20.55-112l17.2-66.36c2.23-8.16 9.59-13.64 15.06-13.64h214.4c5.47 0 12.83 5.48 14.85 12.86L395.45 240h-278.9zM416 352c-17.67 0-32-14.33-32-32s14.33-32 32-32 32 14.33 32 32-14.33 32-32 32z"/>
+            </svg>
+          </div>
+          <h3 class="strategy-card-title">Taxi Services</h3>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="strategy-clean-card">
+          <div class="strategy-card-icon">
+            <svg viewBox="0 0 512 512" fill="currentColor" width="28" height="28">
+              <path d="M416 320h-96c-17.6 0-32-14.4-32-32s14.4-32 32-32h96s96-107 96-160-43-96-96-96-96 43-96 96c0 25.5 22.2 63.4 45.3 96H320c-52.9 0-96 43.1-96 96s43.1 96 96 96h96c17.6 0 32 14.4 32 32s-14.4 32-32 32H185.5c-16 24.8-33.8 47.7-47.3 64H416c52.9 0 96-43.1 96-96s-43.1-96-96-96zm0-256c17.7 0 32 14.3 32 32s-14.3 32-32 32-32-14.3-32-32 14.3-32 32-32zM96 256c-53 0-96 43-96 96s96 160 96 160 96-107 96-160-43-96-96-96zm0 128c-17.7 0-32-14.3-32-32s14.3-32 32-32 32 14.3 32 32-14.3 32-32 32z"/>
+            </svg>
+          </div>
+          <h3 class="strategy-card-title">Outstation Cabs</h3>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="strategy-clean-card">
+          <div class="strategy-card-icon">
+            <svg viewBox="0 0 640 512" fill="currentColor" width="28" height="28">
+              <path d="M624 448H16c-8.84 0-16 7.16-16 16v32c0 8.84 7.16 16 16 16h608c8.84 0 16-7.16 16-16v-32c0-8.84-7.16-16-16-16zM80.55 341.27c6.28 6.84 15.1 10.72 24.33 10.71l130.54-.18a65.62 65.62 0 0 0 29.64-7.12l290.96-147.65c26.74-13.57 50.71-32.94 67.02-58.31 18.31-28.48 20.3-49.09 13.07-63.65-7.21-14.57-24.74-25.27-58.25-27.45-29.85-1.94-59.54 5.92-86.28 19.48l-98.51 49.99-218.7-82.06a17.799 17.799 0 0 0-18-1.11L90.62 67.29c-10.67 5.41-13.25 19.65-5.17 28.53l156.22 98.1-103.21 52.38-72.35-36.47a17.804 17.804 0 0 0-16.07.02L9.91 230.22c-10.44 5.3-13.19 19.12-5.57 28.08l76.21 82.97z"/>
+            </svg>
+          </div>
+          <h3 class="strategy-card-title">Airport Taxi</h3>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="strategy-clean-card">
+          <div class="strategy-card-icon">
+            <svg viewBox="0 0 512 512" fill="currentColor" width="28" height="28">
+              <path d="M502.63 214.63l-45.25-45.25c-6-6-14.14-9.37-22.63-9.37H384V80c0-26.51-21.49-48-48-48H176c-26.51 0-48 21.49-48 48v80H77.25c-8.49 0-16.62 3.37-22.63 9.37L9.37 214.63c-6 6-9.37 14.14-9.37 22.63V320h128v-16c0-8.84 7.16-16 16-16h32c8.84 0 16 7.16 16 16v16h128v-16c0-8.84 7.16-16 16-16h32c8.84 0 16 7.16 16 16v16h128v-82.75c0-8.48-3.37-16.62-9.37-22.62zM320 160H192V96h128v64zm64 208c0 8.84-7.16 16-16 16h-32c-8.84 0-16-7.16-16-16v-16H192v16c0 8.84-7.16 16-16 16h-32c-8.84 0-16-7.16-16-16v-16H0v96c0 17.67 14.33 32 32 32h448c17.67 0 32-14.33 32-32v-96H384v16z"/>
+            </svg>
+          </div>
+          <h3 class="strategy-card-title">Tour Packages</h3>
+        </div>
+
+        <!-- Card 5 -->
+        <div class="strategy-clean-card">
+          <div class="strategy-card-icon">
+            <svg viewBox="0 0 640 512" fill="currentColor" width="28" height="28">
+              <path d="M290.547 189.039c-20.295-10.149-44.147-11.199-64.739-3.89 42.606 0 71.208 20.475 85.578 50.576 8.576 17.899-5.148 38.071-23.617 38.071 18.429 0 32.211 20.136 23.617 38.071-14.725 30.846-46.123 50.854-80.298 50.854-.557 0-94.471-8.615-94.471-8.615l-66.406 33.347c-9.384 4.693-19.815.379-23.895-7.781L1.86 290.747c-4.167-8.615-1.111-18.897 6.946-23.621l58.072-33.069L108 159.861c6.39-57.245 34.731-109.767 79.743-146.726 11.391-9.448 28.341-7.781 37.51 3.613 9.446 11.394 7.78 28.067-3.612 37.516-12.503 10.559-23.618 22.509-32.509 35.57 21.672-14.729 46.679-24.732 74.186-28.067 14.725-1.945 28.063 8.336 29.73 23.065 1.945 14.728-8.336 28.067-23.062 29.734-16.116 1.945-31.12 7.503-44.178 15.284 26.114-5.713 58.712-3.138 88.079 11.115 13.336 6.669 18.893 22.509 12.224 35.848-6.389 13.06-22.504 18.617-35.564 12.226z"/>
+            </svg>
+          </div>
+          <h3 class="strategy-card-title">Travel Agencies</h3>
+        </div>
+
+        <!-- Card 6 -->
+        <div class="strategy-clean-card">
+          <div class="strategy-card-icon">
+            <svg viewBox="0 0 512 512" fill="currentColor" width="28" height="28">
+              <path d="M505.04 442.66l-99.71-99.69c-4.5-4.5-10.6-7-17-7h-16.3c27.6-35.3 44-79.69 44-127.99C416.03 93.09 322.92 0 208.02 0S0 93.09 0 207.98s93.11 207.98 208.02 207.98c48.3 0 92.71-16.4 128.01-44v16.3c0 6.4 2.5 12.5 7 17l99.71 99.69c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.59.1-33.99z"/>
+            </svg>
+          </div>
+          <h3 class="strategy-card-title">Local Tour Operators</h3>
+        </div>
+      </div>
+
+      <div class="strategy-btn-wrap" style="text-align: center; margin-top: 40px;">
+        <a href="https://pay.marketingsafalta.com/checkout/product/4ef42814-1c13-4bdd-9cb8-29e0b2117ba5?template=2" class="cta-primary">
+          <span>Book A Meeting At ₹49</span>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================
+       TRAVEL SPECIALISTS SECTION (Exact Match to User Screenshot)
+       ========================================================= -->
+  <section class="travel-specialists-section" id="specialists">
+    <div class="container">
+      <div class="specialists-grid">
+
+        <!-- Left Column: Founder & Pitch -->
+        <div class="specialists-left">
+          <h2>Travel specialists.</h2>
+          <p>
+            We specialize exclusively in Google Ads for the travel industry. Every campaign is built from a deep understanding of travel demand, customer search behaviour and booking psychology.
+          </p>
+
+          <div class="founder-showcase">
+            <div class="founder-image-wrapper">
+              <div class="founder-glow"></div>
+              <img class="founder-img" src="/assets/taxi-google-ads-hero.png" alt="Raj Thakur, CEO Marketing Safalta">
+
+              <!-- Floating Founder Badge -->
+              <div class="founder-badge">
+                <span class="badge-pulse"></span>
+                <div class="founder-badge-info">
+                  <small>• MEET THE FOUNDER</small>
+                  <strong>Raj Thakur</strong>
+                  <em>CEO, Marketing Safalta</em>
+                </div>
+                <span class="badge-sparkle">✨</span>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <a class="cta-primary" href="https://pay.marketingsafalta.com/checkout/product/4ef42814-1c13-4bdd-9cb8-29e0b2117ba5?template=2">
+              <span>Book A Meeting At ₹49</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Right Column: 4 Numbered Feature Cards (03, 04, 05, 06) -->
+        <div class="specialist-cards">
+
+          <!-- Card 03 -->
+          <div class="spec-card">
+            <div class="spec-card-top">
+              <span class="spec-card-num">03</span>
+              <div class="spec-card-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              </div>
+            </div>
+            <h3>Leads That Actually Convert</h3>
+            <p>We don't send random traffic. We bring people who are actively searching for taxi &amp; tour services.</p>
+          </div>
+
+          <!-- Card 04 -->
+          <div class="spec-card">
+            <div class="spec-card-top">
+              <span class="spec-card-num">04</span>
+              <div class="spec-card-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20V10M18 20V4M6 20v-4"/></svg>
+              </div>
+            </div>
+            <h3>Data-Driven Optimization</h3>
+            <p>We monitor, optimize, and improve your ads regularly to reduce cost per lead and improve ROI.</p>
+          </div>
+
+          <!-- Card 05 -->
+          <div class="spec-card">
+            <div class="spec-card-top">
+              <span class="spec-card-num">05</span>
+              <div class="spec-card-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z"/></svg>
+              </div>
+            </div>
+            <h3>Travel Industry Expertise</h3>
+            <p>We understand the travel industry inside out: Customer search behavior, peak seasons, booking psychology, and high-converting ad copies.</p>
+          </div>
+
+          <!-- Card 06 -->
+          <div class="spec-card">
+            <div class="spec-card-top">
+              <span class="spec-card-num">06</span>
+              <div class="spec-card-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2M9 7a4 4 0 1 0 0-8 4 4 0 0 0 0 8ZM22 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+              </div>
+            </div>
+            <h3>One-to-One Strategy Meeting</h3>
+            <p>Every client gets a personal one-to-one meeting to understand their business and build a customized ad strategy. No templates. No copy-paste.</p>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CLIENT REVIEWS & VERIFIED PROOFS -->
+  <section class="section proof" id="reviews">
+    <div class="container">
+      <div class="section-intro centered">
+        <div class="section-label">
+          <span class="label-dot"></span>
+          CLIENT REVIEWS
+        </div>
+        <h2>
+          What Our Clients<br>
+          <span>Say.</span>
+        </h2>
+        <p>
+          Real WhatsApp chats, verified client confirmations, and live campaign analytics from taxi &amp; tour operators across India.
+        </p>
+      </div>
+
+      <!-- WhatsApp Review Screenshots -->
+      <div class="reviews-proof-grid">
+        <button class="review-tile" onclick="openLightbox(0)" aria-label="Open Client WhatsApp Review 1">
+          <div class="review-img-wrap">
+            <img src="/assets/42fb2c05-2d10-4bf0-92bf-6ba215ba566b.jpg" alt="Client WhatsApp Review 1">
+          </div>
+          <span class="review-badge">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+            WhatsApp Review 01
+          </span>
+        </button>
+
+        <button class="review-tile" onclick="openLightbox(1)" aria-label="Open Client WhatsApp Review 2">
+          <div class="review-img-wrap">
+            <img src="/assets/515180f9-8af0-4640-af5a-e7e92f39c58f.jpg" alt="Client WhatsApp Review 2">
+          </div>
+          <span class="review-badge">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+            WhatsApp Review 02
+          </span>
+        </button>
+
+        <button class="review-tile" onclick="openLightbox(2)" aria-label="Open Client WhatsApp Review 3">
+          <div class="review-img-wrap">
+            <img src="/assets/c852383c-1210-4bd6-b005-63df7e7e7962.jpg" alt="Client WhatsApp Review 3">
+          </div>
+          <span class="review-badge">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+            WhatsApp Review 03
+          </span>
+        </button>
+      </div>
+
+      <!-- Additional Campaign Proof Screenshots -->
+      <div class="gallery-heading" style="margin-top: 55px;">
+        <span>CAMPAIGN PERFORMANCE SCREENSHOTS</span>
+        <small>Tap any image to zoom &amp; inspect</small>
+      </div>
+      <div class="proof-grid">
+        <button class="proof-tile" onclick="openLightbox(3)">
+          <img src="/assets/aaaa.jpeg" alt="Campaign result 01">
+          <span>Campaign result <b>01</b></span>
+        </button>
+        <button class="proof-tile" onclick="openLightbox(4)">
+          <img src="/assets/aaaaa.jpeg" alt="Campaign result 02">
+          <span>Campaign result <b>02</b></span>
+        </button>
+        <button class="proof-tile" onclick="openLightbox(5)">
+          <img src="/assets/aaa.jpeg" alt="Campaign result 03">
+          <span>Campaign result <b>03</b></span>
+        </button>
+        <button class="proof-tile" onclick="openLightbox(6)">
+          <img src="/assets/a.jpeg" alt="Campaign result 04">
+          <span>Campaign result <b>04</b></span>
+        </button>
+        <button class="proof-tile" onclick="openLightbox(7)">
+          <img src="/assets/WhatsApp-Image-2026-04-11-at-10.48.35-AM.jpeg" alt="Campaign result 05">
+          <span>Campaign result <b>05</b></span>
+        </button>
+        <button class="proof-tile" onclick="openLightbox(8)">
+          <img src="/assets/WhatsApp-Image-2026-04-11-at-10.54.05-AM.jpeg" alt="Campaign result 06">
+          <span>Campaign result <b>06</b></span>
+        </button>
+      </div>
+
+      <div style="margin-top: 45px; text-align: center;">
+        <a class="cta-primary pulse-btn-large" href="https://pay.marketingsafalta.com/checkout/product/4ef42814-1c13-4bdd-9cb8-29e0b2117ba5?template=2">
+          <span>Book A Meeting At ₹49</span>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================
+       CONSULTATION & DIRECT CHECKOUT SECTION (Form Removed)
+       ========================================================= -->
+  <section class="section offer" id="consultation">
+    <div class="container">
+      <div class="strategy-panel final-cta-panel" style="background: linear-gradient(145deg, #1f1235, #0d0818); border: 1px solid rgba(167, 139, 250, 0.35); padding: 48px; border-radius: 18px;">
+        <div class="section-label">
+          <span class="label-dot"></span>
+          1-ON-1 TRAVEL CONSULTATION (AT ₹49)
+        </div>
+        <h2 style="font-size: clamp(34px, 4vw, 50px); line-height: 1.1; margin: 18px 0; color: #ffffff;">
+          Start filling your<br>
+          <span style="color: #a78bfa;">booking calendar today.</span>
+        </h2>
+        <p style="color: #cbd5e1; font-size: 15px; line-height: 1.7; max-width: 620px; margin-bottom: 30px;">
+          Tell us about your taxi, cab, tour package or travel agency. We will analyze high-intent search demand in your city and build a profitable campaign blueprint tailored to your margins.
+        </p>
+        <div class="contact-points" style="display: grid; gap: 16px; margin-bottom: 35px;">
+          <div style="display: flex; align-items: center; gap: 14px;">
+            <span class="point-icon" style="width: 40px; height: 40px; border-radius: 10px; background: rgba(139, 92, 246, 0.2); display: flex; align-items: center; justify-content: center; color: #c4b5fd;">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+            </span>
+            <div>
+              <b style="color: #f1f5f9; font-size: 14px; display: block;">Pan-India Support</b>
+              <small style="color: #94a3b8; font-size: 12px;">Serving travel businesses across India</small>
+            </div>
+          </div>
+          <div style="display: flex; align-items: center; gap: 14px;">
+            <span class="point-icon" style="width: 40px; height: 40px; border-radius: 10px; background: rgba(139, 92, 246, 0.2); display: flex; align-items: center; justify-content: center; color: #c4b5fd;">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+            </span>
+            <div>
+              <b style="color: #f1f5f9; font-size: 14px; display: block;">Dedicated Growth Strategist</b>
+              <small style="color: #94a3b8; font-size: 12px;">Clear guidance for your next campaign</small>
+            </div>
+          </div>
+          <div style="display: flex; align-items: center; gap: 14px;">
+            <span class="point-icon" style="width: 40px; height: 40px; border-radius: 10px; background: rgba(139, 92, 246, 0.2); display: flex; align-items: center; justify-content: center; color: #c4b5fd;">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg>
+            </span>
+            <div>
+              <b style="color: #f1f5f9; font-size: 14px; display: block;">Performance-First Planning</b>
+              <small style="color: #94a3b8; font-size: 12px;">Built around leads, bookings and ROI</small>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <a class="cta-primary pulse-btn-large" href="https://pay.marketingsafalta.com/checkout/product/4ef42814-1c13-4bdd-9cb8-29e0b2117ba5?template=2">
+            <span>Book A Meeting At ₹49</span>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container footer-grid">
+      <div class="brand footer-brand">
+        <img src="/assets/logo.png" alt="Marketing Safalta">
+        <span>
+          <b>Marketing Safalta</b>
+          <em>Travel Growth</em>
+        </span>
+      </div>
+      <p>Performance marketing for taxi, cab &amp; tour businesses across India.</p>
+      <div class="footer-links">
+        <a href="https://pay.marketingsafalta.com/checkout/product/4ef42814-1c13-4bdd-9cb8-29e0b2117ba5?template=2">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          Book A Meeting At ₹49
+        </a>
+      </div>
+    </div>
+    <div class="container copyright">
+      &copy; 2026 Marketing Safalta. All rights reserved.
+    </div>
+  </footer>
+
+  <!-- STICKY BOTTOM BAR ON SCROLL -->
+  <div class="sticky-bar" id="sticky-bar">
+    <div class="container sticky-bar-inner">
+      <div class="sticky-bar-text">
+        <span>Ready to scale your taxi &amp; tour business?</span>
+        <strong>Get 100+ Bookings in Just 30 Days</strong>
+      </div>
+      <a class="cta-primary sticky-btn" href="https://pay.marketingsafalta.com/checkout/product/4ef42814-1c13-4bdd-9cb8-29e0b2117ba5?template=2">
+        <span>Book A Meeting At ₹49</span>
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+    </div>
+  </div>
+
+  <!-- LIGHTBOX MODAL -->
+  <div class="lightbox" id="lightbox" style="display:none;" onclick="handleLightboxClick(event)">
+    <div class="lightbox-toolbar">
+      <span id="lightbox-counter">Result 01 / 09</span>
+      <button onclick="closeLightbox()" aria-label="Close viewer">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6 6 18M6 6l12 12"/></svg>
+      </button>
+    </div>
+    <button class="lightbox-arrow left" onclick="prevImage(event)" aria-label="Previous">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m15 18-6-6 6-6"/></svg>
+    </button>
+    <img class="lightbox-image" id="lightbox-img" src="" alt="Proof Viewer">
+    <button class="lightbox-arrow right" onclick="nextImage(event)" aria-label="Next">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m9 18 6-6-6-6"/></svg>
+    </button>
+    <div class="lightbox-controls">
+      <button onclick="zoomOut(event)" aria-label="Zoom out">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3M8 11h6"/></svg>
+      </button>
+      <span id="zoom-level">100%</span>
+      <button onclick="zoomIn(event)" aria-label="Zoom in">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3M11 8v6M8 11h6"/></svg>
+      </button>
+    </div>
+  </div>
+
+  <script>
+    // Theme Management
+    const savedTheme = localStorage.getItem('ms_theme') || 'dark';
+    setTheme(savedTheme);
+
+    function setTheme(t) {
+      document.documentElement.setAttribute('data-theme', t);
+      localStorage.setItem('ms_theme', t);
+      const sun = document.getElementById('theme-icon-sun');
+      const moon = document.getElementById('theme-icon-moon');
+      if (t === 'dark') {
+        if (sun) sun.style.display = 'block';
+        if (moon) moon.style.display = 'none';
+      } else {
+        if (sun) sun.style.display = 'none';
+        if (moon) moon.style.display = 'block';
+      }
+    }
+
+    function toggleTheme() {
+      const current = document.documentElement.getAttribute('data-theme') || 'dark';
+      setTheme(current === 'dark' ? 'light' : 'dark');
+    }
+
+    // Navigation & Mobile Menu
+    function toggleMenu() {
+      const nav = document.getElementById('main-nav');
+      if (nav) nav.classList.toggle('open');
+    }
+
+    function scrollToId(id) {
+      const el = document.getElementById(id);
+      if (el) {
+        const nav = document.getElementById('main-nav');
+        if (nav) nav.classList.remove('open');
+        el.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+
+    // Sticky Bottom Bar
+    window.addEventListener('scroll', () => {
+      const bar = document.getElementById('sticky-bar');
+      if (window.scrollY > 450) {
+        bar.classList.add('visible');
+      } else {
+        bar.classList.remove('visible');
+      }
+    }, { passive: true });
+
+    // Lightbox Gallery
+    const galleryImages = [
+      '/assets/42fb2c05-2d10-4bf0-92bf-6ba215ba566b.jpg',
+      '/assets/515180f9-8af0-4640-af5a-e7e92f39c58f.jpg',
+      '/assets/c852383c-1210-4bd6-b005-63df7e7e7962.jpg',
+      '/assets/aaaa.jpeg',
+      '/assets/aaaaa.jpeg',
+      '/assets/aaa.jpeg',
+      '/assets/a.jpeg',
+      '/assets/WhatsApp-Image-2026-04-11-at-10.48.35-AM.jpeg',
+      '/assets/WhatsApp-Image-2026-04-11-at-10.54.05-AM.jpeg'
+    ];
+
+    let currentIdx = 0;
+    let currentZoom = 1;
+
+    function openLightbox(idx) {
+      currentIdx = idx;
+      currentZoom = 1;
+      updateLightbox();
+      document.getElementById('lightbox').style.display = 'grid';
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeLightbox() {
+      document.getElementById('lightbox').style.display = 'none';
+      document.body.style.overflow = '';
+    }
+
+    function updateLightbox() {
+      const img = document.getElementById('lightbox-img');
+      const counter = document.getElementById('lightbox-counter');
+      const zoomText = document.getElementById('zoom-level');
+      img.src = galleryImages[currentIdx];
+      img.style.transform = `scale(${currentZoom})`;
+      counter.textContent = `Result ${String(currentIdx + 1).padStart(2, '0')} / ${galleryImages.length}`;
+      zoomText.textContent = `${Math.round(currentZoom * 100)}%`;
+    }
+
+    function prevImage(e) {
+      if (e) e.stopPropagation();
+      currentIdx = (currentIdx - 1 + galleryImages.length) % galleryImages.length;
+      currentZoom = 1;
+      updateLightbox();
+    }
+
+    function nextImage(e) {
+      if (e) e.stopPropagation();
+      currentIdx = (currentIdx + 1) % galleryImages.length;
+      currentZoom = 1;
+      updateLightbox();
+    }
+
+    function zoomIn(e) {
+      if (e) e.stopPropagation();
+      currentZoom = Math.min(2.4, currentZoom + 0.2);
+      updateLightbox();
+    }
+
+    function zoomOut(e) {
+      if (e) e.stopPropagation();
+      currentZoom = Math.max(1, currentZoom - 0.2);
+      updateLightbox();
+    }
+
+    function handleLightboxClick(e) {
+      if (e.target.id === 'lightbox') {
+        closeLightbox();
+      }
+    }
+
+    // Direct Checkout Redirection for all CTA buttons
+    const CHECKOUT_URL = 'https://pay.marketingsafalta.com/checkout/product/4ef42814-1c13-4bdd-9cb8-29e0b2117ba5?template=2';
+    document.addEventListener('click', (e) => {
+      const cta = e.target.closest('.cta-primary, .strategy-green-btn, .pulse-btn-large, .sticky-btn, a[href*="checkout"]');
+      if (cta) {
+        e.preventDefault();
+        window.location.href = CHECKOUT_URL;
+      }
+    });
+  </script>
+</body>
+</html>
