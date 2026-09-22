@@ -355,6 +355,19 @@ footer{padding:37px 0 20px;border-top:1px solid #292435;background:#08070b}.foot
   letter-spacing: 0.02em;
 }
 
+.badge-emoji-img {
+  width: 34px;
+  height: 34px;
+  object-fit: contain;
+  vertical-align: middle;
+  flex-shrink: 0;
+  filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.85));
+}
+
+.mobile-br {
+  display: none;
+}
+
 .badge-emoji {
   font-size: 1.45em;
   line-height: 1;
@@ -780,19 +793,40 @@ footer{padding:37px 0 20px;border-top:1px solid #292435;background:#08070b}.foot
   .hero-pattern-section {
     padding: 24px 0 36px;
   }
+  .mobile-br {
+    display: block;
+  }
   .badge-green-pill {
-    font-size: clamp(15px, 4vw, 19px);
-    padding: 14px 24px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    font-size: clamp(13px, 3.8vw, 16px);
+    padding: 12px 18px;
     width: 95%;
-    max-width: 520px;
+    max-width: 480px;
     border-radius: 14px;
+    line-height: 1.35;
+    text-align: center;
+  }
+  .badge-green-pill .badge-text {
+    display: inline-block;
+    text-align: center;
+    line-height: 1.35;
+  }
+  .badge-emoji-img {
+    width: 24px;
+    height: 24px;
   }
   .badge-red-pill {
-    font-size: clamp(13px, 3.5vw, 17px);
-    padding: 12px 20px;
+    display: inline-block;
+    font-size: clamp(12px, 3.3vw, 15px);
+    padding: 10px 16px;
     width: 95%;
-    max-width: 520px;
+    max-width: 480px;
     border-radius: 12px;
+    line-height: 1.35;
+    text-align: center;
   }
   .hero-arrow-points {
     flex-direction: column;
