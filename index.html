@@ -238,10 +238,12 @@
       box-shadow: 0 6px 20px rgba(0, 0, 0, 0.06) !important;
     }
 
-    /* Remove border from hero box */
+    /* Remove box background, border, shadow and padding from hero */
     .hero-pattern-section .budget-highlight-box {
+      background: transparent !important;
       border: none !important;
       box-shadow: none !important;
+      padding: 8px 16px 0 !important;
     }
 
     @media (max-width: 768px) {
@@ -1239,8 +1241,8 @@
     <div class="container hero-pattern-container">
 
 
-      <!-- Budget Highlight Box in Hero (Border Removed) -->
-      <div class="budget-highlight-box" style="max-width: 900px; width: 100%; margin: 0 auto; border: none; box-shadow: none;">
+      <!-- Hero Main Content (No Box / Seamless Background) -->
+      <div class="budget-highlight-box" style="max-width: 900px; width: 100%; margin: 0 auto; background: transparent; border: none; box-shadow: none; padding: 8px 16px 0;">
         <div class="budget-tag">🚀 GROW YOUR TAXI &amp; TOUR BUSINESS WITH PROFITABLE GOOGLE ADS</div>
         <h3>
           GET <span class="purple-highlight">199+ TAXI/ CAB &amp; TOUR PACKAGE</span><br class="desktop-br">BOOKINGS IN
@@ -1249,7 +1251,7 @@
         <div class="budget-points">
           <div class="b-point">
             <span class="b-icon">➔</span>
-            <span>More Calls&amp; Confirmed Customers Every Month.</span>
+            <span>More Calls &amp; Confirmed Customers Every Month.</span>
           </div>
           <div class="b-point">
             <span class="b-icon">➔</span>
