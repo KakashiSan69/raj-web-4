@@ -12,6 +12,10 @@ Performance Google Ads & Marketing for Taxi, Cab & Tour Businesses across India.
 
 ## Running Locally
 ```bash
+npm run dev
+```
+Or with PHP built-in server:
+```bash
 php -S 0.0.0.0:8000 router.php
 ```
-Visit `http://localhost:8000` in your browser.
+Visit `http://localhost:3000` (or `http://localhost:3001` if port 3000 is occupied).
