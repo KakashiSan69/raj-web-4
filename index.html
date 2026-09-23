@@ -127,9 +127,99 @@
     }
 
     .hero-card-title .purple-highlight,
-    .budget-highlight-box h3 .purple-highlight {
+    .budget-highlight-box h3 .purple-highlight,
+    .hero-headline-pill .purple-highlight {
       color: #a78bfa !important;
       text-shadow: 0 0 16px rgba(167, 139, 250, 0.45);
+    }
+
+    /* Headline Pill Container matching top budget-tag */
+    .hero-top-tag {
+      display: inline-flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      background: rgba(168, 122, 255, 0.16) !important;
+      border: 1.5px solid rgba(168, 122, 255, 0.55) !important;
+      color: #ede9fe !important;
+      font-family: 'Space Grotesk', sans-serif !important;
+      font-size: clamp(13px, 1.35vw, 15.5px) !important;
+      font-weight: 800 !important;
+      letter-spacing: 0.12em !important;
+      text-transform: uppercase !important;
+      padding: 10px 48px !important;
+      border-radius: 40px !important;
+      margin-bottom: 14px !important;
+      min-width: min(780px, 96%) !important;
+      max-width: 820px !important;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4), 0 0 20px rgba(168, 122, 255, 0.22) !important;
+      backdrop-filter: blur(8px) !important;
+      -webkit-backdrop-filter: blur(8px) !important;
+      transition: all 0.3s ease !important;
+    }
+
+    .hero-top-tag:hover {
+      border-color: rgba(168, 122, 255, 0.8) !important;
+      box-shadow: 0 6px 25px rgba(0, 0, 0, 0.5), 0 0 28px rgba(168, 122, 255, 0.32) !important;
+    }
+
+    [data-theme="light"] .hero-top-tag {
+      background: #eff6ff !important;
+      border-color: #bfdbfe !important;
+      color: #1d4ed8 !important;
+      box-shadow: 0 4px 15px rgba(29, 78, 216, 0.1) !important;
+    }
+
+    .hero-headline-pill {
+      display: inline-block !important;
+      background: rgba(168, 122, 255, 0.12) !important;
+      border: 1.5px solid rgba(168, 122, 255, 0.45) !important;
+      border-radius: 20px !important;
+      padding: 14px 28px !important;
+      margin: 4px auto 22px !important;
+      max-width: 680px !important;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.45), 0 0 22px rgba(168, 122, 255, 0.18) !important;
+      backdrop-filter: blur(10px) !important;
+      -webkit-backdrop-filter: blur(10px) !important;
+      font-size: clamp(20px, 2.7vw, 32px) !important;
+      font-weight: 800 !important;
+      color: #ffffff !important;
+      line-height: 1.35 !important;
+      letter-spacing: -0.02em !important;
+      text-align: center !important;
+      transition: all 0.3s ease;
+    }
+
+    .hero-headline-pill:hover {
+      border-color: rgba(168, 122, 255, 0.7) !important;
+      box-shadow: 0 14px 40px rgba(0, 0, 0, 0.6), 0 0 30px rgba(168, 122, 255, 0.28) !important;
+    }
+
+    [data-theme="light"] .hero-headline-pill {
+      background: #f5f3ff !important;
+      border-color: #ddd6fe !important;
+      color: #1e1b4b !important;
+      box-shadow: 0 6px 20px rgba(124, 58, 237, 0.08) !important;
+    }
+
+    [data-theme="light"] .hero-headline-pill .purple-highlight {
+      color: #7c3aed !important;
+      text-shadow: none !important;
+    }
+
+    @media (max-width: 640px) {
+      .hero-top-tag {
+        min-width: unset !important;
+        width: 100% !important;
+        padding: 9px 14px !important;
+        font-size: 11.5px !important;
+        letter-spacing: 0.06em !important;
+      }
+      .hero-headline-pill {
+        padding: 12px 16px !important;
+        border-radius: 14px !important;
+        font-size: 19px !important;
+        width: 100% !important;
+      }
     }
 
     /* 4 Feature Points with Yellow Arrows OUTSIDE the box below */
@@ -1241,14 +1331,15 @@
     <div class="container hero-pattern-container">
 
 
-      <!-- Hero Main Content (No Box / Seamless Background) -->
-      <div class="budget-highlight-box" style="max-width: 900px; width: 100%; margin: 0 auto; background: transparent; border: none; box-shadow: none; padding: 8px 16px 0;">
-        <div class="budget-tag">🚀 GROW YOUR TAXI &amp; TOUR BUSINESS WITH PROFITABLE GOOGLE ADS</div>
-        <h3>
-          GET <span class="purple-highlight">199+ TAXI/ CAB &amp; TOUR PACKAGE</span><br class="desktop-br">BOOKINGS IN
-          JUST 30 DAYS!
-        </h3>
-        <div class="budget-points">
+      <!-- Hero Main Content (Pill headline matching budget-tag, bullets outside) -->
+      <div class="hero-header-wrap budget-highlight-box" style="max-width: 900px; width: 100%; margin: 0 auto; background: transparent; border: none; box-shadow: none; padding: 8px 16px 0; text-align: center;">
+        <div class="budget-tag hero-top-tag">🚀 GROW YOUR TAXI &amp; TOUR BUSINESS WITH PROFITABLE GOOGLE ADS</div>
+        <div>
+          <h3 class="hero-headline-pill">
+            GET <span class="purple-highlight">199+ TAXI/ CAB &amp; TOUR PACKAGE</span><br class="desktop-br">BOOKINGS IN JUST 30 DAYS!
+          </h3>
+        </div>
+        <div class="budget-points" style="margin-top: 14px;">
           <div class="b-point">
             <span class="b-icon">➔</span>
             <span>More Calls &amp; Confirmed Customers Every Month.</span>
