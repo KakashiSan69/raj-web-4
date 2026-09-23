@@ -663,29 +663,31 @@ footer{padding:37px 0 20px;border-top:1px solid #292435;background:#08070b}.foot
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  background: #ffffff;
-  color: #000000;
-  border: 3px solid #ff6b35;
+  background: linear-gradient(145deg, #151122, #0d0a15);
+  color: #ffffff;
+  border: 1.5px solid rgba(168, 122, 255, 0.5);
   border-radius: 9999px;
   padding: 12px 32px;
   height: auto;
   min-height: unset;
   max-height: unset;
   font-family: 'DM Sans', sans-serif;
-  font-size: clamp(16px, 1.6vw, 20px);
-  font-weight: 800;
+  font-size: clamp(15.5px, 1.6vw, 19px);
+  font-weight: 700;
   text-align: center;
   letter-spacing: -0.01em;
-  box-shadow: 0 8px 24px rgba(255, 107, 53, 0.22);
-  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6), 0 0 20px rgba(139, 92, 246, 0.2);
+  transition: all 0.25s ease;
   user-select: none;
   box-sizing: border-box;
 }
 
 .outcome-pill:hover {
-  transform: translateY(-4px) scale(1.02);
-  box-shadow: 0 14px 30px rgba(255, 107, 53, 0.45);
-  border-color: #ff5018;
+  background: rgba(139, 92, 246, 0.22);
+  transform: translateY(-3px) scale(1.03);
+  box-shadow: 0 14px 35px rgba(0, 0, 0, 0.75), 0 0 30px rgba(139, 92, 246, 0.4);
+  border-color: rgba(168, 122, 255, 0.85);
+  color: #f5f3ff;
 }
 
 @media (max-width: 768px) {

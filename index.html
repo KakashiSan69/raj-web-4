@@ -213,14 +213,27 @@
       color: #0f172a;
     }
 
-    [data-theme="light"] .hero-card-tag {
-      background: rgba(139, 92, 246, 0.1);
-      color: #7c3aed;
-      border-color: rgba(139, 92, 246, 0.3);
+    /* Outcome pills dark theme */
+    .outcome-pill {
+      background: linear-gradient(145deg, #151122, #0d0a15) !important;
+      color: #ffffff !important;
+      border: 1.5px solid rgba(168, 122, 255, 0.5) !important;
+      border-radius: 9999px !important;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6), 0 0 20px rgba(139, 92, 246, 0.2) !important;
+      transition: all 0.25s ease !important;
     }
-
-    [data-theme="light"] .htp-item {
-      color: #334155;
+    .outcome-pill:hover {
+      background: rgba(139, 92, 246, 0.22) !important;
+      transform: translateY(-3px) scale(1.03) !important;
+      box-shadow: 0 14px 35px rgba(0, 0, 0, 0.75), 0 0 30px rgba(139, 92, 246, 0.4) !important;
+      border-color: rgba(168, 122, 255, 0.85) !important;
+      color: #f5f3ff !important;
+    }
+    [data-theme="light"] .outcome-pill {
+      background: #ffffff !important;
+      color: #1e1b4b !important;
+      border-color: rgba(139, 92, 246, 0.35) !important;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.06) !important;
     }
 
     @media (max-width: 768px) {
@@ -1765,7 +1778,7 @@
   <section class="why-stacked-section" id="why-us">
     <div class="container why-stacked-container">
       <div class="why-stacked-header">
-        <h2 class="why-stacked-title">Why MS Travel Marketing?</h2>
+        <h2 class="why-stacked-title">Why Marketing Safalta?</h2>
         <p class="why-stacked-subtitle">
           We’re not general marketers. We specialize exclusively in Google Ads for the travel industry
         </p>
