@@ -96,24 +96,36 @@
     .hero-card-tag {
       display: inline-flex;
       align-items: center;
-      gap: 8px;
-      background: rgba(168, 122, 255, 0.15);
-      border: 1px solid rgba(168, 122, 255, 0.4);
-      color: #c4a5ff;
-      font-family: 'DM Sans', sans-serif;
-      font-size: clamp(11px, 1.4vw, 13px);
+      justify-content: center;
+      gap: 10px;
+      background: rgba(168, 122, 255, 0.2);
+      border: 1.5px solid rgba(168, 122, 255, 0.55);
+      color: #f5f3ff;
+      font-family: 'Space Grotesk', 'DM Sans', sans-serif;
+      font-size: clamp(14px, 1.6vw, 17px);
       font-weight: 800;
       text-transform: uppercase;
-      letter-spacing: 0.14em;
-      padding: 7px 22px;
+      letter-spacing: 0.08em;
+      padding: 10px 28px;
       border-radius: 9999px;
-      margin-bottom: 22px;
-      box-shadow: 0 0 16px rgba(139, 92, 246, 0.15);
+      margin-bottom: 24px;
+      box-shadow: 0 0 24px rgba(139, 92, 246, 0.3);
+      line-height: 1.35;
+      text-align: center;
+      transition: all 0.25s ease;
+    }
+
+    .hero-card-tag:hover {
+      background: rgba(168, 122, 255, 0.28);
+      border-color: rgba(168, 122, 255, 0.8);
+      box-shadow: 0 0 32px rgba(139, 92, 246, 0.45);
+      transform: translateY(-1px);
     }
 
     .hero-card-tag .tag-rocket {
-      font-size: 15px;
+      font-size: 20px;
       display: inline-block;
+      filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.45));
     }
 
     .hero-card-title {
