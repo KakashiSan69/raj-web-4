@@ -63,6 +63,178 @@
       color: var(--violet) !important;
     }
 
+    /* Redrawn Hero Card - Image 2 Purple Theme & Size */
+    .hero-main-card {
+      max-width: 960px;
+      width: 100%;
+      margin: 0 auto;
+      background: linear-gradient(145deg, #130924 0%, #0a0414 100%);
+      border: 1.5px solid rgba(139, 92, 246, 0.45);
+      border-radius: 22px;
+      padding: 44px 38px 36px;
+      text-align: center;
+      box-shadow: 0 24px 60px rgba(0, 0, 0, 0.8), 0 0 40px rgba(139, 92, 246, 0.18), inset 0 0 25px rgba(139, 92, 246, 0.06);
+      position: relative;
+      transition: all 0.3s ease;
+    }
+    .hero-main-card:hover {
+      border-color: rgba(139, 92, 246, 0.7);
+      box-shadow: 0 28px 70px rgba(0, 0, 0, 0.85), 0 0 50px rgba(139, 92, 246, 0.25);
+    }
+    .hero-card-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(139, 92, 246, 0.18);
+      border: 1px solid rgba(139, 92, 246, 0.4);
+      color: #c4b5fd;
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 12.5px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      padding: 7px 20px;
+      border-radius: 9999px;
+      margin-bottom: 22px;
+      box-shadow: 0 0 16px rgba(139, 92, 246, 0.2);
+    }
+    .hero-card-tag .tag-rocket {
+      font-size: 15px;
+      display: inline-block;
+    }
+    .hero-card-title {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: clamp(28px, 4.2vw, 46px);
+      font-weight: 800;
+      color: #ffffff;
+      line-height: 1.22;
+      margin: 0 0 16px;
+      letter-spacing: -0.03em;
+    }
+    .hero-card-title .purple-highlight {
+      color: #a78bfa;
+      text-shadow: 0 0 25px rgba(167, 139, 250, 0.45);
+    }
+    .hero-card-subtitle {
+      font-family: 'DM Sans', sans-serif;
+      font-size: clamp(15px, 1.8vw, 17.5px);
+      color: #cbd5e1;
+      line-height: 1.6;
+      max-width: 720px;
+      margin: 0 auto;
+    }
+    .hero-card-points {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 14px;
+      margin-top: 30px;
+    }
+    .hcp-point {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 9px;
+      background: rgba(139, 92, 246, 0.12);
+      border: 1px solid rgba(139, 92, 246, 0.28);
+      border-radius: 12px;
+      padding: 13px 14px;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 14px;
+      font-weight: 700;
+      color: #f5f3ff;
+      transition: all 0.25s ease;
+    }
+    .hcp-point:hover {
+      background: rgba(139, 92, 246, 0.22);
+      border-color: rgba(139, 92, 246, 0.55);
+      transform: translateY(-2px);
+    }
+    .hcp-icon {
+      font-size: 16px;
+      flex-shrink: 0;
+    }
+
+    /* Bigger Video Player in Purple Theme */
+    .hero-video-box.big-video {
+      max-width: 960px !important;
+      width: 100% !important;
+      margin: 36px auto 0 !important;
+      border: 2.5px solid rgba(139, 92, 246, 0.55) !important;
+      border-radius: 22px !important;
+      box-shadow: 0 25px 65px rgba(0, 0, 0, 0.85), 0 0 40px rgba(139, 92, 246, 0.25) !important;
+      background: #000000 !important;
+      overflow: hidden;
+      position: relative;
+    }
+    .hero-video-box.big-video video {
+      width: 100% !important;
+      max-height: 640px !important;
+      aspect-ratio: auto !important;
+      object-fit: contain !important;
+      background: #000000 !important;
+      display: block;
+    }
+    .hero-video-box.big-video .play-circle-icon {
+      width: 76px;
+      height: 76px;
+      background: linear-gradient(135deg, #8b5cf6, #6d28d9);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #ffffff;
+      box-shadow: 0 0 35px rgba(139, 92, 246, 0.7);
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+    }
+    .hero-video-box.big-video:hover .play-circle-icon {
+      transform: scale(1.08);
+      box-shadow: 0 0 50px rgba(139, 92, 246, 0.9);
+    }
+
+    [data-theme="light"] .hero-main-card {
+      background: #ffffff;
+      border-color: rgba(139, 92, 246, 0.35);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    }
+    [data-theme="light"] .hero-card-title {
+      color: #0f172a;
+    }
+    [data-theme="light"] .hero-card-subtitle {
+      color: #475569;
+    }
+    [data-theme="light"] .hcp-point {
+      background: #f8fafc;
+      border-color: rgba(139, 92, 246, 0.2);
+      color: #1e1b4b;
+    }
+
+    @media (max-width: 768px) {
+      .hero-main-card {
+        padding: 26px 18px 22px;
+        border-radius: 18px;
+      }
+      .hero-card-points {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+        margin-top: 20px;
+      }
+      .hcp-point {
+        padding: 10px 10px;
+        font-size: 12.5px;
+      }
+      .hero-video-box.big-video {
+        margin-top: 24px !important;
+        border-radius: 16px !important;
+      }
+      .hero-video-box.big-video video {
+        max-height: 480px !important;
+      }
+      .hero-video-box.big-video .play-circle-icon {
+        width: 60px;
+        height: 60px;
+      }
+    }
+
     /* Certified Partner Badges Section */
     .partner-badges-section {
       padding: 50px 0 20px;
@@ -184,8 +356,9 @@
       letter-spacing: -0.03em;
       margin: 0 0 16px;
     }
+    .proof-hero-title .highlight-purple,
     .proof-hero-title .highlight-teal {
-      color: #00d2c4;
+      color: #a78bfa;
     }
     .proof-section-sub {
       font-family: 'DM Sans', sans-serif;
@@ -889,47 +1062,49 @@
     <div class="container hero-pattern-container">
 
 
-      <!-- Green Pill Badge (Strictly 2 Lines) -->
-      <div class="badge-green-pill">
-        <span class="badge-line line-1"><img draggable="false" role="img" class="badge-emoji-img" alt="🚀" src="/assets/rocket.svg" width="26" height="26">GROW YOUR TAXI &amp; TOUR BUSINESS</span>
-        <span class="badge-line line-2">WITH PROFITABLE GOOGLE ADS</span>
+      <!-- Redrawn Hero Purple Card (Theme & Size matching Image 2) -->
+      <div class="hero-main-card">
+        <div class="hero-card-tag">
+          <span class="tag-rocket">🚀</span>
+          <span>GROW YOUR TAXI &amp; TOUR BUSINESS</span>
+        </div>
+        <h1 class="hero-card-title">
+          Get <span class="purple-highlight">100+ Taxi, Cab &amp; Tour</span> Bookings In Just 30 Days!
+        </h1>
+        <p class="hero-card-subtitle">
+          With High-ROI, Profitable Google Ads Campaigns Specially Designed For Travel Operators Across India.
+        </p>
+
+        <!-- 4 Feature Points in Purple Theme -->
+        <div class="hero-card-points">
+          <div class="hcp-point">
+            <span class="hcp-icon">📞</span>
+            <span>Get More Calls</span>
+          </div>
+          <div class="hcp-point">
+            <span class="hcp-icon">💬</span>
+            <span>More WhatsApp Enquiries</span>
+          </div>
+          <div class="hcp-point">
+            <span class="hcp-icon">🚕</span>
+            <span>More Bookings</span>
+          </div>
+          <div class="hcp-point">
+            <span class="hcp-icon">📈</span>
+            <span>Better ROI</span>
+          </div>
+        </div>
       </div>
 
-      <!-- Red Pill Badge (Strictly 2 Lines) -->
-      <div class="badge-red-pill">
-        <span class="badge-line line-1">GET 100+ TAXI/ CAB &amp; TOUR PACKAGE</span>
-        <span class="badge-line line-2">BOOKINGS IN JUST 30 DAYS!</span>
-      </div>
-
-      <!-- 4 Feature Points with Yellow Arrows (2 Columns on mobile) -->
-      <div class="hero-arrow-points">
-        <div class="arrow-point">
-          <span class="yellow-arrow">➔</span>
-          <span>Get More Calls</span>
-        </div>
-        <div class="arrow-point">
-          <span class="yellow-arrow">➔</span>
-          <span>More WhatsApp Enquiries</span>
-        </div>
-        <div class="arrow-point">
-          <span class="yellow-arrow">➔</span>
-          <span>More Bookings</span>
-        </div>
-        <div class="arrow-point">
-          <span class="yellow-arrow">➔</span>
-          <span>Better ROI</span>
-        </div>
-      </div>
-
-      <!-- Hero Video Player Box with Blue Border & Play Button -->
-      <div class="hero-video-box">
-        <video id="hero-main-video" controls preload="none" poster="/assets/76yuhj.webp" playsinline aria-label="Google Ads results for taxi businesses" width="600" height="338">
-          <source src="/assets/taxi-google-ads-results.mp4" type="video/mp4">
+      <!-- Bigger Hero Video Player Box in Purple Theme -->
+      <div class="hero-video-box big-video">
+        <video id="hero-main-video" controls preload="metadata" poster="/assets/video1-poster.jpg" playsinline aria-label="Google Ads results for taxi and tour businesses">
+          <source src="/assets/video1.mp4" type="video/mp4">
           Your browser does not support HTML video.
         </video>
         <div class="hero-video-play-overlay" id="video-play-btn" onclick="playHeroVideo()">
           <div class="play-circle-icon">
-            <svg width="34" height="34" viewBox="0 0 24 24" fill="currentColor"><polygon points="7 4 20 12 7 20 7 4"/></svg>
+            <svg width="38" height="38" viewBox="0 0 24 24" fill="currentColor"><polygon points="7 4 20 12 7 20 7 4"/></svg>
           </div>
         </div>
       </div>
@@ -1039,20 +1214,10 @@
 
       <!-- 4 WhatsApp Review Screenshots including Varun Travels -->
       <div class="reviews-proof-grid-4">
-        <!-- New Varun Travels Review -->
-        <button class="review-tile" onclick="openLightboxReview(0)" aria-label="Open Varun Travels WhatsApp Review">
+        <!-- WhatsApp Review 01 (Varun Travels) -->
+        <button class="review-tile" onclick="openLightboxReview(0)" aria-label="Open Client WhatsApp Review 1">
           <div class="review-img-wrap">
-            <img src="/assets/varun-travels-whatsapp-review.webp" alt="Varun Travels WhatsApp Review" width="400" height="500" loading="lazy" decoding="async">
-          </div>
-          <span class="review-badge">
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
-            Varun Travels · 14 Calls
-          </span>
-        </button>
-
-        <button class="review-tile" onclick="openLightboxReview(1)" aria-label="Open Client WhatsApp Review 1">
-          <div class="review-img-wrap">
-            <img src="/assets/42fb2c05-2d10-4bf0-92bf-6ba215ba566b.webp" alt="Client WhatsApp Review 1" width="400" height="500" loading="lazy" decoding="async">
+            <img src="/assets/varun-travels-whatsapp-review.webp" alt="WhatsApp Review 01 - Varun Travels" width="400" height="500" loading="lazy" decoding="async">
           </div>
           <span class="review-badge">
             <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
@@ -1060,9 +1225,10 @@
           </span>
         </button>
 
-        <button class="review-tile" onclick="openLightboxReview(2)" aria-label="Open Client WhatsApp Review 2">
+        <!-- WhatsApp Review 02 -->
+        <button class="review-tile" onclick="openLightboxReview(1)" aria-label="Open Client WhatsApp Review 2">
           <div class="review-img-wrap">
-            <img src="/assets/515180f9-8af0-4640-af5a-e7e92f39c58f.webp" alt="Client WhatsApp Review 2" width="400" height="500" loading="lazy" decoding="async">
+            <img src="/assets/42fb2c05-2d10-4bf0-92bf-6ba215ba566b.webp" alt="Client WhatsApp Review 2" width="400" height="500" loading="lazy" decoding="async">
           </div>
           <span class="review-badge">
             <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
@@ -1070,13 +1236,25 @@
           </span>
         </button>
 
-        <button class="review-tile" onclick="openLightboxReview(3)" aria-label="Open Client WhatsApp Review 3">
+        <!-- WhatsApp Review 03 -->
+        <button class="review-tile" onclick="openLightboxReview(2)" aria-label="Open Client WhatsApp Review 3">
           <div class="review-img-wrap">
-            <img src="/assets/c852383c-1210-4bd6-b005-63df7e7e7962.webp" alt="Client WhatsApp Review 3" width="400" height="500" loading="lazy" decoding="async">
+            <img src="/assets/515180f9-8af0-4640-af5a-e7e92f39c58f.webp" alt="Client WhatsApp Review 3" width="400" height="500" loading="lazy" decoding="async">
           </div>
           <span class="review-badge">
             <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
             WhatsApp Review 03
+          </span>
+        </button>
+
+        <!-- WhatsApp Review 04 -->
+        <button class="review-tile" onclick="openLightboxReview(3)" aria-label="Open Client WhatsApp Review 4">
+          <div class="review-img-wrap">
+            <img src="/assets/c852383c-1210-4bd6-b005-63df7e7e7962.webp" alt="Client WhatsApp Review 4" width="400" height="500" loading="lazy" decoding="async">
+          </div>
+          <span class="review-badge">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+            WhatsApp Review 04
           </span>
         </button>
       </div>
@@ -1094,8 +1272,8 @@
     <div class="container">
       <div class="proof-header">
         <h2 class="proof-hero-title">
-          Google Ads Results <span class="highlight-teal">For</span><br>
-          <span class="highlight-teal">Taxi &amp; Tour Businesses</span>
+          Google Ads Results <span class="highlight-purple">For</span><br>
+          <span class="highlight-purple">Taxi &amp; Tour Businesses</span>
         </h2>
         <p class="proof-section-sub">
           We don't just generate traffic. We generate conversations that move customers closer to your booking.
