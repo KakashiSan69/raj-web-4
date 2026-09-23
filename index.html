@@ -266,26 +266,10 @@
     .proof-item-card:hover .proof-img-frame img {
       transform: scale(1.015);
     }
-    .proof-badge-num {
-      position: absolute;
-      top: 10px;
-      left: 10px;
-      background: rgba(0, 0, 0, 0.85);
-      color: #ffffff;
-      font-family: 'Space Grotesk', sans-serif;
-      font-size: 11px;
-      font-weight: 700;
-      padding: 4px 9px;
-      border-radius: 6px;
-      border: 1px solid rgba(255, 255, 255, 0.2);
-      backdrop-filter: blur(4px);
-      z-index: 2;
-      letter-spacing: 0.05em;
-    }
     .proof-bottom-bar {
       display: flex;
       align-items: center;
-      gap: 9px;
+      justify-content: space-between;
       margin-top: 14px;
       padding: 0 4px;
       font-family: 'DM Sans', sans-serif;
@@ -294,12 +278,38 @@
       color: #cbd5e1;
       transition: color 0.2s ease;
     }
-    .proof-item-card:hover .proof-bottom-bar span {
+    .proof-badge-chip {
+      background: rgba(0, 210, 196, 0.16);
+      border: 1px solid rgba(0, 210, 196, 0.45);
+      color: #00d2c4;
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 12px;
+      font-weight: 700;
+      padding: 3px 10px;
+      border-radius: 6px;
+      letter-spacing: 0.05em;
+    }
+    .proof-action-text {
+      display: flex;
+      align-items: center;
+      gap: 7px;
+      color: #cbd5e1;
+      transition: color 0.2s ease;
+    }
+    .proof-item-card:hover .proof-action-text span {
       color: #00d2c4;
     }
-    .proof-bottom-bar svg {
+    .proof-action-text svg {
       color: #00d2c4;
       flex-shrink: 0;
+    }
+    [data-theme="light"] .proof-badge-chip {
+      background: rgba(0, 210, 196, 0.12);
+      border-color: rgba(0, 180, 160, 0.35);
+      color: #008779;
+    }
+    [data-theme="light"] .proof-action-text {
+      color: #475569;
     }
 
     [data-theme="light"] .proof-hero-title {
@@ -1010,6 +1020,75 @@
     </div>
   </section>
 
+  <!-- CLIENT REVIEWS (What Our Clients Say.) -->
+  <section class="section proof" id="reviews">
+    <div class="container">
+      <div class="section-intro centered">
+        <div class="section-label">
+          <span class="label-dot"></span>
+          CLIENT REVIEWS
+        </div>
+        <h2>
+          What Our Clients<br>
+          <span>Say.</span>
+        </h2>
+        <p>
+          Real WhatsApp chats, verified client confirmations, and live campaign analytics from taxi &amp; tour operators across India.
+        </p>
+      </div>
+
+      <!-- 4 WhatsApp Review Screenshots including Varun Travels -->
+      <div class="reviews-proof-grid-4">
+        <!-- New Varun Travels Review -->
+        <button class="review-tile" onclick="openLightboxReview(0)" aria-label="Open Varun Travels WhatsApp Review">
+          <div class="review-img-wrap">
+            <img src="/assets/varun-travels-whatsapp-review.webp" alt="Varun Travels WhatsApp Review" width="400" height="500" loading="lazy" decoding="async">
+          </div>
+          <span class="review-badge">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+            Varun Travels · 14 Calls
+          </span>
+        </button>
+
+        <button class="review-tile" onclick="openLightboxReview(1)" aria-label="Open Client WhatsApp Review 1">
+          <div class="review-img-wrap">
+            <img src="/assets/42fb2c05-2d10-4bf0-92bf-6ba215ba566b.webp" alt="Client WhatsApp Review 1" width="400" height="500" loading="lazy" decoding="async">
+          </div>
+          <span class="review-badge">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+            WhatsApp Review 01
+          </span>
+        </button>
+
+        <button class="review-tile" onclick="openLightboxReview(2)" aria-label="Open Client WhatsApp Review 2">
+          <div class="review-img-wrap">
+            <img src="/assets/515180f9-8af0-4640-af5a-e7e92f39c58f.webp" alt="Client WhatsApp Review 2" width="400" height="500" loading="lazy" decoding="async">
+          </div>
+          <span class="review-badge">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+            WhatsApp Review 02
+          </span>
+        </button>
+
+        <button class="review-tile" onclick="openLightboxReview(3)" aria-label="Open Client WhatsApp Review 3">
+          <div class="review-img-wrap">
+            <img src="/assets/c852383c-1210-4bd6-b005-63df7e7e7962.webp" alt="Client WhatsApp Review 3" width="400" height="500" loading="lazy" decoding="async">
+          </div>
+          <span class="review-badge">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+            WhatsApp Review 03
+          </span>
+        </button>
+      </div>
+
+      <div style="margin-top: 30px; text-align: center;">
+        <a class="cta-primary pulse-btn-large" href="https://pay.marketingsafalta.com/checkout/product/4ef42814-1c13-4bdd-9cb8-29e0b2117ba5?template=2">
+          <span>Book A Meet At ₹49 →</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
   <!-- GOOGLE ADS RESULTS PROOFS SECTION -->
   <section class="proof-section-wrap" id="live-proofs">
     <div class="container">
@@ -1035,72 +1114,84 @@
         <!-- Proof Card 01 -->
         <div class="proof-item-card" data-category="google" onclick="openLightboxProof(0)">
           <div class="proof-img-frame">
-            <span class="proof-badge-num">01</span>
             <img src="/assets/proofs/proof-01.png" alt="Google Ads Results Proof 01" loading="lazy">
           </div>
           <div class="proof-bottom-bar">
-            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 20V10M12 20V4M6 20v-6"/></svg>
-            <span>Tap to view full screenshot</span>
+            <div class="proof-badge-chip">01</div>
+            <div class="proof-action-text">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 20V10M12 20V4M6 20v-6"/></svg>
+              <span>Tap to view full screenshot</span>
+            </div>
           </div>
         </div>
 
         <!-- Proof Card 02 -->
         <div class="proof-item-card" data-category="google" onclick="openLightboxProof(1)">
           <div class="proof-img-frame">
-            <span class="proof-badge-num">02</span>
             <img src="/assets/proofs/proof-02.png" alt="Google Ads Results Proof 02" loading="lazy">
           </div>
           <div class="proof-bottom-bar">
-            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 20V10M12 20V4M6 20v-6"/></svg>
-            <span>Tap to view full screenshot</span>
+            <div class="proof-badge-chip">02</div>
+            <div class="proof-action-text">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 20V10M12 20V4M6 20v-6"/></svg>
+              <span>Tap to view full screenshot</span>
+            </div>
           </div>
         </div>
 
         <!-- Proof Card 03 -->
         <div class="proof-item-card" data-category="google" onclick="openLightboxProof(2)">
           <div class="proof-img-frame">
-            <span class="proof-badge-num">03</span>
             <img src="/assets/proofs/proof-03.png" alt="Google Ads Results Proof 03" loading="lazy">
           </div>
           <div class="proof-bottom-bar">
-            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 20V10M12 20V4M6 20v-6"/></svg>
-            <span>Tap to view full screenshot</span>
+            <div class="proof-badge-chip">03</div>
+            <div class="proof-action-text">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 20V10M12 20V4M6 20v-6"/></svg>
+              <span>Tap to view full screenshot</span>
+            </div>
           </div>
         </div>
 
         <!-- Proof Card 04 -->
         <div class="proof-item-card" data-category="google" onclick="openLightboxProof(3)">
           <div class="proof-img-frame">
-            <span class="proof-badge-num">04</span>
             <img src="/assets/proofs/proof-04.png" alt="Google Ads Results Proof 04" loading="lazy">
           </div>
           <div class="proof-bottom-bar">
-            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 20V10M12 20V4M6 20v-6"/></svg>
-            <span>Tap to view full screenshot</span>
+            <div class="proof-badge-chip">04</div>
+            <div class="proof-action-text">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 20V10M12 20V4M6 20v-6"/></svg>
+              <span>Tap to view full screenshot</span>
+            </div>
           </div>
         </div>
 
         <!-- Proof Card 05 -->
         <div class="proof-item-card" data-category="local" onclick="openLightboxProof(4)">
           <div class="proof-img-frame">
-            <span class="proof-badge-num">05</span>
             <img src="/assets/proofs/proof-05.jpg" alt="GMB Local SEO Proof 05" loading="lazy">
           </div>
           <div class="proof-bottom-bar">
-            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 20V10M12 20V4M6 20v-6"/></svg>
-            <span>Tap to view full screenshot</span>
+            <div class="proof-badge-chip">05</div>
+            <div class="proof-action-text">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 20V10M12 20V4M6 20v-6"/></svg>
+              <span>Tap to view full screenshot</span>
+            </div>
           </div>
         </div>
 
         <!-- Proof Card 06 -->
         <div class="proof-item-card" data-category="local" onclick="openLightboxProof(5)">
           <div class="proof-img-frame">
-            <span class="proof-badge-num">06</span>
             <img src="/assets/proofs/proof-06.jpg" alt="GMB Local SEO Proof 06" loading="lazy">
           </div>
           <div class="proof-bottom-bar">
-            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 20V10M12 20V4M6 20v-6"/></svg>
-            <span>Tap to view full screenshot</span>
+            <div class="proof-badge-chip">06</div>
+            <div class="proof-action-text">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 20V10M12 20V4M6 20v-6"/></svg>
+              <span>Tap to view full screenshot</span>
+            </div>
           </div>
         </div>
       </div>
@@ -1377,107 +1468,6 @@
     </div>
   </section>
 
-  <!-- CLIENT REVIEWS & VERIFIED PROOFS -->
-  <section class="section proof" id="reviews">
-    <div class="container">
-      <div class="section-intro centered">
-        <div class="section-label">
-          <span class="label-dot"></span>
-          CLIENT REVIEWS
-        </div>
-        <h2>
-          What Our Clients<br>
-          <span>Say.</span>
-        </h2>
-        <p>
-          Real WhatsApp chats, verified client confirmations, and live campaign analytics from taxi &amp; tour operators across India.
-        </p>
-      </div>
-
-      <!-- 4 WhatsApp Review Screenshots including Varun Travels -->
-      <div class="reviews-proof-grid-4">
-        <!-- New Varun Travels Review -->
-        <button class="review-tile" onclick="openLightbox(0)" aria-label="Open Varun Travels WhatsApp Review">
-          <div class="review-img-wrap">
-            <img src="/assets/varun-travels-whatsapp-review.webp" alt="Varun Travels WhatsApp Review" width="400" height="500" loading="lazy" decoding="async">
-          </div>
-          <span class="review-badge">
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
-            Varun Travels · 14 Calls
-          </span>
-        </button>
-
-        <button class="review-tile" onclick="openLightbox(1)" aria-label="Open Client WhatsApp Review 1">
-          <div class="review-img-wrap">
-            <img src="/assets/42fb2c05-2d10-4bf0-92bf-6ba215ba566b.webp" alt="Client WhatsApp Review 1" width="400" height="500" loading="lazy" decoding="async">
-          </div>
-          <span class="review-badge">
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
-            WhatsApp Review 01
-          </span>
-        </button>
-
-        <button class="review-tile" onclick="openLightbox(2)" aria-label="Open Client WhatsApp Review 2">
-          <div class="review-img-wrap">
-            <img src="/assets/515180f9-8af0-4640-af5a-e7e92f39c58f.webp" alt="Client WhatsApp Review 2" width="400" height="500" loading="lazy" decoding="async">
-          </div>
-          <span class="review-badge">
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
-            WhatsApp Review 02
-          </span>
-        </button>
-
-        <button class="review-tile" onclick="openLightbox(3)" aria-label="Open Client WhatsApp Review 3">
-          <div class="review-img-wrap">
-            <img src="/assets/c852383c-1210-4bd6-b005-63df7e7e7962.webp" alt="Client WhatsApp Review 3" width="400" height="500" loading="lazy" decoding="async">
-          </div>
-          <span class="review-badge">
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
-            WhatsApp Review 03
-          </span>
-        </button>
-      </div>
-
-      <!-- Additional Campaign Proof Screenshots -->
-      <div class="gallery-heading" style="margin-top: 35px;">
-        <span>CAMPAIGN PERFORMANCE SCREENSHOTS</span>
-        <small>Tap any image to zoom &amp; inspect</small>
-      </div>
-      <div class="proof-grid">
-        <button class="proof-tile" onclick="openLightbox(4)">
-          <img src="/assets/aaaa.webp" alt="Campaign result 01" width="800" height="470" loading="lazy" decoding="async">
-          <span>Campaign result <b>01</b></span>
-        </button>
-        <button class="proof-tile" onclick="openLightbox(5)">
-          <img src="/assets/aaaaa.webp" alt="Campaign result 02" width="800" height="470" loading="lazy" decoding="async">
-          <span>Campaign result <b>02</b></span>
-        </button>
-        <button class="proof-tile" onclick="openLightbox(6)">
-          <img src="/assets/aaa.webp" alt="Campaign result 03" width="800" height="470" loading="lazy" decoding="async">
-          <span>Campaign result <b>03</b></span>
-        </button>
-        <button class="proof-tile" onclick="openLightbox(7)">
-          <img src="/assets/a.webp" alt="Campaign result 04" width="800" height="470" loading="lazy" decoding="async">
-          <span>Campaign result <b>04</b></span>
-        </button>
-        <button class="proof-tile" onclick="openLightbox(8)">
-          <img src="/assets/WhatsApp-Image-2026-04-11-at-10.48.35-AM.webp" alt="Campaign result 05" width="800" height="470" loading="lazy" decoding="async">
-          <span>Campaign result <b>05</b></span>
-        </button>
-        <button class="proof-tile" onclick="openLightbox(9)">
-          <img src="/assets/WhatsApp-Image-2026-04-11-at-10.54.05-AM.webp" alt="Campaign result 06" width="800" height="470" loading="lazy" decoding="async">
-          <span>Campaign result <b>06</b></span>
-        </button>
-      </div>
-
-      <div style="margin-top: 30px; text-align: center;">
-        <a class="cta-primary pulse-btn-large" href="https://pay.marketingsafalta.com/checkout/product/4ef42814-1c13-4bdd-9cb8-29e0b2117ba5?template=2">
-          <span>Book A Meet At ₹49 →</span>
-        </a>
-      </div>
-    </div>
-  </section>
-
   <!-- =========================================================
        CONSULTATION & DIRECT CHECKOUT SECTION (Form Removed)
        ========================================================= -->
@@ -1645,28 +1635,87 @@
       }
     }, { passive: true });
 
-    // Lightbox Gallery with 6 Proofs + Varun Travels + proofs
-    const galleryImages = [
+    // Lightbox Galleries
+    const proofFallbackImages = [
       '/assets/proofs/proof-01.png',
       '/assets/proofs/proof-02.png',
       '/assets/proofs/proof-03.png',
       '/assets/proofs/proof-04.png',
       '/assets/proofs/proof-05.jpg',
-      '/assets/proofs/proof-06.jpg',
+      '/assets/proofs/proof-06.jpg'
+    ];
+
+    const reviewFallbackImages = [
       '/assets/varun-travels-whatsapp-review.webp',
       '/assets/42fb2c05-2d10-4bf0-92bf-6ba215ba566b.webp',
       '/assets/515180f9-8af0-4640-af5a-e7e92f39c58f.webp',
-      '/assets/c852383c-1210-4bd6-b005-63df7e7e7962.webp',
-      '/assets/aaaa.webp',
-      '/assets/aaaaa.webp',
-      '/assets/aaa.webp',
-      '/assets/a.webp',
-      '/assets/WhatsApp-Image-2026-04-11-at-10.48.35-AM.webp',
-      '/assets/WhatsApp-Image-2026-04-11-at-10.54.05-AM.webp'
+      '/assets/c852383c-1210-4bd6-b005-63df7e7e7962.webp'
     ];
 
+    let activeGallery = proofFallbackImages;
+    let currentIdx = 0;
+    let currentZoom = 1;
+
     function openLightboxProof(idx) {
-      openLightbox(idx);
+      const proofImgs = document.querySelectorAll('.proof-item-card img');
+      if (proofImgs.length) {
+        activeGallery = Array.from(proofImgs).map(img => img.currentSrc || img.src);
+      } else {
+        activeGallery = proofFallbackImages;
+      }
+      currentIdx = idx;
+      currentZoom = 1;
+      updateLightbox();
+      document.getElementById('lightbox').style.display = 'grid';
+      document.body.style.overflow = 'hidden';
+    }
+
+    function openLightboxReview(idx) {
+      const reviewImgs = document.querySelectorAll('.reviews-proof-grid-4 img');
+      if (reviewImgs.length) {
+        activeGallery = Array.from(reviewImgs).map(img => img.currentSrc || img.src);
+      } else {
+        activeGallery = reviewFallbackImages;
+      }
+      currentIdx = idx;
+      currentZoom = 1;
+      updateLightbox();
+      document.getElementById('lightbox').style.display = 'grid';
+      document.body.style.overflow = 'hidden';
+    }
+
+    function openLightbox(idx) {
+      openLightboxReview(idx);
+    }
+
+    function closeLightbox() {
+      document.getElementById('lightbox').style.display = 'none';
+      document.body.style.overflow = '';
+    }
+
+    function updateLightbox() {
+      const img = document.getElementById('lightbox-img');
+      const counter = document.getElementById('lightbox-counter');
+      const zoomText = document.getElementById('zoom-level');
+      if (!activeGallery || !activeGallery.length) activeGallery = proofFallbackImages;
+      img.src = activeGallery[currentIdx];
+      img.style.transform = `scale(${currentZoom})`;
+      counter.textContent = `Result ${String(currentIdx + 1).padStart(2, '0')} / ${String(activeGallery.length).padStart(2, '0')}`;
+      zoomText.textContent = `${Math.round(currentZoom * 100)}%`;
+    }
+
+    function prevImage(e) {
+      if (e) e.stopPropagation();
+      currentIdx = (currentIdx - 1 + activeGallery.length) % activeGallery.length;
+      currentZoom = 1;
+      updateLightbox();
+    }
+
+    function nextImage(e) {
+      if (e) e.stopPropagation();
+      currentIdx = (currentIdx + 1) % activeGallery.length;
+      currentZoom = 1;
+      updateLightbox();
     }
 
     function filterProofs(cat, btn) {
@@ -1682,46 +1731,6 @@
           card.style.display = 'none';
         }
       });
-    }
-
-    let currentIdx = 0;
-    let currentZoom = 1;
-
-    function openLightbox(idx) {
-      currentIdx = idx;
-      currentZoom = 1;
-      updateLightbox();
-      document.getElementById('lightbox').style.display = 'grid';
-      document.body.style.overflow = 'hidden';
-    }
-
-    function closeLightbox() {
-      document.getElementById('lightbox').style.display = 'none';
-      document.body.style.overflow = '';
-    }
-
-    function updateLightbox() {
-      const img = document.getElementById('lightbox-img');
-      const counter = document.getElementById('lightbox-counter');
-      const zoomText = document.getElementById('zoom-level');
-      img.src = galleryImages[currentIdx];
-      img.style.transform = `scale(${currentZoom})`;
-      counter.textContent = `Result ${String(currentIdx + 1).padStart(2, '0')} / ${galleryImages.length}`;
-      zoomText.textContent = `${Math.round(currentZoom * 100)}%`;
-    }
-
-    function prevImage(e) {
-      if (e) e.stopPropagation();
-      currentIdx = (currentIdx - 1 + galleryImages.length) % galleryImages.length;
-      currentZoom = 1;
-      updateLightbox();
-    }
-
-    function nextImage(e) {
-      if (e) e.stopPropagation();
-      currentIdx = (currentIdx + 1) % galleryImages.length;
-      currentZoom = 1;
-      updateLightbox();
     }
 
     function zoomIn(e) {
