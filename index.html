@@ -81,7 +81,7 @@
       background: linear-gradient(145deg, #151122 0%, #0d0a15 100%);
       border: 1px solid rgba(168, 122, 255, 0.45);
       border-radius: 16px;
-      padding: 36px 30px;
+      padding: 34px 28px;
       text-align: center;
       box-shadow: 0 20px 50px rgba(0, 0, 0, 0.7), 0 0 30px rgba(109, 63, 229, 0.2);
       position: relative;
@@ -118,11 +118,11 @@
     }
 
     .hero-card-title {
-      font-size: clamp(20px, 2.5vw, 29px);
+      font-size: clamp(22px, 2.7vw, 32px);
       color: #ffffff;
       letter-spacing: -0.03em;
       line-height: 1.35;
-      margin: 0 0 22px;
+      margin: 0;
       font-weight: 800;
     }
 
@@ -131,31 +131,35 @@
       text-shadow: 0 0 16px rgba(167, 139, 250, 0.4);
     }
 
-    /* 4 Feature Points in exact Image 2 style (2 lines) */
-    .hero-theme-points {
+    /* 4 Feature Points with Yellow Arrows OUTSIDE the box below */
+    .hero-arrow-points {
       display: grid;
       grid-template-columns: repeat(2, auto);
-      gap: 14px 44px;
       justify-content: center;
-      align-items: center;
-      margin: 0 auto;
+      gap: 12px 42px;
+      margin: 22px auto 0;
+      max-width: 600px;
     }
 
-    .htp-item {
+    .arrow-point {
       display: inline-flex;
       align-items: center;
-      gap: 10px;
-      font-size: 15px;
-      color: #ded8e8;
-      font-weight: 500;
+      gap: 9px;
+      color: #ffffff;
+      font-family: 'DM Sans', sans-serif;
+      font-size: clamp(14px, 1.4vw, 16.5px);
+      font-weight: 700;
+      letter-spacing: 0.01em;
+      white-space: nowrap;
     }
 
-    .htp-arrow {
+    .yellow-arrow {
       color: #facc15;
-      font-size: 16px;
+      font-size: 19px;
       font-weight: 900;
+      display: inline-block;
+      text-shadow: 0 0 10px rgba(250, 204, 21, 0.6);
       line-height: 1;
-      filter: drop-shadow(0 0 4px rgba(250, 204, 21, 0.4));
     }
 
     /* Bigger Video Player in Purple Theme */
@@ -223,14 +227,15 @@
         display: none;
       }
       .hero-main-card {
-        padding: 28px 18px 24px;
-        border-radius: 16px;
+        padding: 24px 16px;
+        border-radius: 14px;
       }
-      .hero-theme-points {
+      .hero-arrow-points {
         grid-template-columns: 1fr;
-        gap: 12px;
+        gap: 10px;
         justify-items: start;
-        padding-left: 14px;
+        padding-left: 18px;
+        margin-top: 18px;
       }
       .hero-video-box.big-video {
         margin-top: 24px !important;
@@ -1216,25 +1221,25 @@
         <h1 class="hero-card-title">
           GET <span class="purple-highlight">100+ TAXI/ CAB &amp; TOUR PACKAGE</span><br class="desktop-br">BOOKINGS IN JUST 30 DAYS!
         </h1>
+      </div>
 
-        <!-- 4 Feature Points from Image 1 in Image 2 Purple Theme -->
-        <div class="hero-theme-points">
-          <div class="htp-item">
-            <span class="htp-arrow">➔</span>
-            <span>Get More Calls</span>
-          </div>
-          <div class="htp-item">
-            <span class="htp-arrow">➔</span>
-            <span>More WhatsApp Enquiries</span>
-          </div>
-          <div class="htp-item">
-            <span class="htp-arrow">➔</span>
-            <span>More Bookings</span>
-          </div>
-          <div class="htp-item">
-            <span class="htp-arrow">➔</span>
-            <span>Better ROI</span>
-          </div>
+      <!-- 4 Feature Points with Yellow Arrows (OUTSIDE the box, below) -->
+      <div class="hero-arrow-points">
+        <div class="arrow-point">
+          <span class="yellow-arrow">➔</span>
+          <span>Get More Calls</span>
+        </div>
+        <div class="arrow-point">
+          <span class="yellow-arrow">➔</span>
+          <span>More WhatsApp Enquiries</span>
+        </div>
+        <div class="arrow-point">
+          <span class="yellow-arrow">➔</span>
+          <span>More Bookings</span>
+        </div>
+        <div class="arrow-point">
+          <span class="yellow-arrow">➔</span>
+          <span>Better ROI</span>
         </div>
       </div>
 
