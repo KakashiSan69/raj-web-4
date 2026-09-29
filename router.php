@@ -12,6 +12,16 @@ if ($uri === '/' || $uri === '') {
     }
 }
 
+// Serve thank-you-2 page
+if ($uri === '/thank-you-2' || $uri === '/thank-you-2/' || $uri === '/thank-you-2.html') {
+    if (file_exists(__DIR__ . '/thank-you-2.html')) {
+        header('Content-Type: text/html; charset=UTF-8');
+        header('Cache-Control: no-cache, must-revalidate');
+        readfile(__DIR__ . '/thank-you-2.html');
+        exit;
+    }
+}
+
 // If file exists, serve it with proper caching and content-type
 if (file_exists(__DIR__ . $uri) && !is_dir(__DIR__ . $uri)) {
     $ext = pathinfo($uri, PATHINFO_EXTENSION);

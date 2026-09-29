@@ -1,4 +1,14 @@
 {
   "version": 2,
-  "cleanUrls": true
+  "cleanUrls": true,
+  "rewrites": [
+    {
+      "source": "/thank-you-2",
+      "destination": "/thank-you-2.html"
+    },
+    {
+      "source": "/thank-you-2/",
+      "destination": "/thank-you-2.html"
+    }
+  ]
 }

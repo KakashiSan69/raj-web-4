@@ -1,4 +1,5 @@
 import { defineConfig } from 'vite';
+import { resolve } from 'path';
 
 export default defineConfig({
   plugins: [
@@ -13,6 +14,25 @@ export default defineConfig({
           );
         }
       }
+    },
+    {
+      name: 'thank-you-dev-rewrite',
+      configureServer(server) {
+        server.middlewares.use((req, res, next) => {
+          if (req.url === '/thank-you-2' || req.url === '/thank-you-2/') {
+            req.url = '/thank-you-2.html';
+          }
+          next();
+        });
+      }
     }
-  ]
+  ],
+  build: {
+    rollupOptions: {
+      input: {
+        main: resolve(__dirname, 'index.html'),
+        thankYou2: resolve(__dirname, 'thank-you-2.html')
+      }
+    }
+  }
 });
