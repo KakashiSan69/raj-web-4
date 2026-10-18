@@ -405,35 +405,435 @@
       transform: scale(1.1);
     }
 
-    .elementor-24 .elementor-element.elementor-element-fb722b6 {
-      margin-top: 14px;
-      margin-bottom: 0 !important;
+    /* TOP HERO BRANDING BANNER (Match Photo) */
+    .hero-banner-section {
+      position: relative;
+      padding: 16px 14px 10px;
       text-align: center;
+      background: radial-gradient(circle at 50% 15%, rgba(139, 92, 246, 0.28) 0%, rgba(12, 9, 28, 0.98) 65%, #070512 100%);
+      overflow: hidden;
+      border-bottom: 1px solid rgba(139, 92, 246, 0.25);
+    }
+
+    .hero-banner-section::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background-image: 
+        linear-gradient(rgba(139, 92, 246, 0.08) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(139, 92, 246, 0.08) 1px, transparent 1px);
+      background-size: 32px 32px;
+      pointer-events: none;
+      opacity: 0.6;
+    }
+
+    .hero-banner-container {
+      position: relative;
+      z-index: 2;
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    /* Main Headline in Pill Capsule Box (Strictly Single Line) */
+    .hero-pill-headline {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: auto;
+      max-width: 98%;
+      background: #160025;
+      border: 2.5px solid #F000FF;
+      box-shadow: 0 6px 30px rgba(0, 0, 0, 0.65), 0 0 28px rgba(240, 0, 255, 0.6), inset 0 0 16px rgba(240, 0, 255, 0.2);
+      padding: 12px 38px;
+      border-radius: 999px;
+      text-align: center;
+      margin: 4px auto 10px;
+      transition: all 0.3s ease;
+      white-space: nowrap;
+      overflow: hidden;
+    }
+
+    .hero-pill-headline:hover {
+      box-shadow: 0 8px 36px rgba(0, 0, 0, 0.75), 0 0 38px rgba(240, 0, 255, 0.8), inset 0 0 22px rgba(240, 0, 255, 0.3);
+      transform: translateY(-2px);
+    }
+
+    .hero-main-title {
+      font-family: 'Space Grotesk', 'Roboto', sans-serif !important;
+      font-size: clamp(14px, 1.85vw, 26px) !important;
+      font-weight: 900 !important;
+      text-transform: uppercase;
+      line-height: 1.25em;
+      letter-spacing: 0.02em;
+      margin: 0;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: nowrap !important;
+      white-space: nowrap !important;
+      gap: 10px;
+    }
+
+    .pill-icon {
+      font-size: 1.15em;
+      display: inline-block;
+      margin-right: 2px;
+      flex-shrink: 0;
+    }
+
+    .hero-main-title .c-neon-yellow {
+      color: #EFFF00 !important;
+      -webkit-text-fill-color: #EFFF00 !important;
+      font-weight: 900 !important;
+      -webkit-text-stroke: 1px #EFFF00;
+      text-shadow: 0 0 5px rgba(239, 255, 0, 0.55), 0 0 12px rgba(239, 255, 0, 0.2);
+      display: inline-block;
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+
+    .hero-main-title .c-white {
+      color: #FFFFFF !important;
+      -webkit-text-fill-color: #FFFFFF !important;
+      font-weight: 900 !important;
+      -webkit-text-stroke: 0.6px #FFFFFF;
+      text-shadow: 0 1px 4px rgba(0, 0, 0, 0.9);
+      display: inline-block;
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+
+    @media (max-width: 640px) {
+      .hero-banner-section {
+        padding: 10px 8px 8px;
+      }
+      .hero-pill-headline {
+        border-radius: 999px;
+        padding: 8px 14px;
+        margin: 4px auto 8px;
+        max-width: 98%;
+        white-space: nowrap;
+      }
+      .hero-main-title {
+        font-size: clamp(10.5px, 3.1vw, 13.5px) !important;
+        line-height: 1.2;
+        gap: 4px;
+        flex-wrap: nowrap !important;
+        white-space: nowrap !important;
+      }
+      .pill-icon {
+        font-size: 1.1em;
+        margin-right: 1px;
+      }
+    }
+
+    /* Target Audience Pill Box */
+    .hero-target-pill {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 8px;
+      background: rgba(18, 12, 38, 0.92);
+      border: 2px solid #a855f7;
+      border-radius: 999px;
+      padding: 11px 30px;
+      box-shadow: 0 0 24px rgba(168, 85, 247, 0.45);
+      margin-bottom: 34px;
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: clamp(14px, 2.3vw, 22px);
+      text-transform: uppercase;
+    }
+
+    .hero-target-pill .for-text {
+      color: #ffffff;
+      font-weight: 800;
+      letter-spacing: 0.05em;
+    }
+
+    .hero-target-pill .target-highlight {
+      color: #ffd000;
+      font-weight: 900;
+      letter-spacing: 0.04em;
+      text-shadow: 0 0 14px rgba(255, 208, 0, 0.55);
+    }
+
+    /* 5 Feature Badges Row */
+    .hero-feature-row {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 16px 26px;
+      max-width: 860px;
+      margin: 0 auto;
+    }
+
+    .hero-feature-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+      min-width: 105px;
+    }
+
+    .hero-feature-icon {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      background: rgba(26, 16, 54, 0.92);
+      border: 2px solid #a855f7;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 20px;
+      color: #ffffff;
+      box-shadow: 0 0 16px rgba(168, 85, 247, 0.55);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .hero-feature-item:hover .hero-feature-icon {
+      transform: translateY(-3px) scale(1.08);
+      box-shadow: 0 0 24px rgba(168, 85, 247, 0.85);
+    }
+
+    .hero-feature-label {
+      color: #f8fafc;
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      font-family: 'Space Grotesk', sans-serif;
+      text-align: center;
+      line-height: 1.25;
+      text-shadow: 0 1px 4px rgba(0,0,0,0.7);
+    }
+
+    /* Hero Video Box (Proper Seamless 16:9 Frame) */
+    .hero-video-box {
+      width: 100%;
+      max-width: 940px;
+      margin: 14px auto 0;
+      padding: 0;
+    }
+
+    .hero-video-wrapper {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      border-radius: 18px;
+      overflow: hidden;
+      background: #0a0718;
+      box-shadow: 0 25px 60px -10px rgba(0, 0, 0, 0.9), 0 0 0 1px rgba(255, 255, 255, 0.12), 0 0 30px rgba(139, 92, 246, 0.2);
+      border: none;
+      outline: none;
+      transform: translateZ(0); /* Clean antialiased rounded edges */
+    }
+
+    .hero-video-poster {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      border-radius: 18px;
+    }
+
+    .hero-poster-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      border-radius: 18px;
+      transition: transform 0.35s ease;
+    }
+
+    .hero-video-poster:hover .hero-poster-img {
+      transform: scale(1.02);
+    }
+
+    .hero-play-btn-circle {
+      position: absolute;
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #a855f7 0%, #7c3aed 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 0 32px rgba(168, 85, 247, 0.95), 0 4px 20px rgba(0, 0, 0, 0.6);
+      transition: transform 0.25s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.25s ease;
+      z-index: 3;
+      border: 2px solid rgba(255, 255, 255, 0.7);
+    }
+
+    .hero-video-poster:hover .hero-play-btn-circle {
+      transform: scale(1.15);
+      box-shadow: 0 0 48px rgba(168, 85, 247, 1), 0 6px 24px rgba(0, 0, 0, 0.8);
+    }
+
+    .play-svg-icon {
+      width: 36px;
+      height: 36px;
+      fill: #ffffff;
+      margin-left: 5px;
+    }
+
+    .hero-play-pulse {
+      position: absolute;
+      width: 95px;
+      height: 95px;
+      border-radius: 50%;
+      border: 2px solid rgba(168, 85, 247, 0.8);
+      animation: hero-play-pulse-ring 2s infinite ease-out;
+      z-index: 2;
+      pointer-events: none;
+    }
+
+    @keyframes hero-play-pulse-ring {
+      0% { transform: scale(0.9); opacity: 1; }
+      100% { transform: scale(1.55); opacity: 0; }
+    }
+
+    .hero-video-elem {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 18px;
+      background: #000;
+      border: none;
+      outline: none;
+      display: block;
+    }
+
+    @media (max-width: 640px) {
+      .hero-play-btn-circle {
+        width: 60px;
+        height: 60px;
+      }
+      .play-svg-icon {
+        width: 26px;
+        height: 26px;
+        margin-left: 3px;
+      }
+      .hero-play-pulse {
+        width: 72px;
+        height: 72px;
+      }
+    }
+
+    /* YouTube Channel Proof Section Under Video (Exact Match) */
+    .hero-yt-section {
+      width: 100%;
+      max-width: 940px;
+      margin: 20px auto 6px;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .hero-yt-title-link {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      text-decoration: none;
+      margin: 0 auto 14px;
+      transition: transform 0.2s ease, opacity 0.2s ease;
+      cursor: pointer;
+    }
+
+    .hero-yt-title-link:hover {
+      transform: scale(1.04);
+      opacity: 0.95;
+    }
+
+    .hero-yt-logo-svg {
+      width: clamp(40px, 4.8vw, 54px);
+      height: auto;
+      aspect-ratio: 24 / 17;
+      filter: drop-shadow(0 0 14px rgba(255, 0, 0, 0.75));
+      flex-shrink: 0;
+    }
+
+    .hero-yt-channel-text {
+      color: #EFFF00 !important;
+      -webkit-text-fill-color: #EFFF00 !important;
+      font-family: 'Space Grotesk', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      font-size: clamp(26px, 3.8vw, 44px);
+      font-weight: 900 !important;
+      -webkit-text-stroke: 1px #EFFF00;
+      letter-spacing: -0.01em;
+      line-height: 1.1;
+      text-shadow: 0 0 8px rgba(239, 255, 0, 0.55), 0 0 18px rgba(239, 255, 0, 0.2);
+      white-space: nowrap;
+    }
+
+    .hero-yt-card {
+      width: 100%;
+      max-width: 760px;
+      margin: 0 auto;
+      border-radius: 18px;
+      overflow: hidden;
+      background: #0f0f0f;
+      border: 1.5px solid rgba(255, 255, 255, 0.12);
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.85), 0 0 30px rgba(139, 92, 246, 0.2);
+      transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+    }
+
+    .hero-yt-card:hover {
+      transform: translateY(-3px);
+      border-color: rgba(255, 0, 0, 0.5);
+      box-shadow: 0 24px 60px rgba(0, 0, 0, 0.9), 0 0 35px rgba(255, 0, 0, 0.3);
+    }
+
+    .hero-yt-img-link {
+      display: block;
+      width: 100%;
+      line-height: 0;
+    }
+
+    .hero-yt-img {
+      width: 100%;
+      height: auto;
+      display: block;
+      object-fit: cover;
+      border-radius: 16px;
+    }
+
+    @media (max-width: 640px) {
+      .hero-yt-section {
+        margin: 16px auto 4px;
+      }
+      .hero-yt-title-link {
+        gap: 12px;
+        margin-bottom: 12px;
+      }
+      .hero-yt-logo-svg {
+        width: 36px;
+      }
+      .hero-yt-channel-text {
+        font-size: 24px;
+        -webkit-text-stroke: 0.8px #EFFF00;
+      }
+      .hero-yt-card {
+        border-radius: 14px;
+      }
+      .hero-yt-img {
+        border-radius: 12px;
+      }
     }
 
     .budget-section {
-      padding-top: 16px !important;
-    }
-
-    .elementor-24 .elementor-element.elementor-element-fb722b6 .elementor-button {
-      background-color: transparent;
-      font-family: 'Space Grotesk', 'Roboto', sans-serif !important;
-      font-size: clamp(17px, 2vw, 24px);
-      font-weight: 700;
-      color: #FFFFFF !important;
-      background-image: linear-gradient(135deg, #8b5cf6 0%, #6d28d9 100%) !important;
-      box-shadow: 0 6px 25px rgba(139, 92, 246, 0.45) !important;
-      border-radius: 30px;
-      padding: 14px 40px;
-      display: inline-block;
-      text-decoration: none;
-      transition: all 0.3s ease;
-    }
-
-    .elementor-24 .elementor-element.elementor-element-fb722b6 .elementor-button:hover {
-      background-image: linear-gradient(135deg, #7c3aed 0%, #5b21b6 100%) !important;
-      box-shadow: 0 8px 30px rgba(139, 92, 246, 0.65) !important;
-      transform: translateY(-2px);
+      padding-top: 18px !important;
     }
 
     /* 4 Feature Points with Yellow Arrows OUTSIDE the box below */
@@ -972,17 +1372,21 @@
       box-shadow: 0 0 16px rgba(139, 92, 246, 0.5);
     }
 
-    /* CTA Buttons to ₹99 */
+    /* CTA Buttons (Exact Match to User Reference: Solid Neon Yellow/Lime Pill with Black Text) */
     .cta-primary,
     .strategy-green-btn,
     .pulse-btn-large,
-    .sticky-btn {
-      background: linear-gradient(135deg, #7c3aed 0%, #6366f1 100%) !important;
-      border: 1px solid rgba(196, 181, 253, 0.45) !important;
-      color: #ffffff !important;
-      box-shadow: 0 10px 25px rgba(124, 58, 237, 0.35) !important;
-      font-weight: 700 !important;
-      letter-spacing: 0.02em !important;
+    .sticky-btn,
+    .header-cta,
+    .cta {
+      background: #EFFF00 !important;
+      border: none !important;
+      color: #000000 !important;
+      box-shadow: 0 8px 28px rgba(239, 255, 0, 0.45), 0 2px 10px rgba(0, 0, 0, 0.25) !important;
+      font-family: 'Space Grotesk', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+      font-weight: 800 !important;
+      letter-spacing: 0.04em !important;
+      text-transform: uppercase !important;
       transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1) !important;
       cursor: pointer !important;
       text-decoration: none !important;
@@ -990,17 +1394,37 @@
       align-items: center !important;
       justify-content: center !important;
       gap: 10px !important;
-      padding: 13px 26px !important;
-      border-radius: 8px !important;
+      padding: 14px 32px !important;
+      border-radius: 999px !important;
+    }
+
+    .header-cta {
+      padding: 10px 22px !important;
+      font-size: 13px !important;
+    }
+
+    .cta-primary *,
+    .strategy-green-btn *,
+    .pulse-btn-large *,
+    .sticky-btn *,
+    .header-cta *,
+    .cta * {
+      color: #000000 !important;
+      font-weight: 800 !important;
+      text-transform: uppercase !important;
+      letter-spacing: 0.04em !important;
     }
 
     .cta-primary:hover,
     .strategy-green-btn:hover,
     .pulse-btn-large:hover,
-    .sticky-btn:hover {
+    .sticky-btn:hover,
+    .header-cta:hover,
+    .cta:hover {
       transform: translateY(-2px) scale(1.02) !important;
-      box-shadow: 0 16px 36px rgba(139, 92, 246, 0.55) !important;
-      background: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%) !important;
+      box-shadow: 0 12px 36px rgba(239, 255, 0, 0.7) !important;
+      background: #f7ff33 !important;
+      color: #000000 !important;
     }
 
     /* Travel specialists Section (Matched to Screenshot) */
@@ -1511,7 +1935,7 @@
         <button onclick="scrollToId('consultation')">Consultation</button>
         <a class="cta-primary header-cta"
           href="https://app.automatefunnels.in/form/ms-travel-marketing-lead-form-msefuhao">
-          <span>Book A Free Strategy Call →</span>
+          <span>Book A Free Strategy Call</span>
         </a>
       </nav>
 
@@ -1536,134 +1960,59 @@
     </div>
   </header>
 
-  <!-- HERO SECTION (Elementor Original) -->
-  <div class="page-content" id="top">
-    <div data-elementor-type="wp-page" data-elementor-id="24" class="elementor elementor-24"
-      data-elementor-post-type="page">
-      <section
-        class="elementor-section elementor-top-section elementor-element elementor-element-245346e9 elementor-section-content-middle elementor-section-boxed elementor-section-height-default elementor-section-height-default"
-        data-id="245346e9" data-element_type="section" data-e-type="section"
-        data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
-        <div class="elementor-background-overlay"></div>
-        <div class="elementor-container elementor-column-gap-default">
-          <div
-            class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-7e81b93b"
-            data-id="7e81b93b" data-element_type="column" data-e-type="column">
-            <div class="elementor-widget-wrap elementor-element-populated">
-              <div
-                class="elementor-element elementor-element-143d650c elementor-widget__width-auto elementor-widget elementor-widget-heading"
-                data-id="143d650c" data-element_type="widget" data-e-type="widget" data-widget_type="heading.default">
-                <p class="elementor-heading-title elementor-size-default">🚀 Get More Taxi &amp; Tour Bookings With
-                  Profitable Google Ads</p>
-              </div>
-              <div
-                class="elementor-element elementor-element-1a21f7a elementor-widget__width-auto elementor-widget elementor-widget-heading"
-                data-id="1a21f7a" data-element_type="widget" data-e-type="widget" data-widget_type="heading.default">
-                <p class="elementor-heading-title elementor-size-default">199+ TAXI/ CAB &amp; TOUR PACKAGE BOOKINGS IN
-                  JUST 30 DAYS!</p>
-              </div>
-              <div
-                class="elementor-element elementor-element-1c7f71e1 elementor-icon-list--layout-inline elementor-align-center elementor-mobile-align-start elementor-list-item-link-full_width elementor-widget elementor-widget-icon-list"
-                data-id="1c7f71e1" data-element_type="widget" data-e-type="widget" data-widget_type="icon-list.default">
-                <ul class="elementor-icon-list-items elementor-inline-items">
-                  <li class="elementor-icon-list-item elementor-inline-item">
-                    <span class="elementor-icon-list-icon">
-                      <svg aria-hidden="true" class="e-font-icon-svg e-fas-long-arrow-alt-right" viewBox="0 0 448 512"
-                        xmlns="http://www.w3.org/2000/svg">
-                        <path
-                          d="M313.941 216H12c-6.627 0-12 5.373-12 12v56c0 6.627 5.373 12 12 12h301.941v46.059c0 21.382 25.851 32.09 40.971 16.971l86.059-86.059c9.373-9.373 9.373-24.569 0-33.941l-86.059-86.059c-15.119-15.119-40.971-4.411-40.971 16.971V216z">
-                        </path>
-                      </svg>
-                    </span>
-                    <span class="elementor-icon-list-text">Get More Calls</span>
-                  </li>
-                  <li class="elementor-icon-list-item elementor-inline-item">
-                    <span class="elementor-icon-list-icon">
-                      <svg aria-hidden="true" class="e-font-icon-svg e-fas-long-arrow-alt-right" viewBox="0 0 448 512"
-                        xmlns="http://www.w3.org/2000/svg">
-                        <path
-                          d="M313.941 216H12c-6.627 0-12 5.373-12 12v56c0 6.627 5.373 12 12 12h301.941v46.059c0 21.382 25.851 32.09 40.971 16.971l86.059-86.059c9.373-9.373 9.373-24.569 0-33.941l-86.059-86.059c-15.119-15.119-40.971-4.411-40.971 16.971V216z">
-                        </path>
-                      </svg>
-                    </span>
-                    <span class="elementor-icon-list-text">More WhatsApp Enquiries</span>
-                  </li>
-                  <li class="elementor-icon-list-item elementor-inline-item">
-                    <span class="elementor-icon-list-icon">
-                      <svg aria-hidden="true" class="e-font-icon-svg e-fas-long-arrow-alt-right" viewBox="0 0 448 512"
-                        xmlns="http://www.w3.org/2000/svg">
-                        <path
-                          d="M313.941 216H12c-6.627 0-12 5.373-12 12v56c0 6.627 5.373 12 12 12h301.941v46.059c0 21.382 25.851 32.09 40.971 16.971l86.059-86.059c9.373-9.373 9.373-24.569 0-33.941l-86.059-86.059c-15.119-15.119-40.971-4.411-40.971 16.971V216z">
-                        </path>
-                      </svg>
-                    </span>
-                    <span class="elementor-icon-list-text">More Bookings</span>
-                  </li>
-                  <li class="elementor-icon-list-item elementor-inline-item">
-                    <span class="elementor-icon-list-icon">
-                      <svg aria-hidden="true" class="e-font-icon-svg e-fas-long-arrow-alt-right" viewBox="0 0 448 512"
-                        xmlns="http://www.w3.org/2000/svg">
-                        <path
-                          d="M313.941 216H12c-6.627 0-12 5.373-12 12v56c0 6.627 5.373 12 12 12h301.941v46.059c0 21.382 25.851 32.09 40.971 16.971l86.059-86.059c9.373-9.373 9.373-24.569 0-33.941l-86.059-86.059c-15.119-15.119-40.971-4.411-40.971 16.971V216z">
-                        </path>
-                      </svg>
-                    </span>
-                    <span class="elementor-icon-list-text">Better ROI</span>
-                  </li>
-                </ul>
-              </div>
-              <div class="elementor-element elementor-element-3bec93f0 elementor-widget elementor-widget-video"
-                data-id="3bec93f0" data-element_type="widget" data-e-type="widget"
-                data-settings="{&quot;show_image_overlay&quot;:&quot;yes&quot;,&quot;image_overlay&quot;:{&quot;url&quot;:&quot;https:\/\/mstravelmarketing.in\/wp-content\/uploads\/2026\/02\/76yuhj.jpg&quot;,&quot;id&quot;:29,&quot;size&quot;:&quot;&quot;},&quot;lightbox&quot;:&quot;yes&quot;,&quot;video_type&quot;:&quot;hosted&quot;,&quot;autoplay&quot;:&quot;yes&quot;,&quot;play_on_mobile&quot;:&quot;yes&quot;,&quot;loop&quot;:&quot;yes&quot;}"
-                data-widget_type="video.default">
-                <div class="e-hosted-video elementor-wrapper elementor-open-lightbox">
-                  <div class="elementor-custom-embed-image-overlay" data-elementor-open-lightbox="yes"
-                    id="elementor-video-thumb" onclick="playElementorHeroVid()">
-                    <img decoding="async" width="640" height="360" src="/assets/video1-poster.jpg"
-                      onerror="this.src='https://mstravelmarketing.in/wp-content/uploads/2026/02/76yuhj.jpg'"
-                      class="attachment-full size-full wp-image-29" alt="Google Ads Taxi Results" />
-                    <div class="elementor-custom-embed-play" role="button" aria-label="Play Video" tabindex="0">
-                      <svg aria-hidden="true" class="e-font-icon-svg e-eicon-play" viewBox="0 0 1000 1000"
-                        xmlns="http://www.w3.org/2000/svg">
-                        <path
-                          d="M838 162C746 71 633 25 500 25 371 25 258 71 163 162 71 254 25 367 25 500 25 633 71 746 163 837 254 929 367 979 500 979 633 979 746 933 838 837 929 746 975 633 975 500 975 367 929 254 838 162M808 192C892 279 933 379 933 500 933 621 892 725 808 808 725 892 621 938 500 938 379 938 279 896 196 808 113 725 67 621 67 500 67 379 108 279 196 192 279 108 383 62 500 62 621 62 721 108 808 192M438 392V642L642 517 438 392Z">
-                        </path>
-                      </svg>
-                    </div>
-                  </div>
-                  <video id="elementor-hero-video-player" controls preload="metadata" playsinline
-                    style="display:none; width: 100%; height: auto; border-radius: 16px;">
-                    <source src="/assets/video1.mp4" type="video/mp4">
-                    Your browser does not support HTML video.
-                  </video>
-                </div>
-              </div>
-              <div
-                class="elementor-element elementor-element-fb722b6 elementor-align-center elementor-invisible elementor-widget elementor-widget-button"
-                data-id="fb722b6" data-element_type="widget" data-e-type="widget"
-                data-settings="{&quot;_animation&quot;:&quot;tada&quot;}" data-widget_type="button.default">
-                <a class="elementor-button elementor-button-link elementor-size-sm elementor-animation-buzz"
-                  href="https://app.automatefunnels.in/form/ms-travel-marketing-lead-form-msefuhao">
-                  <span class="elementor-button-content-wrapper">
-                    <span class="elementor-button-text">Book A Free Strategy Call →</span>
-                  </span>
-                </a>
-              </div>
+  <!-- TOP HERO BRANDING BANNER (Exact Match with Reference Photo) -->
+  <section class="hero-banner-section" id="top">
+    <div class="hero-banner-container">
+      <!-- Main Headline in Pill Capsule Box (Full Green Color) -->
+      <div class="hero-pill-headline">
+        <h1 class="hero-main-title">
+          <span class="pill-icon">🚀</span>
+          <span class="c-neon-yellow">GOOGLE ADS &amp; SEO SERVICES FOR TRAVEL AGENCY</span>
+        </h1>
+      </div>
+
+      <!-- VIDEO CONTAINER WITH FULL UNCLIPPED 16:9 THUMBNAIL -->
+      <div class="hero-video-box">
+        <div class="hero-video-wrapper" id="hero-video-wrapper">
+          <div class="hero-video-poster" id="hero-video-poster" onclick="playHeroVideo()" role="button" aria-label="Play Google Ads Results Video" tabindex="0">
+            <img src="/assets/taxi-seo-google-ads-thumbnail.jpg" alt="Google Ads & SEO Services for Taxi and Tour Packages" class="hero-poster-img" />
+            <div class="hero-play-btn-circle">
+              <svg viewBox="0 0 24 24" class="play-svg-icon">
+                <path d="M8 5v14l11-7z"/>
+              </svg>
             </div>
+            <div class="hero-play-pulse"></div>
           </div>
+          <video id="main-hero-video" controls preload="metadata" playsinline class="hero-video-elem" style="display:none;">
+            <source src="/assets/taxi-results-video.mp4" type="video/mp4">
+            Your browser does not support HTML5 video.
+          </video>
         </div>
-      </section>
+      </div>
+
+      <!-- YOUTUBE CHANNEL PROOF (Under Video - Exact Match) -->
+      <div class="hero-yt-section">
+        <a href="https://www.youtube.com/@marketingsafalta" target="_blank" rel="noopener noreferrer" class="hero-yt-title-link" aria-label="YouTube Channel">
+          <svg viewBox="0 0 24 24" class="hero-yt-logo-svg" aria-hidden="true">
+            <path fill="#FF0000" d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814z"/>
+            <polygon points="9.5,8 16,12 9.5,16" fill="#111111"/>
+          </svg>
+          <span class="hero-yt-channel-text">YouTube Channel</span>
+        </a>
+
+        <div class="hero-yt-card">
+          <a href="https://www.youtube.com/@marketingsafalta" target="_blank" rel="noopener noreferrer" class="hero-yt-img-link" title="Marketing Safalta by Raj Thakur - YouTube Channel">
+            <img src="/assets/youtube-channel-proof.png" alt="Marketing Safalta by Raj Thakur - YouTube Channel Proof" class="hero-yt-img" loading="lazy" />
+          </a>
+        </div>
+      </div>
     </div>
-  </div>
+  </section>
 
   <!-- BUDGET & VALUE PROPOSITION SECTION -->
   <section class="section budget-section">
     <div class="container budget-container">
       <div class="budget-intro-card">
-        <p class="budget-lead-text">
-          If you run a <b>Taxi, Cab, Tour Package, Travel Agency, or Local Travel Business</b>, and you want genuine
-          leads, daily inquiries, and consistent bookings, you are in the right place.
-        </p>
         <div class="budget-highlight-box">
           <div class="budget-tag">PROVEN PROFIT FORMULA</div>
           <h3>
@@ -1821,7 +2170,7 @@
       <div style="margin-top: 30px; text-align: center;">
         <a class="cta-primary pulse-btn-large"
           href="https://app.automatefunnels.in/form/ms-travel-marketing-lead-form-msefuhao">
-          <span>Book A Free Strategy Call →</span>
+          <span>Book A Free Strategy Call</span>
         </a>
       </div>
     </div>
@@ -2030,7 +2379,7 @@
       <div class="strategy-btn-wrap" style="text-align: center; margin-top: 40px;">
         <a href="https://app.automatefunnels.in/form/ms-travel-marketing-lead-form-msefuhao"
           class="cta-primary">
-          <span>Book A Free Strategy Call →</span>
+          <span>Book A Free Strategy Call</span>
         </a>
       </div>
     </div>
@@ -2073,7 +2422,7 @@
           <div>
             <a class="cta-primary"
               href="https://app.automatefunnels.in/form/ms-travel-marketing-lead-form-msefuhao">
-              <span>Book A Free Strategy Call →</span>
+              <span>Book A Free Strategy Call</span>
             </a>
           </div>
         </div>
@@ -2240,7 +2589,7 @@
       <div style="text-align: center; margin-top: 40px;">
         <a class="cta-primary pulse-btn-large"
           href="https://app.automatefunnels.in/form/ms-travel-marketing-lead-form-msefuhao">
-          <span>Book A Free Strategy Call →</span>
+          <span>Book A Free Strategy Call</span>
         </a>
       </div>
     </div>
@@ -2309,7 +2658,7 @@
         <div>
           <a class="cta-primary pulse-btn-large"
             href="https://app.automatefunnels.in/form/ms-travel-marketing-lead-form-msefuhao">
-            <span>Book A Free Strategy Call →</span>
+            <span>Book A Free Strategy Call</span>
           </a>
         </div>
       </div>
@@ -2332,7 +2681,7 @@
           <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
             <path d="M5 12h14M12 5l7 7-7 7" />
           </svg>
-          Book A Free Strategy Call →
+          Book A Free Strategy Call
         </a>
       </div>
     </div>
@@ -2350,7 +2699,7 @@
       </div>
       <a class="cta-primary sticky-btn"
         href="https://app.automatefunnels.in/form/ms-travel-marketing-lead-form-msefuhao">
-        <span>Book A Free Strategy Call →</span>
+        <span>Book A Free Strategy Call</span>
       </a>
     </div>
   </div>
@@ -2579,22 +2928,23 @@
     }
 
     function playHeroVideo() {
-      const vid = document.getElementById('hero-main-video');
+      const poster = document.getElementById('hero-video-poster');
+      const vid = document.getElementById('main-hero-video') || document.getElementById('hero-main-video');
       const overlay = document.getElementById('video-play-btn');
       if (vid) {
-        vid.play();
+        if (poster) poster.style.display = 'none';
         if (overlay) overlay.style.display = 'none';
+        vid.style.display = 'block';
+        vid.play().catch((err) => console.log('Video playback error:', err));
       }
     }
-    const heroVid = document.getElementById('hero-main-video');
+    const heroVid = document.getElementById('main-hero-video') || document.getElementById('hero-main-video');
     if (heroVid) {
       heroVid.addEventListener('play', () => {
+        const poster = document.getElementById('hero-video-poster');
+        if (poster) poster.style.display = 'none';
         const overlay = document.getElementById('video-play-btn');
         if (overlay) overlay.style.display = 'none';
-      });
-      heroVid.addEventListener('pause', () => {
-        const overlay = document.getElementById('video-play-btn');
-        if (overlay) overlay.style.display = 'flex';
       });
     }
 
