@@ -437,20 +437,21 @@
       align-items: center;
     }
 
-    /* Main Headline in Pill Capsule Box (Strictly Single Line) */
+    /* Main Headline in Pill Capsule Box (Fits tightly to text) */
     .hero-pill-headline {
       display: inline-flex;
       align-items: center;
       justify-content: center;
       width: auto;
       max-width: 98%;
+      box-sizing: border-box;
       background: #160025;
       border: 2.5px solid #F000FF;
       box-shadow: 0 6px 30px rgba(0, 0, 0, 0.65), 0 0 28px rgba(240, 0, 255, 0.6), inset 0 0 16px rgba(240, 0, 255, 0.2);
-      padding: 12px 38px;
+      padding: 12px 34px;
       border-radius: 999px;
       text-align: center;
-      margin: 4px auto 10px;
+      margin: 4px auto 8px;
       transition: all 0.3s ease;
       white-space: nowrap;
       overflow: hidden;
@@ -491,7 +492,7 @@
       font-weight: 900 !important;
       text-shadow: none !important;
       filter: none !important;
-      -webkit-text-stroke: 0 !important;
+      -webkit-text-stroke: 0.8px #FFFFFF !important;
       display: inline-block;
       white-space: nowrap;
       flex-shrink: 0;
@@ -737,16 +738,17 @@
       align-items: center;
       justify-content: center;
       gap: 12px;
-      padding: 8px 24px;
-      background: #140a22;
-      border: 2px solid rgba(255, 255, 255, 0.6);
+      padding: 10px 30px;
+      background: #160025;
+      border: 2.5px solid #F000FF;
       border-radius: 999px;
-      box-shadow: 0 4px 18px rgba(0, 0, 0, 0.6), 0 0 14px rgba(255, 255, 255, 0.15);
+      box-shadow: 0 6px 30px rgba(0, 0, 0, 0.65), 0 0 28px rgba(240, 0, 255, 0.6), inset 0 0 16px rgba(240, 0, 255, 0.2);
       text-decoration: none;
       margin: 0 auto 8px;
       cursor: default !important;
       pointer-events: none;
       user-select: none;
+      white-space: nowrap;
     }
 
     .hero-yt-logo-svg {
@@ -766,7 +768,7 @@
       letter-spacing: -0.01em;
       line-height: 1.1;
       text-shadow: none !important;
-      -webkit-text-stroke: 0 !important;
+      -webkit-text-stroke: 0.8px #FFFFFF !important;
       white-space: nowrap;
     }
 
@@ -809,6 +811,7 @@
         padding: 6px 16px;
         gap: 8px;
         margin-bottom: 6px;
+        border: 2px solid #F000FF;
       }
       .hero-yt-logo-svg {
         width: 26px;
@@ -1462,7 +1465,7 @@
       display: flex;
       flex-direction: column;
       align-items: flex-start;
-      margin-bottom: 14px;
+      margin-bottom: 0 !important;
     }
 
     .founder-image-wrapper {
@@ -1471,6 +1474,7 @@
       max-width: 440px;
       display: flex;
       justify-content: center;
+      margin-bottom: 0 !important;
     }
 
     .founder-glow {
@@ -1490,6 +1494,27 @@
       max-height: 480px;
       object-fit: contain;
       filter: drop-shadow(0 20px 35px rgba(0, 0, 0, 0.8));
+      display: block;
+      margin-bottom: 0 !important;
+    }
+
+    .founder-cta-wrap {
+      position: relative;
+      z-index: 5;
+      margin-top: -34px !important;
+      display: flex;
+      justify-content: flex-start;
+    }
+
+    @media (max-width: 992px) {
+      .founder-showcase {
+        align-items: center;
+        margin-bottom: 0 !important;
+      }
+      .founder-cta-wrap {
+        justify-content: center;
+        margin-top: -34px !important;
+      }
     }
 
     .founder-badge {
@@ -1955,12 +1980,19 @@
   <!-- TOP HERO BRANDING BANNER (Exact Match with Reference Photo) -->
   <section class="hero-banner-section" id="top">
     <div class="hero-banner-container">
-      <!-- Main Headline in Pill Capsule Box (Full Green Color) -->
+      <!-- Main Headline in Pill Capsule Box -->
       <div class="hero-pill-headline">
         <h1 class="hero-main-title">
           <span class="pill-icon">🚀</span>
-          <span class="c-neon-yellow">GOOGLE ADS &amp; SEO SERVICES FOR TRAVEL AGENCY</span>
+          <span class="c-neon-yellow"><strong>GOOGLE ADS &amp; SEO SERVICES FOR TRAVEL AGENCY</strong></span>
         </h1>
+      </div>
+
+      <!-- Second Headline Pill Box (Ditto Same Size Box) -->
+      <div class="hero-pill-headline">
+        <h2 class="hero-main-title">
+          <span class="c-neon-yellow"><strong>GET MORE TAXI &amp; TOUR PACKAGE BOOKINGS</strong></span>
+        </h2>
       </div>
 
       <!-- VIDEO CONTAINER WITH FULL UNCLIPPED 16:9 THUMBNAIL -->
@@ -2409,7 +2441,7 @@
             </div>
           </div>
 
-          <div>
+          <div class="founder-cta-wrap">
             <a class="cta-primary"
               href="https://app.automatefunnels.in/form/ms-travel-marketing-lead-form-msefuhao">
               <span>Book A Free Strategy Call</span>
