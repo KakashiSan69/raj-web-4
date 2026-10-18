@@ -484,23 +484,14 @@
       flex-shrink: 0;
     }
 
-    .hero-main-title .c-neon-yellow {
-      color: #EFFF00 !important;
-      -webkit-text-fill-color: #EFFF00 !important;
-      font-weight: 900 !important;
-      -webkit-text-stroke: 1px #EFFF00;
-      text-shadow: 0 0 5px rgba(239, 255, 0, 0.55), 0 0 12px rgba(239, 255, 0, 0.2);
-      display: inline-block;
-      white-space: nowrap;
-      flex-shrink: 0;
-    }
-
+    .hero-main-title .c-neon-yellow,
     .hero-main-title .c-white {
       color: #FFFFFF !important;
       -webkit-text-fill-color: #FFFFFF !important;
       font-weight: 900 !important;
-      -webkit-text-stroke: 0.6px #FFFFFF;
-      text-shadow: 0 1px 4px rgba(0, 0, 0, 0.9);
+      text-shadow: none !important;
+      filter: none !important;
+      -webkit-text-stroke: 0 !important;
       display: inline-block;
       white-space: nowrap;
       flex-shrink: 0;
@@ -729,11 +720,11 @@
       }
     }
 
-    /* YouTube Channel Proof Section Under Video (Exact Match) */
+    /* YouTube Channel Proof Section Under Video (Bordered Pill) */
     .hero-yt-section {
       width: 100%;
       max-width: 940px;
-      margin: 20px auto 6px;
+      margin: 22px auto 6px;
       text-align: center;
       display: flex;
       flex-direction: column;
@@ -745,35 +736,41 @@
       align-items: center;
       justify-content: center;
       gap: 12px;
+      padding: 10px 28px;
+      background: #140a22;
+      border: 2px solid rgba(255, 255, 255, 0.6);
+      border-radius: 999px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6), 0 0 16px rgba(255, 255, 255, 0.15);
       text-decoration: none;
-      margin: 0 auto 14px;
-      transition: transform 0.2s ease, opacity 0.2s ease;
+      margin: 0 auto 16px;
+      transition: all 0.25s ease;
       cursor: pointer;
     }
 
     .hero-yt-title-link:hover {
-      transform: scale(1.04);
-      opacity: 0.95;
+      transform: translateY(-2px);
+      border-color: #ffffff;
+      box-shadow: 0 6px 26px rgba(0, 0, 0, 0.75), 0 0 22px rgba(255, 255, 255, 0.35);
     }
 
     .hero-yt-logo-svg {
-      width: clamp(40px, 4.8vw, 54px);
+      width: clamp(32px, 3.8vw, 42px);
       height: auto;
       aspect-ratio: 24 / 17;
-      filter: drop-shadow(0 0 14px rgba(255, 0, 0, 0.75));
+      filter: drop-shadow(0 0 10px rgba(255, 0, 0, 0.6));
       flex-shrink: 0;
     }
 
     .hero-yt-channel-text {
-      color: #EFFF00 !important;
-      -webkit-text-fill-color: #EFFF00 !important;
+      color: #FFFFFF !important;
+      -webkit-text-fill-color: #FFFFFF !important;
       font-family: 'Space Grotesk', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-      font-size: clamp(26px, 3.8vw, 44px);
-      font-weight: 900 !important;
-      -webkit-text-stroke: 1px #EFFF00;
+      font-size: clamp(18px, 2.5vw, 28px);
+      font-weight: 800 !important;
       letter-spacing: -0.01em;
       line-height: 1.1;
-      text-shadow: 0 0 8px rgba(239, 255, 0, 0.55), 0 0 18px rgba(239, 255, 0, 0.2);
+      text-shadow: none !important;
+      -webkit-text-stroke: 0 !important;
       white-space: nowrap;
     }
 
@@ -811,18 +808,18 @@
 
     @media (max-width: 640px) {
       .hero-yt-section {
-        margin: 16px auto 4px;
+        margin: 18px auto 4px;
       }
       .hero-yt-title-link {
-        gap: 12px;
+        padding: 8px 20px;
+        gap: 10px;
         margin-bottom: 12px;
       }
       .hero-yt-logo-svg {
-        width: 36px;
+        width: 30px;
       }
       .hero-yt-channel-text {
-        font-size: 24px;
-        -webkit-text-stroke: 0.8px #EFFF00;
+        font-size: 18px;
       }
       .hero-yt-card {
         border-radius: 14px;
@@ -1372,17 +1369,17 @@
       box-shadow: 0 0 16px rgba(139, 92, 246, 0.5);
     }
 
-    /* CTA Buttons (Exact Match to User Reference: Solid Neon Yellow/Lime Pill with Black Text) */
+    /* CTA Buttons (Exact Color #E8FC07 with Black Text) */
     .cta-primary,
     .strategy-green-btn,
     .pulse-btn-large,
     .sticky-btn,
     .header-cta,
     .cta {
-      background: #EFFF00 !important;
+      background: #E8FC07 !important;
       border: none !important;
       color: #000000 !important;
-      box-shadow: 0 8px 28px rgba(239, 255, 0, 0.45), 0 2px 10px rgba(0, 0, 0, 0.25) !important;
+      box-shadow: 0 8px 28px rgba(232, 252, 7, 0.45), 0 2px 10px rgba(0, 0, 0, 0.25) !important;
       font-family: 'Space Grotesk', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
       font-weight: 800 !important;
       letter-spacing: 0.04em !important;
@@ -1422,8 +1419,8 @@
     .header-cta:hover,
     .cta:hover {
       transform: translateY(-2px) scale(1.02) !important;
-      box-shadow: 0 12px 36px rgba(239, 255, 0, 0.7) !important;
-      background: #f7ff33 !important;
+      box-shadow: 0 12px 36px rgba(232, 252, 7, 0.75) !important;
+      background: #f0fd33 !important;
       color: #000000 !important;
     }
 
@@ -1995,7 +1992,7 @@
         <a href="https://www.youtube.com/@marketingsafalta" target="_blank" rel="noopener noreferrer" class="hero-yt-title-link" aria-label="YouTube Channel">
           <svg viewBox="0 0 24 24" class="hero-yt-logo-svg" aria-hidden="true">
             <path fill="#FF0000" d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814z"/>
-            <polygon points="9.5,8 16,12 9.5,16" fill="#111111"/>
+            <polygon points="9.5,8 16,12 9.5,16" fill="#FFFFFF"/>
           </svg>
           <span class="hero-yt-channel-text">YouTube Channel</span>
         </a>
