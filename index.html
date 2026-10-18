@@ -531,9 +531,9 @@
       background: rgba(18, 12, 38, 0.92);
       border: 2px solid #a855f7;
       border-radius: 999px;
-      padding: 11px 30px;
+      padding: 9px 24px;
       box-shadow: 0 0 24px rgba(168, 85, 247, 0.45);
-      margin-bottom: 34px;
+      margin-bottom: 16px;
       font-family: 'Space Grotesk', sans-serif;
       font-size: clamp(14px, 2.3vw, 22px);
       text-transform: uppercase;
@@ -606,7 +606,7 @@
     .hero-video-box {
       width: 100%;
       max-width: 940px;
-      margin: 14px auto 0;
+      margin: 8px auto 0;
       padding: 0;
     }
 
@@ -720,41 +720,37 @@
       }
     }
 
-    /* YouTube Channel Proof Section Under Video (Bordered Pill) */
+    /* YouTube Channel Proof Section Under Video (Bordered Pill - Non-Clickable Display) */
     .hero-yt-section {
       width: 100%;
       max-width: 940px;
-      margin: 22px auto 6px;
+      margin: 11px auto 4px;
       text-align: center;
       display: flex;
       flex-direction: column;
       align-items: center;
     }
 
+    .hero-yt-title-badge,
     .hero-yt-title-link {
       display: inline-flex;
       align-items: center;
       justify-content: center;
       gap: 12px;
-      padding: 10px 28px;
+      padding: 8px 24px;
       background: #140a22;
       border: 2px solid rgba(255, 255, 255, 0.6);
       border-radius: 999px;
-      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6), 0 0 16px rgba(255, 255, 255, 0.15);
+      box-shadow: 0 4px 18px rgba(0, 0, 0, 0.6), 0 0 14px rgba(255, 255, 255, 0.15);
       text-decoration: none;
-      margin: 0 auto 16px;
-      transition: all 0.25s ease;
-      cursor: pointer;
-    }
-
-    .hero-yt-title-link:hover {
-      transform: translateY(-2px);
-      border-color: #ffffff;
-      box-shadow: 0 6px 26px rgba(0, 0, 0, 0.75), 0 0 22px rgba(255, 255, 255, 0.35);
+      margin: 0 auto 8px;
+      cursor: default !important;
+      pointer-events: none;
+      user-select: none;
     }
 
     .hero-yt-logo-svg {
-      width: clamp(32px, 3.8vw, 42px);
+      width: clamp(28px, 3.2vw, 38px);
       height: auto;
       aspect-ratio: 24 / 17;
       filter: drop-shadow(0 0 10px rgba(255, 0, 0, 0.6));
@@ -765,7 +761,7 @@
       color: #FFFFFF !important;
       -webkit-text-fill-color: #FFFFFF !important;
       font-family: 'Space Grotesk', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-      font-size: clamp(18px, 2.5vw, 28px);
+      font-size: clamp(17px, 2.2vw, 24px);
       font-weight: 800 !important;
       letter-spacing: -0.01em;
       line-height: 1.1;
@@ -782,20 +778,17 @@
       overflow: hidden;
       background: #0f0f0f;
       border: 1.5px solid rgba(255, 255, 255, 0.12);
-      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.85), 0 0 30px rgba(139, 92, 246, 0.2);
-      transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
-    }
-
-    .hero-yt-card:hover {
-      transform: translateY(-3px);
-      border-color: rgba(255, 0, 0, 0.5);
-      box-shadow: 0 24px 60px rgba(0, 0, 0, 0.9), 0 0 35px rgba(255, 0, 0, 0.3);
+      box-shadow: 0 16px 40px rgba(0, 0, 0, 0.85), 0 0 25px rgba(139, 92, 246, 0.2);
+      cursor: default !important;
+      user-select: none;
     }
 
     .hero-yt-img-link {
       display: block;
       width: 100%;
       line-height: 0;
+      cursor: default !important;
+      pointer-events: none;
     }
 
     .hero-yt-img {
@@ -804,22 +797,24 @@
       display: block;
       object-fit: cover;
       border-radius: 16px;
+      pointer-events: none;
     }
 
     @media (max-width: 640px) {
       .hero-yt-section {
-        margin: 18px auto 4px;
+        margin: 10px auto 3px;
       }
+      .hero-yt-title-badge,
       .hero-yt-title-link {
-        padding: 8px 20px;
-        gap: 10px;
-        margin-bottom: 12px;
+        padding: 6px 16px;
+        gap: 8px;
+        margin-bottom: 6px;
       }
       .hero-yt-logo-svg {
-        width: 30px;
+        width: 26px;
       }
       .hero-yt-channel-text {
-        font-size: 18px;
+        font-size: 16px;
       }
       .hero-yt-card {
         border-radius: 14px;
@@ -830,7 +825,7 @@
     }
 
     .budget-section {
-      padding-top: 18px !important;
+      padding-top: 10px !important;
     }
 
     /* 4 Feature Points with Yellow Arrows OUTSIDE the box below */
@@ -838,8 +833,8 @@
       display: grid;
       grid-template-columns: repeat(2, auto);
       justify-content: center;
-      gap: 12px 42px;
-      margin: 22px auto 0;
+      gap: 8px 28px;
+      margin: 11px auto 0;
       max-width: 600px;
     }
 
@@ -868,7 +863,7 @@
     .hero-video-box.big-video {
       max-width: 1060px !important;
       width: 100% !important;
-      margin: 36px auto 0 !important;
+      margin: 16px auto 0 !important;
       border: 2px solid rgba(168, 122, 255, 0.45) !important;
       border-radius: 20px !important;
       box-shadow: 0 25px 75px rgba(0, 0, 0, 0.85), 0 0 45px rgba(139, 92, 246, 0.28) !important;
@@ -982,14 +977,14 @@
 
     /* Certified Partner Badges Section */
     .partner-badges-section {
-      padding: 50px 0 20px;
+      padding: 24px 0 10px;
       position: relative;
     }
 
     .partner-cards-grid {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
-      gap: 24px;
+      gap: 14px;
       max-width: 980px;
       margin: 0 auto;
     }
@@ -998,7 +993,7 @@
       background: linear-gradient(145deg, #120a1d 0%, #0d0716 100%);
       border: 1.5px solid rgba(168, 122, 255, 0.5);
       border-radius: 18px;
-      padding: 34px 28px 26px;
+      padding: 18px 20px 14px;
       text-align: center;
       display: flex;
       flex-direction: column;
@@ -1015,11 +1010,11 @@
     }
 
     .partner-badge-logo {
-      height: 74px;
+      height: 56px;
       display: flex;
       align-items: center;
       justify-content: center;
-      margin-bottom: 22px;
+      margin-bottom: 12px;
     }
 
     .partner-badge-logo img {
@@ -1035,7 +1030,7 @@
       font-size: 21px;
       font-weight: 700;
       color: #ffffff;
-      margin: 0 0 16px;
+      margin: 0 0 10px;
       letter-spacing: -0.02em;
     }
 
@@ -1043,7 +1038,7 @@
       width: 88%;
       height: 1px;
       border-top: 1.5px dotted rgba(255, 255, 255, 0.22);
-      margin: 0 auto 16px;
+      margin: 0 auto 10px;
     }
 
     .partner-badge-desc {
@@ -1074,39 +1069,39 @@
 
     @media (max-width: 768px) {
       .partner-badges-section {
-        padding: 35px 0 15px;
+        padding: 18px 0 10px;
       }
 
       .partner-cards-grid {
         grid-template-columns: 1fr;
-        gap: 16px;
+        gap: 12px;
       }
 
       .partner-badge-card {
-        padding: 28px 20px 22px;
+        padding: 16px 16px 12px;
       }
 
       .partner-badge-logo {
-        height: 60px;
-        margin-bottom: 16px;
+        height: 48px;
+        margin-bottom: 10px;
       }
 
       .partner-badge-title {
         font-size: 18px;
-        margin-bottom: 12px;
+        margin-bottom: 8px;
       }
     }
 
     /* Google Ads Results Proofs Section */
     .proof-section-wrap {
-      padding: 65px 0 55px;
+      padding: 30px 0 24px;
       position: relative;
     }
 
     .proof-header {
       text-align: center;
       max-width: 820px;
-      margin: 0 auto 36px;
+      margin: 0 auto 18px;
     }
 
     .proof-hero-title {
@@ -1116,7 +1111,7 @@
       color: #ffffff;
       line-height: 1.18;
       letter-spacing: -0.03em;
-      margin: 0 0 16px;
+      margin: 0 0 10px;
     }
 
     .proof-hero-title .highlight-purple,
@@ -1138,15 +1133,15 @@
       align-items: center;
       justify-content: center;
       flex-wrap: wrap;
-      gap: 12px;
-      margin-bottom: 38px;
+      gap: 10px;
+      margin-bottom: 18px;
     }
 
     .proof-tab-btn {
       font-family: 'Space Grotesk', sans-serif;
       font-size: 14px;
       font-weight: 600;
-      padding: 10px 24px;
+      padding: 8px 20px;
       border-radius: 9999px;
       border: 1px solid rgba(255, 255, 255, 0.12);
       background: rgba(14, 20, 27, 0.85);
@@ -1171,7 +1166,7 @@
     .proof-cards-grid {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
-      gap: 26px;
+      gap: 14px;
       max-width: 1100px;
       margin: 0 auto;
     }
@@ -1426,7 +1421,7 @@
 
     /* Travel specialists Section (Matched to Screenshot) */
     .travel-specialists-section {
-      padding: 100px 0;
+      padding: 36px 0;
       background: radial-gradient(circle at 25% 40%, rgba(124, 58, 237, 0.16), transparent 50%), #090510;
       border-block: 1px solid rgba(139, 92, 246, 0.15);
     }
@@ -1434,14 +1429,14 @@
     .specialists-grid {
       display: grid;
       grid-template-columns: 1.05fr 1.15fr;
-      gap: 60px;
+      gap: 24px;
       align-items: center;
     }
 
     @media (max-width: 992px) {
       .specialists-grid {
         grid-template-columns: 1fr;
-        gap: 50px;
+        gap: 22px;
       }
     }
 
@@ -1449,7 +1444,7 @@
       font-size: clamp(38px, 4.5vw, 56px);
       line-height: 1.05;
       font-weight: 700;
-      margin: 0 0 20px;
+      margin: 0 0 12px;
       color: #ffffff;
       letter-spacing: -0.04em;
     }
@@ -1459,7 +1454,7 @@
       line-height: 1.7;
       color: #cbd5e1;
       max-width: 520px;
-      margin: 0 0 35px;
+      margin: 0 0 16px;
     }
 
     .founder-showcase {
@@ -1467,7 +1462,7 @@
       display: flex;
       flex-direction: column;
       align-items: flex-start;
-      margin-bottom: 28px;
+      margin-bottom: 14px;
     }
 
     .founder-image-wrapper {
@@ -1629,7 +1624,7 @@
        WHY MS TRAVEL MARKETING (Stacked 6 Cards from Screenshot)
        ========================================================= */
     .why-stacked-section {
-      padding: 95px 0;
+      padding: 36px 0;
       background: radial-gradient(circle at 50% 30%, rgba(109, 40, 217, 0.14), transparent 60%), #090510;
       border-bottom: 1px solid rgba(139, 92, 246, 0.15);
     }
@@ -1641,14 +1636,14 @@
 
     .why-stacked-header {
       text-align: center;
-      margin-bottom: 45px;
+      margin-bottom: 20px;
     }
 
     .why-stacked-title {
       font-size: clamp(34px, 4vw, 48px);
       font-weight: 700;
       color: #ffffff;
-      margin: 0 0 14px;
+      margin: 0 0 10px;
       letter-spacing: -0.03em;
     }
 
@@ -1663,12 +1658,12 @@
     .why-cards-stack {
       display: flex;
       flex-direction: column;
-      gap: 18px;
+      gap: 10px;
     }
 
     .why-card-item {
-      padding: 26px 30px;
-      border-radius: 16px;
+      padding: 16px 22px;
+      border-radius: 14px;
       background: linear-gradient(145deg, rgba(25, 15, 41, 0.9), rgba(16, 9, 27, 0.95));
       border: 1px solid rgba(139, 92, 246, 0.25);
       box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
@@ -1987,20 +1982,18 @@
         </div>
       </div>
 
-      <!-- YOUTUBE CHANNEL PROOF (Under Video - Exact Match) -->
+      <!-- YOUTUBE CHANNEL PROOF (Under Video - Non-Clickable Display) -->
       <div class="hero-yt-section">
-        <a href="https://www.youtube.com/@marketingsafalta" target="_blank" rel="noopener noreferrer" class="hero-yt-title-link" aria-label="YouTube Channel">
+        <div class="hero-yt-title-badge" aria-label="YouTube Channel">
           <svg viewBox="0 0 24 24" class="hero-yt-logo-svg" aria-hidden="true">
             <path fill="#FF0000" d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814z"/>
             <polygon points="9.5,8 16,12 9.5,16" fill="#FFFFFF"/>
           </svg>
           <span class="hero-yt-channel-text">YouTube Channel</span>
-        </a>
+        </div>
 
         <div class="hero-yt-card">
-          <a href="https://www.youtube.com/@marketingsafalta" target="_blank" rel="noopener noreferrer" class="hero-yt-img-link" title="Marketing Safalta by Raj Thakur - YouTube Channel">
-            <img src="/assets/youtube-channel-proof.png" alt="Marketing Safalta by Raj Thakur - YouTube Channel Proof" class="hero-yt-img" loading="lazy" />
-          </a>
+          <img src="/assets/youtube-channel-proof.png" alt="Marketing Safalta by Raj Thakur - YouTube Channel Proof" class="hero-yt-img" loading="lazy" />
         </div>
       </div>
     </div>

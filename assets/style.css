@@ -710,7 +710,7 @@ footer{padding:37px 0 20px;border-top:1px solid #292435;background:#08070b}.foot
   align-items: center;
   gap: 16px 20px;
   flex-wrap: wrap;
-  margin-top: 32px;
+  margin-top: 16px;
   width: 100%;
 }
 
@@ -1634,86 +1634,109 @@ footer{padding:37px 0 20px;border-top:1px solid #292435;background:#08070b}.foot
   padding: 12px 22px !important;
 }
 
-/* ── 2. SECTION SPACING: Eliminate huge gaps ── */
+/* ── 2. SECTION SPACING: Eliminate huge gaps (Reduced by 50%) ── */
 
 /* Main section padding override */
 .section {
-  padding: 65px 0 !important;
+  padding: 30px 0 !important;
 }
 
 /* Proof / Reviews section */
 .section.proof {
-  padding: 60px 0 !important;
+  padding: 28px 0 !important;
+}
+
+/* Partner Badges section */
+.partner-badges-section {
+  padding: 24px 0 10px !important;
+}
+
+/* Live Proofs wrap */
+.proof-section-wrap {
+  padding: 30px 0 24px !important;
 }
 
 /* Strategy section */
 .strategy-clean-section {
-  padding: 60px 0 65px !important;
+  padding: 28px 0 32px !important;
 }
 
 /* Travel Specialists */
 .travel-specialists-section {
-  padding: 60px 0 !important;
+  padding: 32px 0 !important;
 }
 
 /* Why Stacked Section */
 .why-stacked-section {
-  padding: 60px 0 !important;
+  padding: 30px 0 !important;
 }
 
 /* Budget Section */
 .budget-section {
-  padding: 16px 0 50px !important;
+  padding: 10px 0 24px !important;
 }
 
 /* Consultation / Offer Section — the big gap culprit */
 .section.offer {
-  padding: 50px 0 100px !important;
+  padding: 24px 0 45px !important;
 }
 
 /* Dark section spacing */
 .dark-section {
-  padding: 65px 0 !important;
+  padding: 30px 0 !important;
 }
 
 /* Hero section fine-tuning */
 .hero-pattern-section {
-  padding: 28px 16px 20px !important;
+  padding: 14px 16px 10px !important;
 }
 
 /* Stats section tighter */
 .stats-grid > div {
-  padding: 28px 24px !important;
+  padding: 14px 18px !important;
 }
 
 /* Reduce gallery heading top margin */
 .gallery-heading {
-  margin-top: 35px !important;
+  margin-top: 18px !important;
 }
 
 /* Reduce CTA wrap margins within sections */
 .strategy-btn-wrap {
-  margin-top: 28px !important;
+  margin-top: 14px !important;
 }
 
 /* Cards row bottom margin */
 .strategy-cards-row {
-  margin-bottom: 32px !important;
+  margin-bottom: 16px !important;
 }
 
 /* Why stacked header */
 .why-stacked-header {
-  margin-bottom: 32px !important;
+  margin-bottom: 16px !important;
 }
 
 /* Specialists grid gap */
 .specialists-grid {
-  gap: 40px !important;
+  gap: 22px !important;
 }
 
 /* Section intro margin */
 .section-intro {
-  margin-bottom: 40px !important;
+  margin-bottom: 20px !important;
+}
+
+.why-grid,
+.offer-grid {
+  gap: 36px !important;
+}
+
+.proof-cards-grid {
+  gap: 14px !important;
+}
+
+.partner-cards-grid {
+  gap: 14px !important;
 }
 
 /* ── 3. TYPOGRAPHY: Bigger, bolder, more readable ── */
@@ -2001,27 +2024,27 @@ footer {
 
 @media (max-width: 480px) {
   .section {
-    padding: 40px 0 !important;
+    padding: 20px 0 !important;
   }
 
   .section.proof {
-    padding: 35px 0 !important;
+    padding: 18px 0 !important;
   }
 
   .strategy-clean-section {
-    padding: 35px 0 40px !important;
+    padding: 18px 0 20px !important;
   }
 
   .travel-specialists-section {
-    padding: 35px 0 !important;
+    padding: 18px 0 !important;
   }
 
   .why-stacked-section {
-    padding: 35px 0 !important;
+    padding: 18px 0 !important;
   }
 
   .section.offer {
-    padding: 30px 0 75px !important;
+    padding: 16px 0 36px !important;
   }
 
   h1 {
