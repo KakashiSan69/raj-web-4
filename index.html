@@ -796,6 +796,13 @@
       box-shadow: 0 16px 40px rgba(0, 0, 0, 0.85), 0 0 25px rgba(139, 92, 246, 0.2);
       cursor: default !important;
       user-select: none;
+      position: relative;
+    }
+
+    .hero-yt-picture {
+      display: block;
+      width: 100%;
+      line-height: 0;
     }
 
     .hero-yt-img-link {
@@ -808,7 +815,9 @@
 
     .hero-yt-img {
       width: 100%;
+      max-width: 100%;
       height: auto;
+      aspect-ratio: 1024 / 889;
       display: block;
       object-fit: cover;
       border-radius: 16px;
@@ -2046,7 +2055,18 @@
         </div>
 
         <div class="hero-yt-card">
-          <img src="/assets/youtube-channel-proof.png" alt="Marketing Safalta by Raj Thakur - YouTube Channel Proof" class="hero-yt-img" loading="lazy" />
+          <picture class="hero-yt-picture">
+            <source srcset="/assets/youtube-channel-proof.webp, assets/youtube-channel-proof.webp" type="image/webp">
+            <source srcset="/assets/youtube-channel-proof.png, assets/youtube-channel-proof.png" type="image/png">
+            <img src="/assets/youtube-channel-proof.png"
+                 alt="Marketing Safalta by Raj Thakur - YouTube Channel Proof"
+                 class="hero-yt-img"
+                 width="1024"
+                 height="889"
+                 decoding="async"
+                 fetchpriority="high"
+                 onerror="if(!this.dataset.retried){this.dataset.retried='1';this.src='assets/youtube-channel-proof.png';}" />
+          </picture>
         </div>
       </div>
     </div>
