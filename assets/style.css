@@ -517,8 +517,10 @@ footer{padding:37px 0 20px;border-top:1px solid #292435;background:#08070b}.foot
   gap: 12px;
   background: linear-gradient(135deg, #1976f3, #0d66df);
   color: #ffffff !important;
-  font-size: 18px;
+  font-size: clamp(14px, 1.5vw, 18px);
   font-weight: 700;
+  line-height: 1.2;
+  white-space: nowrap;
   padding: 17px 42px;
   border-radius: 50px;
   border: 1px solid rgba(255, 255, 255, 0.25);
@@ -556,7 +558,9 @@ footer{padding:37px 0 20px;border-top:1px solid #292435;background:#08070b}.foot
   border-radius: 7px;
   color: #fff !important;
   font-weight: 700;
-  font-size: 13px;
+  font-size: clamp(14px, 1.5vw, 18px);
+  line-height: 1.2;
+  white-space: nowrap;
   box-shadow: 0 10px 28px #6d3fe533;
   transition: 0.25s;
 }
@@ -883,7 +887,9 @@ footer{padding:37px 0 20px;border-top:1px solid #292435;background:#08070b}.foot
 
 .sticky-btn {
   padding: 12px 28px !important;
-  font-size: 15px !important;
+  font-size: clamp(13px, 1.3vw, 15px) !important;
+  line-height: 1.2 !important;
+  white-space: nowrap !important;
 }
 
 /* Responsive adjustments */
